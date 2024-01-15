@@ -8,9 +8,13 @@ struct ContentView: View {
             TimelineView(.animation) { context in
                 VStack {
                     if !self.model.hideDate {
-                        Text(context.date.formatted(date: .numeric, time: .omitted))
+                        Text(context.date.formatted(.dateTime.year().day().month()))
                     }
-                    Text(context.date.formatted(date: .omitted, time: .standard))
+                    Text(
+                        context.date.formatted(
+                            self.model.hideSecond ? .dateTime.hour().minute() : .dateTime.hour().minute().second()
+                        )
+                    )
                 }
                 .font(.system(size: .init(self.model.fontSize),
                               weight: .bold))
