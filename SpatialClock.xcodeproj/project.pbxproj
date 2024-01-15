@@ -7,20 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16C4CE3F2B550680002260A6 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 16C4CE3E2B550680002260A6 /* RealityKitContent */; };
-		16C4CE412B550680002260A6 /* SpatialClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C4CE402B550680002260A6 /* SpatialClockApp.swift */; };
+		16C4CE412B550680002260A6 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C4CE402B550680002260A6 /* App.swift */; };
 		16C4CE432B550680002260A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C4CE422B550680002260A6 /* ContentView.swift */; };
 		16C4CE452B550684002260A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C4CE442B550684002260A6 /* Assets.xcassets */; };
-		16C4CE482B550684002260A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C4CE472B550684002260A6 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16C4CE392B550680002260A6 /* SpatialClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		16C4CE3D2B550680002260A6 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
-		16C4CE402B550680002260A6 /* SpatialClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialClockApp.swift; sourceTree = "<group>"; };
+		16C4CE402B550680002260A6 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		16C4CE422B550680002260A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		16C4CE442B550684002260A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		16C4CE472B550684002260A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		16C4CE492B550684002260A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -29,7 +25,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16C4CE3F2B550680002260A6 /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +35,6 @@
 			isa = PBXGroup;
 			children = (
 				16C4CE3B2B550680002260A6 /* SpatialClock */,
-				16C4CE3C2B550680002260A6 /* Packages */,
 				16C4CE3A2B550680002260A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,29 +50,12 @@
 		16C4CE3B2B550680002260A6 /* SpatialClock */ = {
 			isa = PBXGroup;
 			children = (
-				16C4CE402B550680002260A6 /* SpatialClockApp.swift */,
+				16C4CE402B550680002260A6 /* App.swift */,
 				16C4CE422B550680002260A6 /* ContentView.swift */,
 				16C4CE442B550684002260A6 /* Assets.xcassets */,
 				16C4CE492B550684002260A6 /* Info.plist */,
-				16C4CE462B550684002260A6 /* Preview Content */,
 			);
 			path = SpatialClock;
-			sourceTree = "<group>";
-		};
-		16C4CE3C2B550680002260A6 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				16C4CE3D2B550680002260A6 /* RealityKitContent */,
-			);
-			path = Packages;
-			sourceTree = "<group>";
-		};
-		16C4CE462B550684002260A6 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				16C4CE472B550684002260A6 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,7 +75,6 @@
 			);
 			name = SpatialClock;
 			packageProductDependencies = (
-				16C4CE3E2B550680002260A6 /* RealityKitContent */,
 			);
 			productName = SpatialClock;
 			productReference = 16C4CE392B550680002260A6 /* SpatialClock.app */;
@@ -142,7 +118,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16C4CE482B550684002260A6 /* Preview Assets.xcassets in Resources */,
 				16C4CE452B550684002260A6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,7 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16C4CE432B550680002260A6 /* ContentView.swift in Sources */,
-				16C4CE412B550680002260A6 /* SpatialClockApp.swift in Sources */,
+				16C4CE412B550680002260A6 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +263,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SpatialClock/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6696GEY228;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -314,7 +289,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SpatialClock/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6696GEY228;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -355,13 +330,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		16C4CE3E2B550680002260A6 /* RealityKitContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 16C4CE312B550680002260A6 /* Project object */;
 }

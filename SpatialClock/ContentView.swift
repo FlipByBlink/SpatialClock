@@ -1,26 +1,14 @@
-//
-//  ContentView.swift
-//  SpatialClock
-//
-//  Created by FULLNAME on 2024/01/15.
-//
-
 import SwiftUI
-import RealityKit
-import RealityKitContent
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
+            VStack {
+                Text(.now, style: Text.DateStyle.date)
+                Text(.now, style: Text.DateStyle.time)
+            }
+            .font(.system(size: 100, weight: .bold))
         }
         .padding()
     }
-}
-
-#Preview(windowStyle: .automatic) {
-    ContentView()
 }
