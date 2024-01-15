@@ -19,7 +19,6 @@ struct ContentView: View {
                 .animation(.default, value: context.date)
                 .padding(.init(self.model.padding))
             }
-            .opacity(self.model.opacity)
             .overlay(alignment: .bottomTrailing) {
                 Button {
                     self.openWindow(id: "setting")
@@ -32,9 +31,10 @@ struct ContentView: View {
                 }
                 .foregroundStyle(self.model.presentSettingWindow ? .quaternary : .tertiary)
                 .buttonStyle(.plain)
-                .padding(24)
+                .padding(.init(min(24, self.model.padding)))
                 .disabled(self.model.presentSettingWindow)
             }
+            .opacity(self.model.opacity)
         }
         .animation(.default, value: self.model.hideDate)
         .fixedSize()

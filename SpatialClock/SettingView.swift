@@ -33,12 +33,23 @@ struct SettingView: View {
                         Label("Opacity", systemImage: "camera.filters")
                     }
                 }
-                Toggle(isOn: self.$model.hideBackground) {
-                    Label("Hide background", systemImage: "rectangle.slash.fill")
-                        .symbolRenderingMode(.hierarchical)
-                }
                 Toggle(isOn: self.$model.hideSettingButton) {
                     Label("Hide setting button", systemImage: "gear")
+                }
+                Section {
+                    Toggle(isOn: self.$model.hideBackground) {
+                        Label("Hide background", systemImage: "rectangle.slash.fill")
+                            .symbolRenderingMode(.hierarchical)
+                    }
+                    if self.model.hideBackground {
+                        Picker(selection: self.$model.angle) {
+                            ForEach(0 ... 90, id: \.self) {
+                                Text($0.description)
+                            }
+                        } label: {
+                            Label("Angle", systemImage: "angle")
+                        }
+                    }
                 }
             }
             .navigationTitle("Setting")
