@@ -13,11 +13,11 @@ struct 🕒ClockView: View {
                 .padding(.horizontal)
                 .padding(.init(self.model.padding))
         }
-        .animation(.default, value: self.model.hideDate)
         .opacity(self.model.opacity)
         .fixedSize()
         .opacity(self.model.presentSettingButton ? 0.3 : 1)
         .glassBackgroundEffect(displayMode: self.model.hideBackground ? .never : .always)
+        .rotation3DEffect(.degrees(.init(self.model.angle)), axis: .x)
         .offset(z: self.model.presentSettingButton ? -20 : 0)
         .onTapGesture {
             if !self.model.presentSettingWindow {

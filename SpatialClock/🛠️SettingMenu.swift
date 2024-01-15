@@ -5,17 +5,23 @@ struct 🛠️SettingMenu: View {
     var body: some View {
         NavigationStack {
             List {
-                Toggle(isOn: self.$model.hideYear) {
-                    Label("Hide year", systemImage: "calendar.circle")
+                Section {
+                    Toggle(isOn: self.$model.hideDate) {
+                        Label("Hide date", systemImage: "calendar")
+                    }
+                    Toggle(isOn: self.$model.hideYear) {
+                        Label("Hide year", systemImage: "calendar.circle")
+                    }
+                    .disabled(self.model.hideDate)
+                    Toggle(isOn: self.$model.hideWeekday) {
+                        Label("Hide weekday", systemImage: "calendar.circle.fill")
+                    }
+                    .disabled(self.model.hideDate)
                 }
-                Toggle(isOn: self.$model.hideWeekday) {
-                    Label("Hide weekday", systemImage: "calendar.circle.fill")
-                }
-                Toggle(isOn: self.$model.hideDate) {
-                    Label("Hide date", systemImage: "calendar")
-                }
-                Toggle(isOn: self.$model.hideSecond) {
-                    Label("Hide second", systemImage: "fitness.timer")
+                Section {
+                    Toggle(isOn: self.$model.hideSecond) {
+                        Label("Hide second", systemImage: "fitness.timer")
+                    }
                 }
                 Picker(selection: self.$model.fontSize) {
                     ForEach(32 ... 180, id: \.self) {
