@@ -4,18 +4,20 @@ struct 🛠️SettingButton: View {
     @EnvironmentObject var model: 📱AppModel
     @Environment(\.openWindow) var openWindow
     var body: some View {
-        Button {
-            self.openWindow(id: "setting")
-            self.model.presentSettingWindow = true
-        } label: {
-            Label("Setting", systemImage: "gearshape")
-                .fontWeight(.light)
-                .labelStyle(.iconOnly)
-                .padding(12)
+        if self.model.presentSettingButton {
+            Button {
+                self.openWindow(id: "setting")
+                self.model.presentSettingWindow = true
+                self.model.presentSettingButton = false
+            } label: {
+                Label("Open setting", systemImage: "gearshape")
+                    .font(.largeTitle)
+                    .padding(24)
+            }
+            .buttonStyle(.plain)
+            .glassBackgroundEffect()
+            .offset(y: 50)
+            .offset(z: 50)
         }
-        .foregroundStyle(self.model.presentSettingWindow ? .quaternary : .tertiary)
-        .buttonStyle(.plain)
-        .padding(.init(min(24, self.model.padding)))
-        .disabled(self.model.presentSettingWindow)
     }
 }

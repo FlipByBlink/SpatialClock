@@ -4,7 +4,7 @@ struct 🕐ClockView: View {
     @EnvironmentObject var model: 📱AppModel
     var body: some View {
         TimelineView(.animation) { context in
-            HStack {
+            HStack(spacing: 32) {
                 if !self.model.hideDate {
                     Text(context.date.formatted(self.dateFormat))
                 }
@@ -20,6 +20,12 @@ struct 🕐ClockView: View {
         .animation(.default, value: self.model.hideDate)
         .opacity(self.model.opacity)
         .fixedSize()
+        .foregroundStyle(self.model.presentSettingButton ? .secondary : .primary)
+        .onTapGesture {
+            if !self.model.presentSettingWindow {
+                self.model.presentSettingButton.toggle()
+            }
+        }
     }
 }
 
