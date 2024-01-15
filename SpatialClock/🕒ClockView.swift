@@ -31,7 +31,13 @@ fileprivate extension 🕒ClockView {
     private var format: Date.FormatStyle {
         var value: Date.FormatStyle = .dateTime.hour().minute()
         if !self.model.hideDate {
-            value = value.year().month().day().weekday()
+            value = value.month().day()
+            if !self.model.hideYear {
+                value = value.year()
+            }
+            if !self.model.hideWeekday {
+                value = value.weekday()
+            }
         }
         if self.model.hideSecond {
             value = value.second()

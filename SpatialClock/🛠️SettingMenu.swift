@@ -5,6 +5,12 @@ struct 🛠️SettingMenu: View {
     var body: some View {
         NavigationStack {
             List {
+                Toggle(isOn: self.$model.hideYear) {
+                    Label("Hide year", systemImage: "calendar.circle")
+                }
+                Toggle(isOn: self.$model.hideWeekday) {
+                    Label("Hide weekday", systemImage: "calendar.circle.fill")
+                }
                 Toggle(isOn: self.$model.hideDate) {
                     Label("Hide date", systemImage: "calendar")
                 }
@@ -33,20 +39,16 @@ struct 🛠️SettingMenu: View {
                         Label("Opacity", systemImage: "camera.filters")
                     }
                 }
-                Section {
-                    Toggle(isOn: self.$model.hideBackground) {
-                        Label("Hide background", systemImage: "rectangle.slash.fill")
-                            .symbolRenderingMode(.hierarchical)
+                Toggle(isOn: self.$model.hideBackground) {
+                    Label("Hide background", systemImage: "rectangle.slash.fill")
+                        .symbolRenderingMode(.hierarchical)
+                }
+                Picker(selection: self.$model.angle) {
+                    ForEach(-45 ... 45, id: \.self) {
+                        Text($0.description)
                     }
-                    if self.model.hideBackground {
-                        Picker(selection: self.$model.angle) {
-                            ForEach(0 ... 90, id: \.self) {
-                                Text($0.description)
-                            }
-                        } label: {
-                            Label("Angle", systemImage: "angle")
-                        }
-                    }
+                } label: {
+                    Label("Angle", systemImage: "angle")
                 }
             }
             .navigationTitle("Setting")
