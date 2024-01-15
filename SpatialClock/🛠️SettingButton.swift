@@ -19,6 +19,7 @@ struct 🛠️SettingButton: View {
             .padding(24)
         }
         .glassBackgroundEffect()
+        .offset(y: 50)
         .offset(z: self.model.presentSettingButton ? 50 : -20)
         .opacity(self.model.presentSettingButton ? 1 : 0)
     }

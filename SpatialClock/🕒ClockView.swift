@@ -15,7 +15,6 @@ struct 🕒ClockView: View {
         }
         .opacity(self.model.opacity)
         .fixedSize()
-        .opacity(self.model.presentSettingButton ? 0.3 : 1)
         .glassBackgroundEffect(displayMode: self.model.hideBackground ? .never : .always)
         .rotation3DEffect(.degrees(.init(self.model.angle)), axis: .x)
         .offset(z: self.model.presentSettingButton ? -20 : 0)
@@ -39,7 +38,7 @@ fileprivate extension 🕒ClockView {
                 value = value.weekday()
             }
         }
-        if self.model.hideSecond {
+        if !self.model.hideSecond {
             value = value.second()
         }
         return value
