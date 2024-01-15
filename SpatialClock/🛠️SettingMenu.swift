@@ -12,7 +12,7 @@ struct 🛠️SettingMenu: View {
                     Label("Hide second", systemImage: "fitness.timer")
                 }
                 Picker(selection: self.$model.fontSize) {
-                    ForEach(32 ... 200, id: \.self) {
+                    ForEach(32 ... 180, id: \.self) {
                         Text($0.description)
                     }
                 } label: {
@@ -32,9 +32,6 @@ struct 🛠️SettingMenu: View {
                     } label: {
                         Label("Opacity", systemImage: "camera.filters")
                     }
-                }
-                Toggle(isOn: self.$model.hideSettingButton) {
-                    Label("Hide setting button", systemImage: "gear")
                 }
                 Section {
                     Toggle(isOn: self.$model.hideBackground) {

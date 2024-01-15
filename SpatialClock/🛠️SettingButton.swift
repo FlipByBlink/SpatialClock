@@ -7,13 +7,17 @@ struct 🛠️SettingButton: View {
         Button {
             self.openWindow(id: "setting")
             self.model.presentSettingWindow = true
-            self.model.presentSettingButton = false
+            withAnimation {
+                self.model.presentSettingButton = false
+            }
         } label: {
-            Label("Open setting", systemImage: "gearshape")
-                .font(.system(size: 50))
-                .padding(24)
+            HStack(spacing: 20) {
+                Image(systemName: "gearshape")
+                Text("Open setting")
+            }
+            .font(.system(size: 48, weight: .semibold))
+            .padding(24)
         }
-        .buttonStyle(.plain)
         .glassBackgroundEffect()
         .offset(z: self.model.presentSettingButton ? 50 : -20)
         .opacity(self.model.presentSettingButton ? 1 : 0)
