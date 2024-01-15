@@ -2,7 +2,7 @@ import SwiftUI
 
 @main
 struct SpatialClockApp: App {
-    @StateObject private var model: AppModel = .init()
+    @StateObject private var model: 📱AppModel = .init()
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -10,7 +10,7 @@ struct SpatialClockApp: App {
         }
         .windowResizability(.contentSize)
         WindowGroup(id: "setting") {
-            SettingView()
+            🛠️SettingMenu()
                 .environmentObject(self.model)
         }
         .windowResizability(.contentSize)

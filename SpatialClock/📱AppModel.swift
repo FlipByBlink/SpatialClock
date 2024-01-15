@@ -1,6 +1,6 @@
 import SwiftUI
 
-class AppModel: ObservableObject {
+class 📱AppModel: ObservableObject {
     @Published var presentSettingWindow: Bool = false
     @Published var hideDate: Bool = false
     @Published var hideSecond: Bool = false
