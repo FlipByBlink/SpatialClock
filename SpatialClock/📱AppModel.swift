@@ -7,6 +7,7 @@ class 📱AppModel: ObservableObject {
     @Published var hideWeekday: Bool = false
     @Published var hideDate: Bool = false
     @Published var hideSecond: Bool = false
+    @Published var amPm: Bool = false
     @Published var fontSize: Int = 100
     @Published var padding: Int = 32
     @Published var disableAnimation: Bool = false
