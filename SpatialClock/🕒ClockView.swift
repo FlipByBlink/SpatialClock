@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct 🕐ClockView: View {
+struct 🕒ClockView: View {
     @EnvironmentObject var model: 📱AppModel
     var body: some View {
         TimelineView(.animation) { context in
@@ -20,16 +20,17 @@ struct 🕐ClockView: View {
         .animation(.default, value: self.model.hideDate)
         .opacity(self.model.opacity)
         .fixedSize()
-        .foregroundStyle(self.model.presentSettingButton ? .secondary : .primary)
+        .opacity(self.model.presentSettingButton ? 0.5 : 1)
+        .offset(z: self.model.presentSettingButton ? -20 : 0)
         .onTapGesture {
             if !self.model.presentSettingWindow {
-                self.model.presentSettingButton.toggle()
+                withAnimation { self.model.presentSettingButton.toggle() }
             }
         }
     }
 }
 
-fileprivate extension 🕐ClockView {
+fileprivate extension 🕒ClockView {
     private var dateFormat: Date.FormatStyle {
         .dateTime.year().month().day().weekday()
     }
