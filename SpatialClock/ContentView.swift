@@ -12,11 +12,14 @@ struct ContentView: View {
                     }
                     Text(context.date.formatted(date: .omitted, time: .standard))
                 }
-                .font(.system(size: 100, weight: .bold).monospacedDigit())
+                .font(.system(size: .init(self.model.fontSize),
+                              weight: .bold))
+                .monospacedDigit()
                 .contentTransition(.numericText())
                 .animation(.default, value: context.date)
-                .padding(48)
+                .padding(.init(self.model.padding))
             }
+            .opacity(self.model.opacity)
             .overlay(alignment: .bottomTrailing) {
                 Button {
                     self.openWindow(id: "setting")

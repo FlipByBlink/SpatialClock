@@ -11,12 +11,19 @@ struct SettingView: View {
                 Toggle(isOn: self.$model.hideSecond) {
                     Label("Hide second", systemImage: "fitness.timer")
                 }
-                Picker(selection: self.$model.timeFontSize) {
+                Picker(selection: self.$model.fontSize) {
                     ForEach(32 ... 200, id: \.self) {
                         Text($0.description)
                     }
                 } label: {
-                    Label("Time font size", systemImage: "calendar")
+                    Label("Font size", systemImage: "calendar")
+                }
+                Picker(selection: self.$model.padding) {
+                    ForEach(0 ... 64, id: \.self) {
+                        Text($0.description)
+                    }
+                } label: {
+                    Label("Padding size", systemImage: "calendar")
                 }
                 Stepper(value: self.$model.opacity, in: 0.1 ... 1.0, step: 0.1) {
                     LabeledContent {
