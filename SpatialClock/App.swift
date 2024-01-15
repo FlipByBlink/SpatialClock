@@ -6,5 +6,6 @@ struct SpatialClockApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowResizability(.contentSize)
     }
 }
