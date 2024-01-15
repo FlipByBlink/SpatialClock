@@ -27,7 +27,7 @@ struct ContentView: View {
                         .labelStyle(.iconOnly)
                         .padding(12)
                 }
-                .foregroundStyle(.tertiary)
+                .foregroundStyle(self.model.presentSettingWindow ? .quaternary : .tertiary)
                 .buttonStyle(.plain)
                 .padding(24)
                 .disabled(self.model.presentSettingWindow)
