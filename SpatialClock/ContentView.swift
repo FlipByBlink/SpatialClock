@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var presentSetting: Bool = false
-    @State private var hideDate: Bool = false
+    @EnvironmentObject var model: AppModel
+    @Environment(\.openWindow) var openWindow
     var body: some View {
         VStack {
             TimelineView(.animation) { context in
                 VStack {
-                    if !self.hideDate {
+                    if !self.model.hideDate {
                         Text(context.date.formatted(date: .numeric, time: .omitted))
                     }
                     Text(context.date.formatted(date: .omitted, time: .standard))
@@ -19,30 +19,21 @@ struct ContentView: View {
             }
             .overlay(alignment: .bottomTrailing) {
                 Button {
-                    self.presentSetting.toggle()
+                    self.openWindow(id: "setting")
+                    self.model.presentSettingWindow = true
                 } label: {
-                    Label("Setting",
-                          systemImage: self.presentSetting ? "checkmark" : "gearshape")
-                    .labelStyle(.iconOnly)
-                    .padding()
+                    Label("Setting", systemImage: "gearshape")
+                        .fontWeight(.light)
+                        .labelStyle(.iconOnly)
+                        .padding(12)
                 }
                 .foregroundStyle(.tertiary)
                 .buttonStyle(.plain)
-                .padding()
-            }
-            if self.presentSetting {
-                Divider()
-                VStack {
-                    Toggle(isOn: self.$hideDate) {
-                        Label("Hide date", systemImage: "calendar")
-                    }
-                    .padding()
-                }
-                .padding(.horizontal, 48)
+                .padding(24)
+                .disabled(self.model.presentSettingWindow)
             }
         }
-        .animation(.default, value: self.presentSetting)
-        .animation(.default, value: self.hideDate)
+        .animation(.default, value: self.model.hideDate)
         .fixedSize()
     }
 }
