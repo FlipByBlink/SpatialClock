@@ -19,7 +19,7 @@ struct 🛠️SettingMenu: View {
                     Label("Font size", systemImage: "calendar")
                 }
                 Picker(selection: self.$model.padding) {
-                    ForEach(0 ... 64, id: \.self) {
+                    ForEach(16 ... 64, id: \.self) {
                         Text($0.description)
                     }
                 } label: {

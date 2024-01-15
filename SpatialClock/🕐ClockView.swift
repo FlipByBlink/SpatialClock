@@ -4,9 +4,9 @@ struct 🕐ClockView: View {
     @EnvironmentObject var model: 📱AppModel
     var body: some View {
         TimelineView(.animation) { context in
-            VStack {
+            HStack {
                 if !self.model.hideDate {
-                    Text(context.date.formatted(.dateTime.year().day().month()))
+                    Text(context.date.formatted(self.dateFormat))
                 }
                 Text(context.date.formatted(self.timeFormat))
             }
@@ -24,6 +24,9 @@ struct 🕐ClockView: View {
 }
 
 fileprivate extension 🕐ClockView {
+    private var dateFormat: Date.FormatStyle {
+        .dateTime.year().month().day().weekday()
+    }
     private var timeFormat: Date.FormatStyle {
         if self.model.hideSecond {
             .dateTime.hour().minute()
