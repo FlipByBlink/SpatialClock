@@ -5,14 +5,14 @@ struct 🕒ClockView: View {
     var body: some View {
         TimelineView(.periodic(from: .now, by: 1)) { context in
             Text(context.date.formatted(self.format))
-                .font(.system(size: self.model.fontSize,
+                .font(.system(size: .init(self.model.fontSize),
                               weight: self.model.fontWeight.value,
                               design: self.model.fontDesign.value))
                 .monospacedDigit()
                 .modifier(💾Option.Animation(value: context.date))
                 .foregroundStyle(self.model.textColor)
                 .padding(.horizontal)
-                .padding(self.model.padding)
+                .padding(.init(self.model.padding))
         }
         .opacity(self.model.opacity)
         .fixedSize()
