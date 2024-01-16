@@ -4,12 +4,30 @@ struct 🛠️InfoTab: View {
     var body: some View {
         NavigationStack {
             List {
-                Text("時間の精度は前後1秒です。")
-                Text("アニメーションがオンの状態で秒を表示している場合にCPUリソースをある程度消費する可能性があります。")
-                Text("このアプリは共有スペース専用です。フルスペースのアプリを利用している際はこのアプリを利用できません。")
+                Text("The clock is accurate to within one second.")
+                Text(#"If both the "Animation on" setting and the "Show seconds" setting are enabled, there is a possibility of consuming a certain amount of CPU resources."#)
+                Text("This app is dedicated for Shared Space. It cannot be used when using a Full Space app.")
+                Self.links()
             }
             .navigationTitle("Info")
         }
         .tabItem { Label("Info", systemImage: "info") }
+    }
+}
+
+fileprivate extension 🛠️InfoTab {
+    private static func links() -> some View {
+        Group {
+            Section {
+                Link(destination: .init(string: "https://www.apple.com")!) {
+                    Label("App Store link", systemImage: "link")
+                }
+            }
+            Section {
+                Link(destination: .init(string: "https://github.com/FlipByBlink/SpatialClock")!) {
+                    Label("Source code link", systemImage: "link")
+                }
+            }
+        }
     }
 }
