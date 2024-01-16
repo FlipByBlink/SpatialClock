@@ -1,5 +1,4 @@
 enum 💾Key {
-    static let presentSettingButton: String = "presentSettingButton"
     static let presentSettingWindow: String = "presentSettingWindow"
     static let hideYear: String = "hideYear"
     static let hideWeekday: String = "hideWeekday"

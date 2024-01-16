@@ -1,7 +1,7 @@
 import SwiftUI
 
 class 📱AppModel: ObservableObject {
-    @AppStorage(💾Key.presentSettingButton) var presentSettingButton: Bool = false
+    @Published var presentSettingButton: Bool = false
     @AppStorage(💾Key.hideYear) var hideYear: Bool = false
     @AppStorage(💾Key.hideWeekday) var hideWeekday: Bool = false
     @AppStorage(💾Key.hideDate) var hideDate: Bool = false
@@ -9,7 +9,7 @@ class 📱AppModel: ObservableObject {
     @AppStorage(💾Key.fontSize) var fontSize: Int = 100
     @AppStorage(💾Key.fontWeight) var fontWeight: 💾Option.FontWeight = .bold
     @AppStorage(💾Key.fontDesign) var fontDesign: 💾Option.FontDesign = .default
-    @AppStorage(💾Key.textColor) var textColor: 💾Option.Color = .init(.yellow)
+    @Published var textColor: Color = 💾Option.load()
     @AppStorage(💾Key.padding) var padding: Int = 32
     @AppStorage(💾Key.disableAnimation) var disableAnimation: Bool = false
     @AppStorage(💾Key.opacity) var opacity: Double = 1.0

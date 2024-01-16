@@ -91,17 +91,13 @@ struct 🛠️SettingMenu: View {
 fileprivate extension 🛠️SettingMenu {
     private struct TextColorPicker: View {
         @EnvironmentObject var model: 📱AppModel
-        @State private var value: Color = .white
         var body: some View {
-            ColorPicker(selection: self.$value, supportsOpacity: false) {
+            ColorPicker(selection: self.$model.textColor, supportsOpacity: false) {
                 Label("Text color", systemImage: "paintpalette")
             }
-            .task { self.value = self.model.textColor.value }
-//            .onChange(of: self.value) { _, newValue in
-//                if self.model.textColor.value != newValue {
-//                    self.model.textColor = .init(newValue)
-//                }
-//            }
+            .onChange(of: self.model.textColor) { _, newValue in
+                💾Option.save(newValue)
+            }
         }
     }
 }

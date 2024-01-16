@@ -2,6 +2,7 @@ import SwiftUI
 
 struct 🛠️SettingButton: View {
     @EnvironmentObject var model: 📱AppModel
+    @Environment(\.scenePhase) var scenePhase
     @Environment(\.openWindow) var openWindow
     var body: some View {
         Button {
@@ -21,5 +22,11 @@ struct 🛠️SettingButton: View {
         .offset(y: 70)
         .offset(z: self.model.presentSettingButton ? 50 : -20)
         .opacity(self.model.presentSettingButton ? 1 : 0)
+        .onChange(of: self.scenePhase) { _, newValue in
+            switch newValue {
+                case .inactive, .background: self.model.presentSettingButton = false
+                default: break
+            }
+        }
     }
 }

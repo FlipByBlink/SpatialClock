@@ -51,19 +51,24 @@ enum 💾Option {
             }
         }
     }
-    struct Color: RawRepresentable, Codable {
+    static func load() -> Color {
+        if let ⓓata = UserDefaults.standard.data(forKey: 💾Key.textColor),
+           let ⓜodel = try? JSONDecoder().decode(Self.ColorModel.self, from: ⓓata) {
+            ⓜodel.value
+        } else {
+            .white
+        }
+    }
+    static func save(_ color: Color) {
+        do {
+            UserDefaults.standard.setValue(try JSONEncoder().encode(ColorModel(color)),
+                                           forKey: 💾Key.textColor)
+        } catch {
+            assertionFailure()
+        }
+    }
+    struct ColorModel: Codable {
         var r, g, b: Double
-        var rawValue: String {
-            .init(data: try! JSONEncoder().encode(self),
-                  encoding: .utf8)!
-        }
-        init?(rawValue: String) {
-            do {
-                self = try JSONDecoder().decode(Self.self, from: rawValue.data(using: .utf8)!)
-            } catch {
-                return nil
-            }
-        }
         var value: SwiftUI.Color { .init(red: self.r, green: self.g, blue: self.b) }
         init(_ ⓢwiftUIColor: SwiftUI.Color) {
             if let ⓒolor = ⓢwiftUIColor.cgColor?.components {
