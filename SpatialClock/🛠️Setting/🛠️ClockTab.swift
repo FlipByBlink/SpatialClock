@@ -25,8 +25,8 @@ struct 🛠️ClockTab: View {
                 }
             }
             .navigationTitle("Clock setting")
+            .animation(.default, value: self.model.hideDate)
         }
         .tabItem { Label("Clock", systemImage: "clock") }
     }
 }
-

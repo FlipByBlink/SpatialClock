@@ -65,6 +65,7 @@ struct 🛠️VisualTab: View {
                 }
             }
             .navigationTitle("Visual setting")
+            .animation(.default, value: self.model.hideBackground)
         }
         .tabItem { Label("Visual", systemImage: "paintbrush") }
     }
