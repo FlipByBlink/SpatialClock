@@ -15,8 +15,10 @@ struct 🛠️SettingButton: View {
                 Image(systemName: "gearshape")
                 Text("Open setting")
             }
-            .font(.system(size: 48, weight: .semibold))
+            .font(.system(size: 42, weight: .semibold))
+            .padding(.horizontal)
             .padding(24)
+            .fixedSize()
         }
         .glassBackgroundEffect()
         .offset(y: 70)
