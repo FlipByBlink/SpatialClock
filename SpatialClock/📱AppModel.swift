@@ -6,7 +6,7 @@ class 📱AppModel: ObservableObject {
     @AppStorage(💾Key.hideWeekday) var hideWeekday: Bool = false
     @AppStorage(💾Key.hideDate) var hideDate: Bool = false
     @AppStorage(💾Key.hideSecond) var hideSecond: Bool = false
-    @AppStorage(💾Key.fontSize) var fontSize: Int = 100
+    @AppStorage(💾Key.fontSize) var fontSize: Double = 100
     @AppStorage(💾Key.fontWeight) var fontWeight: 💾Option.FontWeight = .bold
     @AppStorage(💾Key.fontDesign) var fontDesign: 💾Option.FontDesign = .default
     @Published var textColor: Color = 💾Option.load()

@@ -3,10 +3,9 @@ import SwiftUI
 struct 🕒ClockView: View {
     @EnvironmentObject var model: 📱AppModel
     var body: some View {
-        /// CPU消費を抑えるために1秒毎に更新
         TimelineView(.periodic(from: .now, by: 1)) { context in
             Text(context.date.formatted(self.format))
-                .font(.system(size: .init(self.model.fontSize),
+                .font(.system(size: self.model.fontSize,
                               weight: self.model.fontWeight.value,
                               design: self.model.fontDesign.value))
                 .monospacedDigit()
