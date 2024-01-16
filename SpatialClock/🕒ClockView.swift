@@ -20,9 +20,7 @@ struct 🕒ClockView: View {
         .glassBackgroundEffect(displayMode: self.model.hideBackground ? .never : .always)
         .rotation3DEffect(.degrees(.init(self.model.angle)), axis: .x)
         .offset(z: self.model.presentSettingButton ? -50 : 0)
-        .onTapGesture {
-            withAnimation { self.model.presentSettingButton.toggle() }
-        }
+        .onTapGesture { self.showSettingButton() }
     }
 }
 
@@ -42,5 +40,14 @@ fileprivate extension 🕒ClockView {
             value = value.second()
         }
         return value
+    }
+    private func showSettingButton() {
+        withAnimation { self.model.presentSettingButton.toggle() }
+        Task {
+            try? await Task.sleep(for: .seconds(4.5))
+            withAnimation(.default.speed(0.4)) {
+                self.model.presentSettingButton = false
+            }
+        }
     }
 }
