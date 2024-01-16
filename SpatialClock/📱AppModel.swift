@@ -15,5 +15,5 @@ class 📱AppModel: ObservableObject {
     @AppStorage(💾Key.opacity) var opacity: Double = 1.0
     @AppStorage(💾Key.hideBackground) var hideBackground: Bool = false
     @AppStorage(💾Key.angle) var angle: Int = 0
-    @AppStorage(💾Key.animation) var animation: 💾Option.Animation = .default
+    @AppStorage(💾Key.animation) var animation: 💾Option.Animation.Case = .default
 }

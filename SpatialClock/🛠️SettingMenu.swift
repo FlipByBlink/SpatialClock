@@ -33,7 +33,7 @@ struct 🛠️SettingMenu: View {
             NavigationStack {
                 List {
                     Picker(selection: self.$model.animation) {
-                        ForEach(💾Option.Animation.allCases) {
+                        ForEach(💾Option.Animation.Case.allCases) {
                             Text($0.label)
                         }
                     } label: {

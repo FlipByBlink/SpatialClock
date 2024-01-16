@@ -51,31 +51,31 @@ enum 💾Option {
             }
         }
     }
-    enum Animation: String, CaseIterable, Identifiable {
-        case `default`, cool, disable
-        var id: Self { self }
-        struct Modifier: ViewModifier {
-            @EnvironmentObject var model: 📱AppModel
-            var value: Date
-            func body(content: Content) -> some View {
-                switch self.model.animation {
-                    case .default:
-                        content
-                            .animation(.default, value: self.value)
-                    case .cool:
-                        content
-                            .contentTransition(.numericText())
-                            .animation(.default, value: self.value)
-                    case .disable:
-                        content
-                }
+    struct Animation: ViewModifier {
+        @EnvironmentObject var model: 📱AppModel
+        var value: Date
+        func body(content: Content) -> some View {
+            switch self.model.animation {
+                case .default:
+                    content
+                        .animation(.default, value: self.value)
+                case .cool:
+                    content
+                        .contentTransition(.numericText())
+                        .animation(.default, value: self.value)
+                case .disable:
+                    content
             }
         }
-        var label: LocalizedStringKey {
-            switch self {
-                case .default: "default"
-                case .cool: "cool"
-                case .disable: "disable"
+        enum Case: String, CaseIterable, Identifiable {
+            case `default`, cool, disable
+            var id: Self { self }
+            var label: LocalizedStringKey {
+                switch self {
+                    case .default: "default"
+                    case .cool: "cool"
+                    case .disable: "disable"
+                }
             }
         }
     }
