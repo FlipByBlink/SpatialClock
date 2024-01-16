@@ -7,7 +7,6 @@ class 📱AppModel: ObservableObject {
     @Published var hideWeekday: Bool = false
     @Published var hideDate: Bool = false
     @Published var hideSecond: Bool = false
-    @Published var amPm: Bool = false
     @Published var fontSize: Int = 100
     @Published var fontWeight: Font.Weight = .bold
     @Published var fontDesign: Font.Design = .default
