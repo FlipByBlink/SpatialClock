@@ -2,7 +2,6 @@ import SwiftUI
 
 class 📱AppModel: ObservableObject {
     @AppStorage(💾Key.presentSettingButton) var presentSettingButton: Bool = false
-    @AppStorage(💾Key.presentSettingWindow) var presentSettingWindow: Bool = false
     @AppStorage(💾Key.hideYear) var hideYear: Bool = false
     @AppStorage(💾Key.hideWeekday) var hideWeekday: Bool = false
     @AppStorage(💾Key.hideDate) var hideDate: Bool = false

@@ -6,7 +6,6 @@ struct 🛠️SettingButton: View {
     var body: some View {
         Button {
             self.openWindow(id: "setting")
-            self.model.presentSettingWindow = true
             withAnimation {
                 self.model.presentSettingButton = false
             }

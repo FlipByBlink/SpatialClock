@@ -6,7 +6,8 @@ struct 🕒ClockView: View {
         TimelineView(.animation) { context in
             Text(context.date.formatted(self.format))
                 .font(.system(size: .init(self.model.fontSize),
-                              weight: .bold))
+                              weight: self.model.fontWeight.value,
+                              design: self.model.fontDesign.value))
                 .monospacedDigit()
                 .contentTransition(.numericText())
                 .animation(.default, value: context.date)
@@ -19,9 +20,7 @@ struct 🕒ClockView: View {
         .rotation3DEffect(.degrees(.init(self.model.angle)), axis: .x)
         .offset(z: self.model.presentSettingButton ? -20 : 0)
         .onTapGesture {
-            if !self.model.presentSettingWindow {
-                withAnimation { self.model.presentSettingButton.toggle() }
-            }
+            withAnimation { self.model.presentSettingButton.toggle() }
         }
     }
 }
