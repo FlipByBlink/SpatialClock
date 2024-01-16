@@ -12,12 +12,13 @@ struct 🕒ClockView: View {
                 .modifier(💾Option.Animation(value: context.date))
                 .foregroundStyle(self.model.textColor)
                 .padding(.horizontal)
-                .padding(.init(self.model.padding))
+                .padding(self.model.padding)
         }
         .opacity(self.model.opacity)
         .fixedSize()
         .glassBackgroundEffect(displayMode: self.model.hideBackground ? .never : .always)
         .rotation3DEffect(.degrees(.init(self.model.angle)), axis: .x)
+        .modifier(Self.ApplyAnimation())
         .offset(z: self.model.presentSettingButton ? -50 : 0)
         .onTapGesture { self.showSettingButton() }
     }
@@ -47,6 +48,22 @@ fileprivate extension 🕒ClockView {
             withAnimation(.default.speed(0.4)) {
                 self.model.presentSettingButton = false
             }
+        }
+    }
+    private struct ApplyAnimation: ViewModifier {
+        @EnvironmentObject var model: 📱AppModel
+        func body(content: Content) -> some View {
+            content
+                .animation(.default, value: self.model.hideYear)
+                .animation(.default, value: self.model.hideDate)
+                .animation(.default, value: self.model.hideWeekday)
+                .animation(.default, value: self.model.hideSecond)
+                .animation(.default, value: self.model.fontSize)
+                .animation(.default, value: self.model.fontWeight)
+                .animation(.default, value: self.model.fontDesign)
+                .animation(.default, value: self.model.textColor)
+                .animation(.default, value: self.model.padding)
+                .animation(.default, value: self.model.angle)
         }
     }
 }

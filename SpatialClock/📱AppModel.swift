@@ -10,7 +10,7 @@ class 📱AppModel: ObservableObject {
     @AppStorage(💾Key.fontWeight) var fontWeight: 💾Option.FontWeight = .bold
     @AppStorage(💾Key.fontDesign) var fontDesign: 💾Option.FontDesign = .default
     @Published var textColor: Color = 💾Option.load()
-    @AppStorage(💾Key.padding) var padding: Int = 32
+    @AppStorage(💾Key.padding) var padding: Double = 32
     @AppStorage(💾Key.disableAnimation) var disableAnimation: Bool = false
     @AppStorage(💾Key.opacity) var opacity: Double = 1.0
     @AppStorage(💾Key.hideBackground) var hideBackground: Bool = false
