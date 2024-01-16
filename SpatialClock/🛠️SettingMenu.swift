@@ -32,6 +32,13 @@ struct 🛠️SettingMenu: View {
             .tabItem { Label("Clock", systemImage: "clock") }
             NavigationStack {
                 List {
+                    Picker(selection: self.$model.animation) {
+                        ForEach(💾Option.Animation.allCases) {
+                            Text($0.label)
+                        }
+                    } label: {
+                        Label("Animation", systemImage: "circle.dotted.and.circle")
+                    }
                     Picker(selection: self.$model.fontSize) {
                         ForEach(32 ... 180, id: \.self) {
                             Text($0.description)

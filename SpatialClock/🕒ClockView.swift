@@ -10,9 +10,8 @@ struct 🕒ClockView: View {
                               weight: self.model.fontWeight.value,
                               design: self.model.fontDesign.value))
                 .monospacedDigit()
-                .contentTransition(.numericText())
+                .modifier(💾Option.Animation.Modifier(value: context.date))
                 .foregroundStyle(self.model.textColor)
-                .animation(.default, value: context.date)
                 .padding(.horizontal)
                 .padding(.init(self.model.padding))
         }

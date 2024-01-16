@@ -13,4 +13,5 @@ enum 💾Key {
     static let opacity: String = "opacity"
     static let hideBackground: String = "hideBackground"
     static let angle: String = "angle"
+    static let animation: String = "animation"
 }
