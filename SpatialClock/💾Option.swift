@@ -61,20 +61,21 @@ enum 💾Option {
     }
     static func save(_ color: Color) {
         do {
-            UserDefaults.standard.setValue(try JSONEncoder().encode(ColorModel(color)),
+            UserDefaults.standard.setValue(try JSONEncoder().encode(Self.ColorModel(color)),
                                            forKey: 💾Key.textColor)
         } catch {
             assertionFailure()
         }
     }
-    struct ColorModel: Codable {
+}
+
+fileprivate extension 💾Option {
+    private struct ColorModel: Codable {
         var r, g, b: Double
-        var value: SwiftUI.Color { .init(red: self.r, green: self.g, blue: self.b) }
-        init(_ ⓢwiftUIColor: SwiftUI.Color) {
+        var value: Color { .init(red: self.r, green: self.g, blue: self.b) }
+        init(_ ⓢwiftUIColor: Color) {
             if let ⓒolor = ⓢwiftUIColor.cgColor?.components {
-                self.r = Double(ⓒolor[0])
-                self.g = Double(ⓒolor[1])
-                self.b = Double(ⓒolor[2])
+                (self.r, self.g, self.b) = (.init(ⓒolor[0]), .init(ⓒolor[1]), .init(ⓒolor[2]))
             } else {
                 (self.r, self.g, self.b) = (0, 0, 0)
             }
