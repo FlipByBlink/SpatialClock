@@ -1,0 +1,17 @@
+enum 💾Key {
+    static let presentSettingButton: String = "presentSettingButton"
+    static let presentSettingWindow: String = "presentSettingWindow"
+    static let hideYear: String = "hideYear"
+    static let hideWeekday: String = "hideWeekday"
+    static let hideDate: String = "hideDate"
+    static let hideSecond: String = "hideSecond"
+    static let fontSize: String = "fontSize"
+    static let fontWeight: String = "fontWeight"
+    static let fontDesign: String = "fontDesign"
+    static let textColor: String = "textColor"
+    static let padding: String = "padding"
+    static let disableAnimation: String = "disableAnimation"
+    static let opacity: String = "opacity"
+    static let hideBackground: String = "hideBackground"
+    static let angle: String = "angle"
+}
