@@ -56,14 +56,7 @@ struct 🛠️SettingMenu: View {
                         Label("Font design", systemImage: "paintbrush.pointed")
                     }
                     Self.TextColorPicker()
-                    Picker(selection: self.$model.padding) {
-                        ForEach(16 ... 64, id: \.self) {
-                            Text($0.description)
-                        }
-                    } label: {
-                        Label("Padding size", systemImage: "calendar")
-                    }
-                    Stepper(value: self.$model.opacity, in: 0.1 ... 1.0, step: 0.1) {
+                    Stepper(value: self.$model.opacity, in: 0.5 ... 1.0, step: 0.1) {
                         LabeledContent {
                             Text(self.model.opacity.formatted())
                                 .monospacedDigit()
@@ -75,6 +68,14 @@ struct 🛠️SettingMenu: View {
                         Label("Hide background", systemImage: "rectangle.slash.fill")
                             .symbolRenderingMode(.hierarchical)
                     }
+                    Picker(selection: self.$model.padding) {
+                        ForEach(16 ... 64, id: \.self) {
+                            Text($0.description)
+                        }
+                    } label: {
+                        Label("Padding size", systemImage: "calendar")
+                    }
+                    .disabled(self.model.hideBackground)
                     Picker(selection: self.$model.angle) {
                         ForEach(-90 ... 90, id: \.self) {
                             Text($0.description)
@@ -97,6 +98,7 @@ struct 🛠️SettingMenu: View {
                 List {
                     Text("時間の精度は前後1秒です。")
                     Text("アニメーションがオンの状態で秒を表示している場合にCPUリソースをある程度消費する可能性があります。")
+                    Text("このアプリは共有スペース専用です。フルスペースのアプリを利用している際はこのアプリを利用できません。")
                 }
                 .navigationTitle("Info")
             }
