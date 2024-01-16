@@ -27,18 +27,11 @@ struct 🛠️SettingMenu: View {
                         }
                     }
                 }
-                .navigationTitle("Setting")
+                .navigationTitle("Clock setting")
             }
             .tabItem { Label("Clock", systemImage: "clock") }
             NavigationStack {
                 List {
-                    Picker(selection: self.$model.animation) {
-                        ForEach(💾Option.Animation.Case.allCases) {
-                            Text($0.label)
-                        }
-                    } label: {
-                        Label("Animation", systemImage: "circle.dotted.and.circle")
-                    }
                     Picker(selection: self.$model.fontSize) {
                         ForEach(32 ... 180, id: \.self) {
                             Text($0.description)
@@ -83,16 +76,31 @@ struct 🛠️SettingMenu: View {
                             .symbolRenderingMode(.hierarchical)
                     }
                     Picker(selection: self.$model.angle) {
-                        ForEach(-45 ... 45, id: \.self) {
+                        ForEach(-90 ... 90, id: \.self) {
                             Text($0.description)
                         }
                     } label: {
                         Label("Angle", systemImage: "angle")
                     }
+                    Picker(selection: self.$model.animation) {
+                        ForEach(💾Option.Animation.Case.allCases) {
+                            Text($0.label)
+                        }
+                    } label: {
+                        Label("Animation", systemImage: "circle.dotted.and.circle")
+                    }
                 }
-                .navigationTitle("Setting")
+                .navigationTitle("Visual setting")
             }
             .tabItem { Label("Visual", systemImage: "paintbrush") }
+            NavigationStack {
+                List {
+                    Text("時間の精度は前後1秒です。")
+                    Text("アニメーションがオンの状態で秒を表示している場合にCPUリソースをある程度消費する可能性があります。")
+                }
+                .navigationTitle("Info")
+            }
+            .tabItem { Label("Info", systemImage: "info") }
         }
         .frame(maxWidth: 420, maxHeight: 600)
         .onChange(of: self.scenePhase) { _, newValue in

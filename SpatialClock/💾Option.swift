@@ -87,9 +87,9 @@ enum 💾Option {
             .white
         }
     }
-    static func save(_ color: Color) {
+    static func save(_ value: Color) {
         do {
-            UserDefaults.standard.setValue(try JSONEncoder().encode(Self.ColorModel(color)),
+            UserDefaults.standard.setValue(try JSONEncoder().encode(Self.ColorModel(value)),
                                            forKey: 💾Key.textColor)
         } catch {
             assertionFailure()
