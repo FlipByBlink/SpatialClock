@@ -19,7 +19,7 @@ fileprivate extension 🛠️InfoTab {
     private static func links() -> some View {
         Group {
             Section {
-                Link(destination: .init(string: "https://www.apple.com")!) {
+                Link(destination: .init(string: "https://apps.apple.com/app/id6476141176")!) {
                     Label("App Store link", systemImage: "link")
                 }
             }
