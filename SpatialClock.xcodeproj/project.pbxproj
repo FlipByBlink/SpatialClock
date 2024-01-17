@@ -29,6 +29,7 @@
 		160786DB2B5526BA00E2B2CA /* 🛠️SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️SettingButton.swift"; sourceTree = "<group>"; };
 		16267B452B578836000CA8AD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		16267B482B5788AB000CA8AD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		16267B4A2B5791FB000CA8AD /* appstore_badge.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = appstore_badge.svg; sourceTree = "<group>"; };
 		164C77FA2B565D6C008FF872 /* 🛠️InfoTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️InfoTab.swift"; sourceTree = "<group>"; };
 		164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️ClockTab.swift"; sourceTree = "<group>"; };
 		164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️VisualTab.swift"; sourceTree = "<group>"; };
@@ -52,22 +53,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16267B472B57887C000CA8AD /* SupportingFiles */ = {
+		16267B472B57887C000CA8AD /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
 				16C4CE442B550684002260A6 /* Assets.xcassets */,
 				16C4CE492B550684002260A6 /* Info.plist */,
 				16267B452B578836000CA8AD /* Localizable.xcstrings */,
-				16267B492B578919000CA8AD /* READMEAssets */,
+				16267B492B578919000CA8AD /* README assets */,
 			);
-			path = SupportingFiles;
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
-		16267B492B578919000CA8AD /* READMEAssets */ = {
+		16267B492B578919000CA8AD /* README assets */ = {
 			isa = PBXGroup;
 			children = (
+				16267B4A2B5791FB000CA8AD /* appstore_badge.svg */,
 			);
-			path = READMEAssets;
+			path = "README assets";
 			sourceTree = "<group>";
 		};
 		164C77FC2B565DAA008FF872 /* 🛠️Setting */ = {
@@ -117,7 +119,7 @@
 				160786D92B55257F00E2B2CA /* 🕒ClockView.swift */,
 				164C77FC2B565DAA008FF872 /* 🛠️Setting */,
 				164C77FD2B565DD2008FF872 /* 💾Option */,
-				16267B472B57887C000CA8AD /* SupportingFiles */,
+				16267B472B57887C000CA8AD /* Supporting files */,
 			);
 			path = SpatialClock;
 			sourceTree = "<group>";
@@ -342,7 +344,7 @@
 				DEVELOPMENT_TEAM = 6696GEY228;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(TARGET_NAME)/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(TARGET_NAME)/Supporting files/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,7 +371,7 @@
 				DEVELOPMENT_TEAM = 6696GEY228;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(TARGET_NAME)/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(TARGET_NAME)/Supporting files/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

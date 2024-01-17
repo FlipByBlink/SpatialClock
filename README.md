@@ -2,13 +2,13 @@ SpatialClock for Apple Vision Pro
 -----------
 _Clock app for Shared Space_
 
-<img src="SpatialClock/SupportingFiles/READMEAssets/icon.png" width="64">
+<img src="SpatialClock/Supporting files/README assets/icon.png" width="64">
 
 <a href="https://apps.apple.com/app/id6476141176" target="blank">
-    <img src="SpatialClock/SupportingFiles/READMEAssets/appstore_badge.svg">
+    <img src="SpatialClock/Supporting files/README assets/appstore_badge.svg">
 </a>
 
-<img src="SpatialClock/SupportingFiles/READMEAssets/screenshot1200w.png" width="600">
+<img src="SpatialClock/Supporting files/README assets/screenshot1200w.png" width="600">
 
 
 Description
