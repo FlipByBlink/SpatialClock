@@ -11,6 +11,7 @@
 		160786D82B5512EB00E2B2CA /* 📱AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160786D72B5512EB00E2B2CA /* 📱AppModel.swift */; };
 		160786DA2B55257F00E2B2CA /* 🕒ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160786D92B55257F00E2B2CA /* 🕒ClockView.swift */; };
 		160786DC2B5526BA00E2B2CA /* 🛠️SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160786DB2B5526BA00E2B2CA /* 🛠️SettingButton.swift */; };
+		16267B462B578836000CA8AD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 16267B452B578836000CA8AD /* Localizable.xcstrings */; };
 		164C77FB2B565D6C008FF872 /* 🛠️InfoTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C77FA2B565D6C008FF872 /* 🛠️InfoTab.swift */; };
 		164C77FF2B565DFC008FF872 /* 🛠️ClockTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */; };
 		164C78012B565E0A008FF872 /* 🛠️VisualTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */; };
@@ -26,6 +27,8 @@
 		160786D72B5512EB00E2B2CA /* 📱AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "📱AppModel.swift"; sourceTree = "<group>"; };
 		160786D92B55257F00E2B2CA /* 🕒ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🕒ClockView.swift"; sourceTree = "<group>"; };
 		160786DB2B5526BA00E2B2CA /* 🛠️SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️SettingButton.swift"; sourceTree = "<group>"; };
+		16267B452B578836000CA8AD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		16267B482B5788AB000CA8AD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		164C77FA2B565D6C008FF872 /* 🛠️InfoTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️InfoTab.swift"; sourceTree = "<group>"; };
 		164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️ClockTab.swift"; sourceTree = "<group>"; };
 		164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️VisualTab.swift"; sourceTree = "<group>"; };
@@ -49,6 +52,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16267B472B57887C000CA8AD /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				16C4CE442B550684002260A6 /* Assets.xcassets */,
+				16C4CE492B550684002260A6 /* Info.plist */,
+				16267B452B578836000CA8AD /* Localizable.xcstrings */,
+				16267B492B578919000CA8AD /* READMEAssets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		16267B492B578919000CA8AD /* READMEAssets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = READMEAssets;
+			sourceTree = "<group>";
+		};
 		164C77FC2B565DAA008FF872 /* 🛠️Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +94,7 @@
 		16C4CE302B550680002260A6 = {
 			isa = PBXGroup;
 			children = (
+				16267B482B5788AB000CA8AD /* README.md */,
 				16C4CE3B2B550680002260A6 /* SpatialClock */,
 				16C4CE3A2B550680002260A6 /* Products */,
 			);
@@ -95,8 +117,7 @@
 				160786D92B55257F00E2B2CA /* 🕒ClockView.swift */,
 				164C77FC2B565DAA008FF872 /* 🛠️Setting */,
 				164C77FD2B565DD2008FF872 /* 💾Option */,
-				16C4CE442B550684002260A6 /* Assets.xcassets */,
-				16C4CE492B550684002260A6 /* Info.plist */,
+				16267B472B57887C000CA8AD /* SupportingFiles */,
 			);
 			path = SpatialClock;
 			sourceTree = "<group>";
@@ -162,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16267B462B578836000CA8AD /* Localizable.xcstrings in Resources */,
 				16C4CE452B550684002260A6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +342,7 @@
 				DEVELOPMENT_TEAM = 6696GEY228;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_FILE = "$(TARGET_NAME)/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -347,7 +369,7 @@
 				DEVELOPMENT_TEAM = 6696GEY228;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_FILE = "$(TARGET_NAME)/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
