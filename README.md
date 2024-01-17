@@ -1,5 +1,5 @@
 SpatialClock for Apple Vision Pro
------------
+---------------------------------
 _Clock app for Shared Space_
 
 <img src="SpatialClock/Supporting files/README assets/icon.png" width="64">
@@ -16,11 +16,14 @@ Description
 Simple clock for Shared Space.
 
 
-Option
+### Main options
 
-- placeholder
-
-- placeholder
+- Hide date
+- Hide year
+- Hide weekday
+- Hide second
+- Hide background
+- Font customize
 
 
 Source code link
