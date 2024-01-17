@@ -12,6 +12,7 @@
 		160786DA2B55257F00E2B2CA /* 🕒ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160786D92B55257F00E2B2CA /* 🕒ClockView.swift */; };
 		160786DC2B5526BA00E2B2CA /* 🛠️SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160786DB2B5526BA00E2B2CA /* 🛠️SettingButton.swift */; };
 		16267B462B578836000CA8AD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 16267B452B578836000CA8AD /* Localizable.xcstrings */; };
+		16267B552B57D496000CA8AD /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 16267B542B57D496000CA8AD /* InfoPlist.xcstrings */; };
 		164C77FB2B565D6C008FF872 /* 🛠️InfoTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C77FA2B565D6C008FF872 /* 🛠️InfoTab.swift */; };
 		164C77FF2B565DFC008FF872 /* 🛠️ClockTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */; };
 		164C78012B565E0A008FF872 /* 🛠️VisualTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */; };
@@ -30,6 +31,7 @@
 		16267B452B578836000CA8AD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		16267B482B5788AB000CA8AD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		16267B4A2B5791FB000CA8AD /* appstore_badge.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = appstore_badge.svg; sourceTree = "<group>"; };
+		16267B542B57D496000CA8AD /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		164C77FA2B565D6C008FF872 /* 🛠️InfoTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️InfoTab.swift"; sourceTree = "<group>"; };
 		164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️ClockTab.swift"; sourceTree = "<group>"; };
 		164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️VisualTab.swift"; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				16C4CE442B550684002260A6 /* Assets.xcassets */,
 				16C4CE492B550684002260A6 /* Info.plist */,
 				16267B452B578836000CA8AD /* Localizable.xcstrings */,
+				16267B542B57D496000CA8AD /* InfoPlist.xcstrings */,
 				16267B492B578919000CA8AD /* README assets */,
 			);
 			path = "Supporting files";
@@ -185,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16267B552B57D496000CA8AD /* InfoPlist.xcstrings in Resources */,
 				16267B462B578836000CA8AD /* Localizable.xcstrings in Resources */,
 				16C4CE452B550684002260A6 /* Assets.xcassets in Resources */,
 			);
