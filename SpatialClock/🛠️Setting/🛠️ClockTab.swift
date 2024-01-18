@@ -9,14 +9,18 @@ struct 🛠️ClockTab: View {
                     Toggle(isOn: self.$model.hideDate) {
                         Label("Hide date", systemImage: "calendar")
                     }
-                    Toggle(isOn: self.$model.hideYear) {
-                        Label("Hide year", systemImage: "calendar.circle")
+                    Group {
+                        Toggle(isOn: self.$model.hideYear) {
+                            Label("Hide year", systemImage: "calendar.circle")
+                                .opacity(self.model.hideDate ? 0.6 : 1)
+                        }
+                        Toggle(isOn: self.$model.hideWeekday) {
+                            Label("Hide weekday", systemImage: "calendar.circle.fill")
+                                .opacity(self.model.hideDate ? 0.6 : 1)
+                        }
                     }
                     .disabled(self.model.hideDate)
-                    Toggle(isOn: self.$model.hideWeekday) {
-                        Label("Hide weekday", systemImage: "calendar.circle.fill")
-                    }
-                    .disabled(self.model.hideDate)
+                    .animation(.default, value: self.model.hideDate)
                 }
                 Section {
                     Toggle(isOn: self.$model.hideSecond) {
@@ -25,7 +29,6 @@ struct 🛠️ClockTab: View {
                 }
             }
             .navigationTitle("Clock setting")
-            .animation(.default, value: self.model.hideDate)
         }
         .tabItem { Label("Clock", systemImage: "clock") }
     }

@@ -37,18 +37,6 @@ struct 🛠️VisualTab: View {
                         Label("Opacity", systemImage: "camera.filters")
                     }
                 }
-                Toggle(isOn: self.$model.hideBackground) {
-                    Label("Hide background", systemImage: "rectangle.slash.fill")
-                        .symbolRenderingMode(.hierarchical)
-                }
-                Picker(selection: self.$model.padding) {
-                    ForEach(16 ... 64, id: \.self) {
-                        Text($0.description)
-                    }
-                } label: {
-                    Label("Padding size", systemImage: "calendar")
-                }
-                .disabled(self.model.hideBackground)
                 Picker(selection: self.$model.angle) {
                     ForEach(-90 ... 90, id: \.self) {
                         Text($0.description)
@@ -63,9 +51,24 @@ struct 🛠️VisualTab: View {
                 } label: {
                     Label("Animation", systemImage: "circle.dotted.and.circle")
                 }
+                Section {
+                    Toggle(isOn: self.$model.hideBackground) {
+                        Label("Hide background", systemImage: "rectangle.slash.fill")
+                            .symbolRenderingMode(.hierarchical)
+                    }
+                    Picker(selection: self.$model.padding) {
+                        ForEach(16 ... 64, id: \.self) {
+                            Text($0.description)
+                        }
+                    } label: {
+                        Label("Padding size", systemImage: "calendar")
+                            .opacity(self.model.hideBackground ? 0.6 : 1)
+                            .animation(.default, value: self.model.hideBackground)
+                    }
+                    .disabled(self.model.hideBackground)
+                }
             }
             .navigationTitle("Visual setting")
-            .animation(.default, value: self.model.hideBackground)
         }
         .tabItem { Label("Visual", systemImage: "paintbrush") }
     }
