@@ -1,5 +1,7 @@
-SpatialClock for Apple Vision Pro
----------------------------------
+SpatialClock for Shared Space
+-----------------------------
+__Apple Vision Pro__
+
 _Clock app for Shared Space_
 
 <img src="SpatialClock/Supporting files/README assets/icon.png" width="64">
@@ -13,8 +15,11 @@ _Clock app for Shared Space_
 
 Description
 ------------
-Simple clock for Shared Space.
+Clock for Shared Space.
 
+Simple design.
+
+Light weight.
 
 ### Main options
 
