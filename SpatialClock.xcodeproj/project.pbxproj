@@ -28,6 +28,7 @@
 		160786D72B5512EB00E2B2CA /* 📱AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "📱AppModel.swift"; sourceTree = "<group>"; };
 		160786D92B55257F00E2B2CA /* 🕒ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🕒ClockView.swift"; sourceTree = "<group>"; };
 		160786DB2B5526BA00E2B2CA /* 🛠️SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️SettingButton.swift"; sourceTree = "<group>"; };
+		160F46BD2B5A6309001FE696 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		16267B452B578836000CA8AD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		16267B482B5788AB000CA8AD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		16267B4A2B5791FB000CA8AD /* appstore_badge.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = appstore_badge.svg; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		16267B492B578919000CA8AD /* README assets */ = {
 			isa = PBXGroup;
 			children = (
+				160F46BD2B5A6309001FE696 /* icon.png */,
 				16267B4A2B5791FB000CA8AD /* appstore_badge.svg */,
 			);
 			path = "README assets";
