@@ -56,8 +56,8 @@ fileprivate extension 🕒ClockView {
         @EnvironmentObject var model: 📱AppModel
         func body(content: Content) -> some View {
             content
-                .animation(.default, value: self.model.showYear)
                 .animation(.default, value: self.model.hideDate)
+                .animation(.default, value: self.model.showYear)
                 .animation(.default, value: self.model.hideWeekday)
                 .animation(.default, value: self.model.showSecond)
                 .animation(.default, value: self.model.fontSize)

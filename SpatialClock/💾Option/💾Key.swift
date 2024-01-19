@@ -1,8 +1,7 @@
 enum 💾Key {
-    static let presentSettingWindow: String = "presentSettingWindow"
+    static let hideDate: String = "hideDate"
     static let showYear: String = "showYear"
     static let hideWeekday: String = "hideWeekday"
-    static let hideDate: String = "hideDate"
     static let showSecond: String = "showSecond"
     static let fontSize: String = "fontSize"
     static let fontWeight: String = "fontWeight"

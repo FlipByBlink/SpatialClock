@@ -56,6 +56,8 @@ enum 💾Option {
         var value: Date
         func body(content: Content) -> some View {
             switch self.model.animation {
+                case .disable:
+                    content
                 case .default:
                     content
                         .animation(.default, value: self.value)
@@ -63,18 +65,16 @@ enum 💾Option {
                     content
                         .contentTransition(.numericText())
                         .animation(.default, value: self.value)
-                case .disable:
-                    content
             }
         }
         enum Case: String, CaseIterable, Identifiable {
-            case `default`, cool, disable
+            case disable, `default`, cool
             var id: Self { self }
             var label: LocalizedStringKey {
                 switch self {
+                    case .disable: "disable"
                     case .default: "default"
                     case .cool: "cool"
-                    case .disable: "disable"
                 }
             }
         }
