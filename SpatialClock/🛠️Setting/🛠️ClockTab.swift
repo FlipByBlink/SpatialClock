@@ -10,8 +10,8 @@ struct 🛠️ClockTab: View {
                         Label("Hide date", systemImage: "calendar")
                     }
                     Group {
-                        Toggle(isOn: self.$model.hideYear) {
-                            Label("Hide year", systemImage: "calendar.circle")
+                        Toggle(isOn: self.$model.showYear) {
+                            Label("Show year", systemImage: "calendar.circle")
                                 .opacity(self.model.hideDate ? 0.6 : 1)
                         }
                         Toggle(isOn: self.$model.hideWeekday) {
@@ -23,8 +23,8 @@ struct 🛠️ClockTab: View {
                     .animation(.default, value: self.model.hideDate)
                 }
                 Section {
-                    Toggle(isOn: self.$model.hideSecond) {
-                        Label("Hide second", systemImage: "fitness.timer")
+                    Toggle(isOn: self.$model.showSecond) {
+                        Label("Show second", systemImage: "fitness.timer")
                     }
                 }
             }

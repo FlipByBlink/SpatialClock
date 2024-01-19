@@ -31,14 +31,14 @@ fileprivate extension 🕒ClockView {
         var value: Date.FormatStyle = .dateTime.hour().minute()
         if !self.model.hideDate {
             value = value.month().day()
-            if !self.model.hideYear {
+            if self.model.showYear {
                 value = value.year()
             }
             if !self.model.hideWeekday {
                 value = value.weekday()
             }
         }
-        if !self.model.hideSecond {
+        if self.model.showSecond {
             value = value.second()
         }
         return value
@@ -56,10 +56,10 @@ fileprivate extension 🕒ClockView {
         @EnvironmentObject var model: 📱AppModel
         func body(content: Content) -> some View {
             content
-                .animation(.default, value: self.model.hideYear)
+                .animation(.default, value: self.model.showYear)
                 .animation(.default, value: self.model.hideDate)
                 .animation(.default, value: self.model.hideWeekday)
-                .animation(.default, value: self.model.hideSecond)
+                .animation(.default, value: self.model.showSecond)
                 .animation(.default, value: self.model.fontSize)
                 .animation(.default, value: self.model.fontWeight)
                 .animation(.default, value: self.model.fontDesign)

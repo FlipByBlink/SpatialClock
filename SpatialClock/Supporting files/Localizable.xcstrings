@@ -161,32 +161,12 @@
         }
       }
     },
-    "Hide second" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "秒を隠す"
-          }
-        }
-      }
-    },
     "Hide weekday" : {
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "曜日を隠す"
-          }
-        }
-      }
-    },
-    "Hide year" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "年を隠す"
           }
         }
       }
@@ -307,6 +287,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "セリフ体"
+          }
+        }
+      }
+    },
+    "Show second" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秒を表示"
+          }
+        }
+      }
+    },
+    "Show year" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "年を表示"
           }
         }
       }
