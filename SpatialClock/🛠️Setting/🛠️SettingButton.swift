@@ -21,8 +21,7 @@ struct 🛠️SettingButton: View {
             .fixedSize()
         }
         .glassBackgroundEffect()
-        .offset(y: 50)
-        .offset(z: self.model.presentSettingButton ? 50 : -20)
+        .offset(z: self.model.presentSettingButton ? 50 : 0)
         .opacity(self.model.presentSettingButton ? 1 : 0)
         .onChange(of: self.scenePhase) { _, newValue in
             switch newValue {
