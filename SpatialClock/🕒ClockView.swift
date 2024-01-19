@@ -2,6 +2,7 @@ import SwiftUI
 
 struct 🕒ClockView: View {
     @EnvironmentObject var model: 📱AppModel
+    @AppStorage("firstLaunch") var firstLaunch: Bool = true
     var body: some View {
         TimelineView(.periodic(from: .now, by: 1)) { context in
             Text(context.date.formatted(self.format))
@@ -21,6 +22,7 @@ struct 🕒ClockView: View {
         .modifier(Self.ApplyAnimation())
         .offset(z: self.model.presentSettingButton ? -50 : 0)
         .onTapGesture { self.showSettingButton() }
+        .task { self.handleFirstLaunch() }
     }
 }
 
@@ -64,6 +66,12 @@ fileprivate extension 🕒ClockView {
                 .animation(.default, value: self.model.textColor)
                 .animation(.default, value: self.model.padding)
                 .animation(.default, value: self.model.angle)
+        }
+    }
+    private func handleFirstLaunch() {
+        if self.firstLaunch {
+            self.showSettingButton()
+            self.firstLaunch = false
         }
     }
 }
