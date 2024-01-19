@@ -36,6 +36,7 @@
 		164C77FA2B565D6C008FF872 /* 🛠️InfoTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️InfoTab.swift"; sourceTree = "<group>"; };
 		164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️ClockTab.swift"; sourceTree = "<group>"; };
 		164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️VisualTab.swift"; sourceTree = "<group>"; };
+		168EA4542B5AA17400522F94 /* screenshot1200w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot1200w.png; sourceTree = "<group>"; };
 		16C4CE392B550680002260A6 /* SpatialClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C4CE402B550680002260A6 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		16C4CE422B550680002260A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 			children = (
 				160F46BD2B5A6309001FE696 /* icon.png */,
 				16267B4A2B5791FB000CA8AD /* appstore_badge.svg */,
+				168EA4542B5AA17400522F94 /* screenshot1200w.png */,
 			);
 			path = "README assets";
 			sourceTree = "<group>";
