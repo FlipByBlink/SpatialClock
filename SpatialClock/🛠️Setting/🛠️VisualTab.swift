@@ -6,7 +6,7 @@ struct 🛠️VisualTab: View {
         NavigationStack {
             List {
                 Picker(selection: self.$model.fontSize) {
-                    ForEach(32 ... 180, id: \.self) {
+                    ForEach(24 ... 170, id: \.self) {
                         Text($0.description)
                     }
                 } label: {
@@ -57,7 +57,7 @@ struct 🛠️VisualTab: View {
                             .symbolRenderingMode(.hierarchical)
                     }
                     Picker(selection: self.$model.padding) {
-                        ForEach(16 ... 64, id: \.self) {
+                        ForEach(8 ... 64, id: \.self) {
                             Text($0.description)
                         }
                     } label: {

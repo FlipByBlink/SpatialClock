@@ -16,7 +16,7 @@ struct 🛠️SettingButton: View {
                 Text("Open setting")
             }
             .font(.system(size: 42, weight: .semibold))
-            .padding(.horizontal)
+            .padding(.horizontal, 4)
             .padding(24)
             .fixedSize()
         }
