@@ -1,5 +1,5 @@
-SpatialClock for Shared Space
------------------------------
+SpatialClock
+=============
 __Apple Vision Pro__
 
 _Clock app for Shared Space_
