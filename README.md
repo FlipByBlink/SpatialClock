@@ -27,7 +27,8 @@ Light weight.
 - Hide weekday
 - Show second
 - Hide background
-- Font customize
+- Customize size
+- Customize font
 
 
 App Store link
