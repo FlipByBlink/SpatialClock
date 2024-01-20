@@ -24,11 +24,15 @@ fileprivate extension 🛠️InfoTab {
                 Link(destination: .init(string: "https://apps.apple.com/app/id6476141176")!) {
                     Label("App Store link", systemImage: "link")
                 }
+            } footer: {
+                Text(verbatim: "https://apps.apple.com/app/id6476141176")
             }
             Section {
                 Link(destination: .init(string: "https://github.com/FlipByBlink/SpatialClock")!) {
                     Label("Source code link", systemImage: "link")
                 }
+            } footer: {
+                Text(verbatim: "https://github.com/FlipByBlink/SpatialClock")
             }
         }
     }

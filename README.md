@@ -23,24 +23,24 @@ Light weight.
 
 ### Main options
 - Hide date
-- Hide year
+- Show year
 - Hide weekday
-- Hide second
+- Show second
 - Hide background
 - Font customize
 
 
 App Store link
------------------
-https://apps.apple.com/app/id6476141176
+---------------
+[apps.apple.com/app/id6476141176](https://apps.apple.com/app/id6476141176)
 
 
 Source code link
 -----------------
-https://github.com/FlipByBlink/SpatialClock
+[github.com/FlipByBlink/SpatialClock](https://github.com/FlipByBlink/SpatialClock)
 
 ### Source code (Mirror) link
-https://gitlab.com/FlipByBlink/SpatialClock_Mirror
+[gitlab.com/FlipByBlink/SpatialClock_Mirror](https://gitlab.com/FlipByBlink/SpatialClock_Mirror)
 
 
 Contact
