@@ -1,6 +1,6 @@
 SpatialClock
 =============
-__Apple Vision Pro__
+__Platform: Apple Vision Pro__
 
 _Clock app for Shared Space_
 
@@ -10,7 +10,7 @@ _Clock app for Shared Space_
     <img src="SpatialClock/Supporting files/README assets/appstore_badge.svg">
 </a>
 
-<img src="SpatialClock/Supporting files/README assets/screenshot1200w.png" width="600">
+<img src="SpatialClock/Supporting files/README assets/1.jpeg" width="600">
 
 
 Description
@@ -29,6 +29,12 @@ Light weight.
 - Hide background
 - Customize size
 - Customize font
+
+<img src="SpatialClock/Supporting files/README assets/2.jpeg" width="600">
+
+<img src="SpatialClock/Supporting files/README assets/3.jpeg" width="600">
+
+<img src="SpatialClock/Supporting files/README assets/4.jpeg" width="600">
 
 
 App Store link
