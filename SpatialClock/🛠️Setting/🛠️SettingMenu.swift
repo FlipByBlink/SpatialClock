@@ -8,6 +8,7 @@ struct 🛠️SettingMenu: View {
         TabView {
             🛠️ClockTab()
             🛠️VisualTab()
+            🛠️RestTab()
             🛠️InfoTab()
         }
         .frame(maxWidth: 420, maxHeight: 580)

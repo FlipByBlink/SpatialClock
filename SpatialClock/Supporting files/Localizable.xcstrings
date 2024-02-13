@@ -31,6 +31,9 @@
         }
       }
     },
+    "Battery" : {
+
+    },
     "black" : {
       "localizations" : {
         "ja" : {
@@ -261,6 +264,12 @@
         }
       }
     },
+    "Rest" : {
+
+    },
+    "Rest setting" : {
+
+    },
     "rounded" : {
       "localizations" : {
         "ja" : {
@@ -290,6 +299,12 @@
           }
         }
       }
+    },
+    "Show battery level" : {
+
+    },
+    "Show number" : {
+
     },
     "Show second" : {
       "localizations" : {

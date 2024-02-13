@@ -15,4 +15,6 @@ class 📱AppModel: ObservableObject {
     @AppStorage(💾Key.hideBackground) var hideBackground: Bool = false
     @AppStorage(💾Key.angle) var angle: Int = 0
     @AppStorage(💾Key.animation) var animation: 💾Option.Animation.Case = .disable
+    @AppStorage(💾Key.showBattery) var showBattery: Bool = false
+    @AppStorage(💾Key.showBatteryNumber) var showBatteryNumber: Bool = false
 }
