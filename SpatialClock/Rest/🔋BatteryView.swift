@@ -5,29 +5,29 @@ struct 🔋BatteryView: View {
     private let batteryLevel: Float = Self.getBatteryLevel()
     private let batteryState: UIDevice.BatteryState = Self.getBatteryState()
     var body: some View {
-        HStack(spacing: 4) {
+        HStack(spacing: 3) {
             self.batteryIcon()
                 .font(.system(size: .init(self.model.fontSize),
                               weight: self.model.fontWeight.value,
                               design: self.model.fontDesign.value))
-            Group {
-                switch self.batteryState {
-                    case .charging, .full:
-                        Image(systemName: "bolt.fill")
-                            .imageScale(.small)
-                    default:
-                        EmptyView()
-                }
-                if self.model.showBatteryNumber {
-                    Text((self.batteryLevel * 100).rounded().formatted() + "%")
-                        .monospacedDigit()
-                }
+            switch self.batteryState {
+                case .charging, .full:
+                    Image(systemName: "bolt.fill")
+                        .font(.system(size: .init(Double(self.model.fontSize) * 0.6),
+                                      weight: self.model.fontWeight.value,
+                                      design: self.model.fontDesign.value))
+                default:
+                    EmptyView()
             }
-            .font(.system(size: .init(Double(self.model.fontSize) * 0.8),
-                          weight: self.model.fontWeight.value,
-                          design: self.model.fontDesign.value))
+            if self.model.showBatteryNumber {
+                Text((self.batteryLevel * 100).rounded().formatted() + "%")
+                    .monospacedDigit()
+                    .font(.system(size: .init(self.model.fontSize),
+                                  weight: self.model.fontWeight.value,
+                                  design: self.model.fontDesign.value))
+            }
         }
-        .padding(.leading, 15 + (.init(self.batteryLevel) * 0.075))
+        .padding(.leading, 10 + (.init(self.model.fontSize) * 0.35))
     }
     init() {
         UIDevice.current.isBatteryMonitoringEnabled = true
