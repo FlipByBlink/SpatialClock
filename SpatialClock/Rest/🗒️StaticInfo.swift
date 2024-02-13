@@ -32,19 +32,33 @@ extension 🗒️StaticInfo {
                                                                   ("1.0", "2024-02-02")] //降順。先頭の方が新しい
     
     enum SourceCodeCategory: String, CaseIterable, Identifiable {
-        case main, Rest
+        case main, Setting, Option, Rest
         var id: Self { self }
         var fileNames: [String] {
             switch self {
                 case .main: [
                     "App.swift",
                     "ContentView.swift",
-                    "📱AppModel.swift"
+                    "📱AppModel.swift",
+                    "🕒ClockView.swift"
+                ]
+                case .Setting: [
+                    "🛠️SettingButton.swift",
+                    "🛠️SettingMenu.swift",
+                    "🛠️ClockTab.swift",
+                    "🛠️VisualTab.swift",
+                    "🛠️RestTab.swift",
+                    "🛠️TipsTab.swift",
+                    "🛠️AboutTab.swift"
+                ]
+                case .Option: [
+                    "💾Option.swift",
+                    "💾Key.swift"
                 ]
                 case .Rest: [
+                    "🔋BatteryView.swift",
                     "🗒️StaticInfo.swift",
-                    "ℹ️AboutApp.swift",
-                    "ℹ️AboutAppMenu+Tab.swift"
+                    "ℹ️AboutApp.swift"
                 ]
             }
         }
