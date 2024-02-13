@@ -2,7 +2,7 @@ import SwiftUI
 
 struct 🕒ClockView: View {
     @EnvironmentObject var model: 📱AppModel
-    @AppStorage("firstLaunch") var firstLaunch: Bool = true
+    @AppStorage("firstLaunch") private var firstLaunch: Bool = true
     @State private var taskToDisappearSettingButton: Task<Void, Never>? = nil
     var body: some View {
         TimelineView(.periodic(from: .now, by: 1)) { context in

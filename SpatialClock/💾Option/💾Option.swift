@@ -97,7 +97,7 @@ enum 💾Option {
     }
 }
 
-fileprivate extension 💾Option {
+private extension 💾Option {
     private struct ColorModel: Codable {
         var r, g, b: Double
         var value: Color { .init(red: self.r, green: self.g, blue: self.b) }

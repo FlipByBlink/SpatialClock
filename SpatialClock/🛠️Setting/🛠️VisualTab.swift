@@ -74,7 +74,7 @@ struct 🛠️VisualTab: View {
     }
 }
 
-fileprivate extension 🛠️VisualTab {
+private extension 🛠️VisualTab {
     private struct TextColorPicker: View {
         @EnvironmentObject var model: 📱AppModel
         var body: some View {
