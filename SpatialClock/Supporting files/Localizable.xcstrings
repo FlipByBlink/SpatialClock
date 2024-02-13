@@ -104,6 +104,9 @@
         }
       }
     },
+    "Disable hover effect" : {
+
+    },
     "Font design" : {
       "localizations" : {
         "ja" : {
@@ -193,6 +196,9 @@
           }
         }
       }
+    },
+    "It may be a rough number.\n(e.g. 100% → 95% → 90% → 85% …)" : {
+
     },
     "light" : {
       "localizations" : {
@@ -303,7 +309,7 @@
     "Show battery level" : {
 
     },
-    "Show number" : {
+    "Show percent number" : {
 
     },
     "Show second" : {
@@ -335,6 +341,9 @@
           }
         }
       }
+    },
+    "Tap count for \"Open setting\" button" : {
+
     },
     "Text color" : {
       "localizations" : {

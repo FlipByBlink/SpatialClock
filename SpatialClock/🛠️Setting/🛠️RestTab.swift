@@ -6,6 +6,22 @@ struct 🛠️RestTab: View {
         NavigationStack {
             List {
                 Section {
+                    Toggle(isOn: self.$model.disableHoverEffect) {
+                        Label("Disable hover effect",
+                              systemImage: "eye.trianglebadge.exclamationmark")
+                    }
+                }
+                Section {
+                    Stepper(value: self.$model.tapCountForOpenSettingButton, in: 1...4) {
+                        LabeledContent {
+                            Text(self.model.tapCountForOpenSettingButton.formatted())
+                        } label: {
+                            Label(#"Tap count for "Open setting" button"#,
+                                  systemImage: "hand.tap")
+                        }
+                    }
+                }
+                Section {
                     Toggle(isOn: self.$model.showBattery) {
                         Label("Show battery level", systemImage: "battery.100percent.bolt")
                     }
