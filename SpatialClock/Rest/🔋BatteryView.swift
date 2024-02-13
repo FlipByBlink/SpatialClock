@@ -13,7 +13,7 @@ struct 🔋BatteryView: View {
             switch self.batteryState {
                 case .charging, .full:
                     Image(systemName: "bolt.fill")
-                        .font(.system(size: .init(Double(self.model.fontSize) * 0.6),
+                        .font(.system(size: .init(self.model.fontSize) * 0.6,
                                       weight: self.model.fontWeight.value,
                                       design: self.model.fontDesign.value))
                 default:
