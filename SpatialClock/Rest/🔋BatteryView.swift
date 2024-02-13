@@ -3,6 +3,7 @@ import SwiftUI
 struct 🔋BatteryView: View {
     @EnvironmentObject var model: 📱AppModel
     private let batteryLevel: Float = Self.getBatteryLevel()
+    private let batteryState: UIDevice.BatteryState = Self.getBatteryState()
     var body: some View {
         HStack(spacing: 4) {
             self.batteryIcon()
@@ -10,9 +11,12 @@ struct 🔋BatteryView: View {
                               weight: self.model.fontWeight.value,
                               design: self.model.fontDesign.value))
             Group {
-                if self.charging {
-                    Image(systemName: "bolt.fill")
-                        .imageScale(.small)
+                switch self.batteryState {
+                    case .charging, .full:
+                        Image(systemName: "bolt.fill")
+                            .imageScale(.small)
+                    default:
+                        EmptyView()
                 }
                 if self.model.showBatteryNumber {
                     Text((self.batteryLevel * 100).rounded().formatted() + "%")
@@ -32,20 +36,17 @@ struct 🔋BatteryView: View {
 
 private extension 🔋BatteryView {
     private static func getBatteryLevel() -> Float {
-#if !DEBUG
+#if !targetEnvironment(simulator)
         UIDevice.current.batteryLevel
 #else
             .init((1...100).randomElement()!) * 0.01
 #endif
     }
-    private var charging: Bool {
-#if !DEBUG
-        switch UIDevice.current.batteryState {
-            case .charging, .full: true
-            default: false
-        }
+    private static func getBatteryState() -> UIDevice.BatteryState {
+#if !targetEnvironment(simulator)
+        UIDevice.current.batteryState
 #else
-        .random()
+        Bool.random() ? .charging : .unplugged
 #endif
     }
     private func batteryIcon() -> some View {
