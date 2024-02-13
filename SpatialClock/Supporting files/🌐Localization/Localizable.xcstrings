@@ -2,7 +2,14 @@
   "sourceLanguage" : "en",
   "strings" : {
     "About" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリについて"
+          }
+        }
+      }
     },
     "Angle" : {
       "localizations" : {
@@ -24,19 +31,15 @@
         }
       }
     },
-    "App Store link" : {
-      "extractionState" : "stale",
+    "Battery" : {
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "App Storeリンク"
+            "value" : "バッテリー"
           }
         }
       }
-    },
-    "Battery" : {
-
     },
     "black" : {
       "localizations" : {
@@ -138,6 +141,16 @@
         }
       }
     },
+    "for Apple Vision Pro" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Vision Pro 向け"
+          }
+        }
+      }
+    },
     "heavy" : {
       "localizations" : {
         "ja" : {
@@ -188,19 +201,15 @@
         }
       }
     },
-    "Info" : {
-      "extractionState" : "stale",
+    "It may be a rough number.\n(e.g. 100% → 95% → 90% → 85% …)" : {
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "情報"
+            "value" : "大まかな数値で表示されるかもしれません。\n(例: 100% → 95% → 90% → 85% …)"
           }
         }
       }
-    },
-    "It may be a rough number.\n(e.g. 100% → 95% → 90% → 85% …)" : {
-
     },
     "light" : {
       "localizations" : {
@@ -262,9 +271,6 @@
         }
       }
     },
-    "Platform: Apple Vision" : {
-
-    },
     "regular" : {
       "localizations" : {
         "ja" : {
@@ -276,10 +282,24 @@
       }
     },
     "Rest" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "その他"
+          }
+        }
+      }
     },
     "Rest setting" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "その他の設定"
+          }
+        }
+      }
     },
     "rounded" : {
       "localizations" : {
@@ -312,10 +332,24 @@
       }
     },
     "Show battery level" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バッテリー情報を表示"
+          }
+        }
+      }
     },
     "Show percent number" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数字を表示"
+          }
+        }
+      }
     },
     "Show second" : {
       "localizations" : {
@@ -337,22 +371,25 @@
         }
       }
     },
-    "Source code link" : {
-      "extractionState" : "stale",
+    "SpatialClock" : {
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ソースコードリンク"
+            "value" : "SpatialClock - 空間時計"
           }
         }
       }
     },
-    "SpatialClock" : {
-
-    },
     "Tap count for \"Open setting\" button" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「設定を開く」ボタンを呼び出すタップ数"
+          }
+        }
+      }
     },
     "Text color" : {
       "localizations" : {
@@ -395,7 +432,14 @@
       }
     },
     "Tips" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ヒント"
+          }
+        }
+      }
     },
     "ultraLight" : {
       "localizations" : {
