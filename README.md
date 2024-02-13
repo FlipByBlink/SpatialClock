@@ -29,6 +29,7 @@ Light weight.
 - Hide background
 - Customize size
 - Customize font
+- Show battery level
 
 <img src="SpatialClock/Supporting files/README assets/2.jpeg" width="600">
 
