@@ -5,7 +5,7 @@ struct 🕒ClockView: View {
     @AppStorage("firstLaunch") var firstLaunch: Bool = true
     var body: some View {
         TimelineView(.periodic(from: .now, by: 1)) { context in
-            HStack {
+            HStack(spacing: 0) {
                 Text(context.date.formatted(self.format))
                     .font(.system(size: .init(self.model.fontSize),
                                   weight: self.model.fontWeight.value,
@@ -29,7 +29,7 @@ struct 🕒ClockView: View {
     }
 }
 
-fileprivate extension 🕒ClockView {
+private extension 🕒ClockView {
     private var format: Date.FormatStyle {
         var value: Date.FormatStyle = .dateTime.hour().minute()
         if !self.model.hideDate {

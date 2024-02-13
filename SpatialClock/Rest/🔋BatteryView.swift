@@ -2,10 +2,10 @@ import SwiftUI
 
 struct 🔋BatteryView: View {
     @EnvironmentObject var model: 📱AppModel
+    private let batteryLevel: Float = Self.getBatteryLevel()
     var body: some View {
-        HStack(spacing: 1) {
+        HStack(spacing: 4) {
             self.batteryIcon()
-                .imageScale(.small)
                 .font(.system(size: .init(self.model.fontSize),
                               weight: self.model.fontWeight.value,
                               design: self.model.fontDesign.value))
@@ -19,10 +19,11 @@ struct 🔋BatteryView: View {
                         .monospacedDigit()
                 }
             }
-            .font(.system(size: .init(Double(self.model.fontSize) * 0.7),
+            .font(.system(size: .init(Double(self.model.fontSize) * 0.8),
                           weight: self.model.fontWeight.value,
                           design: self.model.fontDesign.value))
         }
+        .padding(.leading, 15 + (.init(self.batteryLevel) * 0.06))
     }
     init() {
         UIDevice.current.isBatteryMonitoringEnabled = true
@@ -30,14 +31,22 @@ struct 🔋BatteryView: View {
 }
 
 private extension 🔋BatteryView {
-    private var batteryLevel: Float {
+    private static func getBatteryLevel() -> Float {
+#if !DEBUG
         UIDevice.current.batteryLevel
+#else
+            .init((1...100).randomElement()!) * 0.01
+#endif
     }
     private var charging: Bool {
+#if !DEBUG
         switch UIDevice.current.batteryState {
             case .charging, .full: true
             default: false
         }
+#else
+        .random()
+#endif
     }
     private func batteryIcon() -> some View {
         switch self.batteryLevel {
@@ -49,15 +58,4 @@ private extension 🔋BatteryView {
             default: Image(systemName: "ladybug")
         }
     }
-#if DEBUG
-    private var batteryState: String {
-        switch UIDevice.current.batteryState {
-            case .unknown: ".unknown"
-            case .unplugged: ".unplugged"
-            case .charging: ".charging"
-            case .full: ".full"
-            @unknown default: "@unknown"
-        }
-    }
-#endif
 }
