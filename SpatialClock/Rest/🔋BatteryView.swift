@@ -27,7 +27,7 @@ struct 🔋BatteryView: View {
                           weight: self.model.fontWeight.value,
                           design: self.model.fontDesign.value))
         }
-        .padding(.leading, 15 + (.init(self.batteryLevel) * 0.06))
+        .padding(.leading, 15 + (.init(self.batteryLevel) * 0.075))
     }
     init() {
         UIDevice.current.isBatteryMonitoringEnabled = true
