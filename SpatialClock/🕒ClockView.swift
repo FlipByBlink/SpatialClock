@@ -3,6 +3,7 @@ import SwiftUI
 struct 🕒ClockView: View {
     @EnvironmentObject var model: 📱AppModel
     @AppStorage("firstLaunch") var firstLaunch: Bool = true
+    @State private var taskToDisappearSettingButton: Task<Void, Never>? = nil
     var body: some View {
         TimelineView(.periodic(from: .now, by: 1)) { context in
             HStack(spacing: 0) {
@@ -47,12 +48,18 @@ private extension 🕒ClockView {
         return value
     }
     private func showSettingButton() {
-        withAnimation { self.model.presentSettingButton.toggle() }
-        Task {
-            try? await Task.sleep(for: .seconds(4.5))
-            withAnimation(.default.speed(0.4)) {
-                self.model.presentSettingButton = false
+        if !self.model.presentSettingButton {
+            withAnimation { self.model.presentSettingButton = true }
+            self.taskToDisappearSettingButton = Task {
+                try? await Task.sleep(for: .seconds(4.5))
+                withAnimation(.default.speed(0.4)) {
+                    self.model.presentSettingButton = false
+                }
             }
+        } else {
+            withAnimation { self.model.presentSettingButton = false }
+            self.taskToDisappearSettingButton?.cancel()
+            self.taskToDisappearSettingButton = nil
         }
     }
     private struct ApplyAnimation: ViewModifier {
