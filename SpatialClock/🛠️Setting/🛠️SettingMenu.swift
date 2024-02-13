@@ -11,7 +11,7 @@ struct 🛠️SettingMenu: View {
             🛠️RestTab()
             🛠️InfoTab()
         }
-        .frame(maxWidth: 420, maxHeight: 580)
+        .frame(width: 520, height: 600)
         .onChange(of: self.scenePhase) { _, newValue in
             switch newValue {
                 case .background: self.dismissWindow()

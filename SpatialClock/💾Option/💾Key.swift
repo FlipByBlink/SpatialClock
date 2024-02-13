@@ -12,8 +12,7 @@ enum 💾Key {
     static let hideBackground: String = "hideBackground"
     static let angle: String = "angle"
     static let animation: String = "animation"
-    static let tapCountForOpenSettingButton: String = "tapCountForOpenSettingButton"
-    static let disableHoverEffect: String = "disableHoverEffect"
+    static let tapCountForOpenSettingButton: String = "tapCountForSettingButton"
     static let showBattery: String = "showBattery"
     static let showBatteryNumber: String = "showBatteryNumber"
 }

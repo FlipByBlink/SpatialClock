@@ -17,7 +17,7 @@ struct SpatialClockApp: App {
             🛠️SettingMenu()
                 .environmentObject(self.model)
         }
-        .defaultSize(width: 420, height: 600)
+        .defaultSize(width: 520, height: 600)
         .windowResizability(.contentSize)
     }
 }
