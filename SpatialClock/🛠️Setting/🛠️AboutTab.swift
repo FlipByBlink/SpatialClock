@@ -17,12 +17,19 @@ struct 🛠️AboutTab: View {
 private extension 🛠️AboutTab {
     private struct FeedbackSection: View {
         @State private var copied: Bool = false
+        @Environment(\.openURL) var openURL
         var body: some View {
             Section {
-                Link(destination: Self.mailToURL) {
+                Button {
+                    var ⓤrlScheme = "mailto:" + 🗒️StaticInfo.contactAddress
+                    ⓤrlScheme += "?subject="
+                    ⓤrlScheme += "SpatialClock feedback".addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
+                    ⓤrlScheme += "&body=Input%20here"
+                    self.openURL(.init(string: ⓤrlScheme)!)
+                } label: {
                     Label("Feedback from mail app", systemImage: "envelope")
+                        .badge(Text(Image(systemName: "arrow.up.forward.app")))
                 }
-                .badge(Text(Image(systemName: "arrow.up.forward.app")))
                 VStack {
                     HStack {
                         Spacer()
@@ -49,13 +56,6 @@ private extension 🛠️AboutTab {
             } footer: {
                 Text("bug report, feature request, impression...")
             }
-        }
-        private static var mailToURL: URL {
-            var value = "mailto:" + 🗒️StaticInfo.contactAddress
-            value += "?subject="
-            value += "SpatialClock feedback".addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
-            value += "&body=Input%20here"
-            return URL(string: value)!
         }
     }
 }
