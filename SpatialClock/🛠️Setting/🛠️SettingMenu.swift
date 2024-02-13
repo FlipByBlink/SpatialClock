@@ -9,7 +9,8 @@ struct 🛠️SettingMenu: View {
             🛠️ClockTab()
             🛠️VisualTab()
             🛠️RestTab()
-            🛠️InfoTab()
+            🛠️TipsTab()
+            🛠️AboutTab()
         }
         .frame(width: 520, height: 600)
         .onChange(of: self.scenePhase) { _, newValue in

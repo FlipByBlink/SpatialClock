@@ -1,0 +1,22 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "current" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clock for Shared Space.\n\nSimple design.\n\nLight weight.\n\nMain options\n- Hide date\n- Show year\n- Hide weekday\n- Show second\n- Hide background\n- Customize size\n- Customize font\n- Show battery level"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共有スペース向けの置き時計です。\n\nシンプルなデザインで軽量。\n\nオプション\n- 日付を隠す\n- 年を表示\n- 曜日を隠す\n- 秒を表示\n- 背景を隠す\n- フォントをカスタマイズ\n- バッテリー情報を表示"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

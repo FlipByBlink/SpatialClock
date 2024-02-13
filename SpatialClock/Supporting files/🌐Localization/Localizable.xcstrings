@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "About" : {
+
+    },
     "Angle" : {
       "localizations" : {
         "ja" : {
@@ -22,6 +25,7 @@
       }
     },
     "App Store link" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -185,6 +189,7 @@
       }
     },
     "Info" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -256,6 +261,9 @@
           }
         }
       }
+    },
+    "Platform: Apple Vision" : {
+
     },
     "regular" : {
       "localizations" : {
@@ -330,6 +338,7 @@
       }
     },
     "Source code link" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -338,6 +347,9 @@
           }
         }
       }
+    },
+    "SpatialClock" : {
+
     },
     "Tap count for \"Open setting\" button" : {
 
@@ -381,6 +393,9 @@
           }
         }
       }
+    },
+    "Tips" : {
+
     },
     "ultraLight" : {
       "localizations" : {
