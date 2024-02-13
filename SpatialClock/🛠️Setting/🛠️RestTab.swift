@@ -10,11 +10,16 @@ struct 🛠️RestTab: View {
                         Label("Show battery level", systemImage: "battery.100percent.bolt")
                     }
                     Toggle(isOn: self.$model.showBatteryNumber) {
-                        Label("Show number", systemImage: "percent")
+                        Label("Show percent number", systemImage: "percent")
                     }
                     .disabled(!self.model.showBattery)
                 } header: {
                     Text("Battery")
+                } footer: {
+                    Text("""
+                    It may be a rough number.
+                    (e.g. 100% → 95% → 90% → 85% …)
+                    """)
                 }
             }
             .navigationTitle("Rest setting")
