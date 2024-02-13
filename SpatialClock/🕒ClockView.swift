@@ -24,7 +24,7 @@ struct 🕒ClockView: View {
         .glassBackgroundEffect(displayMode: self.model.hideBackground ? .never : .always)
         .rotation3DEffect(.degrees(.init(self.model.angle)), axis: .x)
         .modifier(Self.ApplyAnimation())
-        .offset(z: self.model.presentSettingButton ? -50 : 0)
+        .offset(z: self.model.presentSettingButton ? -100 : 0)
         .onTapGesture(count: self.model.tapCountForSettingButton) { self.showSettingButton() }
         .task { self.handleFirstLaunch() }
     }
