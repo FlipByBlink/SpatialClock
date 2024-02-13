@@ -16,6 +16,7 @@
 		164C77FB2B565D6C008FF872 /* 🛠️InfoTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C77FA2B565D6C008FF872 /* 🛠️InfoTab.swift */; };
 		164C77FF2B565DFC008FF872 /* 🛠️ClockTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */; };
 		164C78012B565E0A008FF872 /* 🛠️VisualTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */; };
+		16891EA92B7AEE8300C6F0B3 /* 🔋BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16891EA82B7AEE8300C6F0B3 /* 🔋BatteryView.swift */; };
 		16C4CE412B550680002260A6 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C4CE402B550680002260A6 /* App.swift */; };
 		16C4CE432B550680002260A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C4CE422B550680002260A6 /* ContentView.swift */; };
 		16C4CE452B550684002260A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C4CE442B550684002260A6 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		1669BEB42B6BACDE00D0FEEB /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 		1669BEB52B6BACE000D0FEEB /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = "<group>"; };
 		1669BEB62B6BACE100D0FEEB /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		16891EA82B7AEE8300C6F0B3 /* 🔋BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🔋BatteryView.swift"; sourceTree = "<group>"; };
 		16C4CE392B550680002260A6 /* SpatialClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C4CE402B550680002260A6 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		16C4CE422B550680002260A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = "💾Option";
 			sourceTree = "<group>";
 		};
+		16891EA72B7AEE7000C6F0B3 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				16891EA82B7AEE8300C6F0B3 /* 🔋BatteryView.swift */,
+			);
+			path = Rest;
+			sourceTree = "<group>";
+		};
 		16C4CE302B550680002260A6 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 				160786D92B55257F00E2B2CA /* 🕒ClockView.swift */,
 				164C77FC2B565DAA008FF872 /* 🛠️Setting */,
 				164C77FD2B565DD2008FF872 /* 💾Option */,
+				16891EA72B7AEE7000C6F0B3 /* Rest */,
 				16267B472B57887C000CA8AD /* Supporting files */,
 			);
 			path = SpatialClock;
@@ -217,6 +228,7 @@
 				160786DA2B55257F00E2B2CA /* 🕒ClockView.swift in Sources */,
 				164C78012B565E0A008FF872 /* 🛠️VisualTab.swift in Sources */,
 				16C4CE412B550680002260A6 /* App.swift in Sources */,
+				16891EA92B7AEE8300C6F0B3 /* 🔋BatteryView.swift in Sources */,
 				160786D82B5512EB00E2B2CA /* 📱AppModel.swift in Sources */,
 				16F828702B560FBB00A29476 /* 💾Option.swift in Sources */,
 				160786DC2B5526BA00E2B2CA /* 🛠️SettingButton.swift in Sources */,
