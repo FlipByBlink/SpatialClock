@@ -21,11 +21,11 @@ private extension 🛠️AboutTab {
         var body: some View {
             Section {
                 Button {
-                    var ⓤrlScheme = "mailto:" + 🗒️StaticInfo.contactAddress
-                    ⓤrlScheme += "?subject="
-                    ⓤrlScheme += "SpatialClock feedback".addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
-                    ⓤrlScheme += "&body=Input%20here"
-                    self.openURL(.init(string: ⓤrlScheme)!)
+                    var ⓤrlString = "mailto:" + 🗒️StaticInfo.contactAddress
+                    ⓤrlString += "?subject="
+                    ⓤrlString += "SpatialClock feedback".addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
+                    ⓤrlString += "&body=Input%20here"
+                    self.openURL(.init(string: ⓤrlString)!)
                 } label: {
                     Label("Feedback from mail app", systemImage: "envelope")
                         .badge(Text(Image(systemName: "arrow.up.forward.app")))
