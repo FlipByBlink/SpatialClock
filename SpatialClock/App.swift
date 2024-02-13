@@ -7,10 +7,9 @@ struct SpatialClockApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(self.model)
-                .offset(z: 100)
-                .frame(depth: 200)
+                .frame(depth: 300)
         }
-        .defaultSize(width: 800, height: 200, depth: 200)
+        .defaultSize(width: 800, height: 300, depth: 300)
         .windowResizability(.contentSize)
         .windowStyle(.volumetric)
         WindowGroup(id: "setting") {
