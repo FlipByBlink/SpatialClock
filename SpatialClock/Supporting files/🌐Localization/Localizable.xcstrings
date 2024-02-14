@@ -341,6 +341,16 @@
         }
       }
     },
+    "Restraint" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "抑制"
+          }
+        }
+      }
+    },
     "rounded" : {
       "localizations" : {
         "ja" : {

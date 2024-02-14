@@ -30,6 +30,8 @@ struct 🛠️RestTab: View {
                                   systemImage: "hand.tap")
                         }
                     }
+                } header: {
+                    Text("Restraint")
                 }
             }
             .navigationTitle("Rest setting")
