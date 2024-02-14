@@ -5,7 +5,7 @@ struct 🔋BatteryView: View {
     private let batteryLevel: Float = Self.getBatteryLevel()
     private let batteryState: UIDevice.BatteryState = Self.getBatteryState()
     var body: some View {
-        HStack(spacing: 3) {
+        HStack(spacing: 2) {
             self.batteryIcon()
                 .font(.system(size: .init(self.model.fontSize),
                               weight: self.model.fontWeight.value,
