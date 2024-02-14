@@ -31,7 +31,7 @@ struct 🛠️RestTab: View {
                         }
                     }
                 } header: {
-                    Text("Restraint")
+                    Text("Reserve direct-touch")
                 }
             }
             .navigationTitle("Rest setting")

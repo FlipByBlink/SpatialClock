@@ -321,6 +321,16 @@
         }
       }
     },
+    "Reserve direct-touch" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダイレクトタッチを抑制"
+          }
+        }
+      }
+    },
     "Rest" : {
       "localizations" : {
         "ja" : {
@@ -337,16 +347,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "その他の設定"
-          }
-        }
-      }
-    },
-    "Restraint" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "抑制"
           }
         }
       }

@@ -109,6 +109,7 @@
 		16C4CE422B550680002260A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		16C4CE442B550684002260A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16C4CE492B550684002260A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D833112B7C473300409943 /* 5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpeg; sourceTree = "<group>"; };
 		16F8286D2B560D8700A29476 /* 💾Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "💾Key.swift"; sourceTree = "<group>"; };
 		16F8286F2B560FBB00A29476 /* 💾Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "💾Option.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +145,7 @@
 				1669BEB32B6BACDD00D0FEEB /* 2.jpeg */,
 				1669BEB62B6BACE100D0FEEB /* 3.jpeg */,
 				1669BEB52B6BACE000D0FEEB /* 4.jpeg */,
+				16D833112B7C473300409943 /* 5.jpeg */,
 			);
 			path = "README assets";
 			sourceTree = "<group>";
