@@ -56,7 +56,7 @@ private extension 🔋BatteryView {
             case 0.4..<0.6: Image(systemName: "battery.50percent")
             case 0.6..<0.8: Image(systemName: "battery.75percent")
             case 0.8...1: Image(systemName: "battery.100percent")
-            default: Image(systemName: "ladybug")
+            default: Image(systemName: "battery.0percent")
         }
     }
 }
