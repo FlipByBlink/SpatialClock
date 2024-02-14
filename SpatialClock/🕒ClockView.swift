@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct 🕒ClockView: View {
-    @EnvironmentObject var model: 📱AppModel
+    @EnvironmentObject var model: 🥽AppModel
     @AppStorage("firstLaunch") private var firstLaunch: Bool = true
     @State private var taskToDisappearSettingButton: Task<Void, Never>? = nil
     var body: some View {
@@ -65,7 +65,7 @@ private extension 🕒ClockView {
         }
     }
     private struct ApplyAnimation: ViewModifier {
-        @EnvironmentObject var model: 📱AppModel
+        @EnvironmentObject var model: 🥽AppModel
         func body(content: Content) -> some View {
             content
                 .animation(.default, value: self.model.hideDate)

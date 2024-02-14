@@ -52,7 +52,7 @@ enum 💾Option {
         }
     }
     struct Animation: ViewModifier {
-        @EnvironmentObject var model: 📱AppModel
+        @EnvironmentObject var model: 🥽AppModel
         var value: Date
         func body(content: Content) -> some View {
             switch self.model.animation {

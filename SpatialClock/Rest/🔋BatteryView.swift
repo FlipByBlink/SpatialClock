@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct 🔋BatteryView: View {
-    @EnvironmentObject var model: 📱AppModel
+    @EnvironmentObject var model: 🥽AppModel
     private let batteryLevel: Float = Self.getBatteryLevel()
     private let batteryState: UIDevice.BatteryState = Self.getBatteryState()
     var body: some View {

@@ -1,6 +1,6 @@
 import SwiftUI
 
-class 📱AppModel: ObservableObject {
+class 🥽AppModel: ObservableObject {
     @Published var presentSettingButton: Bool = false
     @AppStorage(💾Key.showYear) var showYear: Bool = false
     @AppStorage(💾Key.hideWeekday) var hideWeekday: Bool = false

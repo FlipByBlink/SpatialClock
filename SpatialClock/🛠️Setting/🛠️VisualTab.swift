@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct 🛠️VisualTab: View {
-    @EnvironmentObject var model: 📱AppModel
+    @EnvironmentObject var model: 🥽AppModel
     var body: some View {
         NavigationStack {
             List {
@@ -76,7 +76,7 @@ struct 🛠️VisualTab: View {
 
 private extension 🛠️VisualTab {
     private struct TextColorPicker: View {
-        @EnvironmentObject var model: 📱AppModel
+        @EnvironmentObject var model: 🥽AppModel
         var body: some View {
             ColorPicker(selection: self.$model.textColor, supportsOpacity: false) {
                 Label("Text color", systemImage: "paintpalette")

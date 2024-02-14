@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct 🛠️ClockTab: View {
-    @EnvironmentObject var model: 📱AppModel
+    @EnvironmentObject var model: 🥽AppModel
     var body: some View {
         NavigationStack {
             List {

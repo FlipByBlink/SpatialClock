@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct 🛠️SettingButton: View {
-    @EnvironmentObject var model: 📱AppModel
+    @EnvironmentObject var model: 🥽AppModel
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.openWindow) var openWindow
     var body: some View {
