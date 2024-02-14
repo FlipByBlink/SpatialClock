@@ -25,6 +25,8 @@ struct 🔋BatteryView: View {
                     .font(.system(size: .init(self.model.fontSize),
                                   weight: self.model.fontWeight.value,
                                   design: self.model.fontDesign.value))
+                    .lineLimit(1)
+                    .fixedSize()
             }
         }
         .padding(.leading, 10 + (.init(self.model.fontSize) * 0.35))

@@ -51,6 +51,7 @@ private extension 🛠️AboutTab {
                         }
                     }
                 }
+                .padding(.vertical)
             } header: {
                 Text("Feedback")
             } footer: {

@@ -12,6 +12,8 @@ struct 🕒ClockView: View {
                                   weight: self.model.fontWeight.value,
                                   design: self.model.fontDesign.value))
                     .monospacedDigit()
+                    .lineLimit(1)
+                    .fixedSize()
                 if self.model.showBattery { 🔋BatteryView() }
             }
             .modifier(💾Option.Animation(value: context.date))
