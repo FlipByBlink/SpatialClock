@@ -292,7 +292,14 @@
       }
     },
     "Open clock window" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時計ウインドウを開く"
+          }
+        }
+      }
     },
     "Open setting" : {
       "localizations" : {
