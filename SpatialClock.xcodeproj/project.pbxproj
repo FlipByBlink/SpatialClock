@@ -150,16 +150,24 @@
 			path = "README assets";
 			sourceTree = "<group>";
 		};
-		164C77FC2B565DAA008FF872 /* 🛠️Setting */ = {
+		16359E222B91CF0D004CC792 /* 🛠️Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				160786DB2B5526BA00E2B2CA /* 🛠️SettingButton.swift */,
-				160786D52B5512AE00E2B2CA /* 🛠️SettingMenu.swift */,
 				164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */,
 				164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */,
 				16891EB22B7AF43600C6F0B3 /* 🛠️RestTab.swift */,
 				164C77FA2B565D6C008FF872 /* 🛠️TipsTab.swift */,
 				16891EC42B7B0A8300C6F0B3 /* 🛠️AboutTab.swift */,
+			);
+			path = "🛠️Tabs";
+			sourceTree = "<group>";
+		};
+		164C77FC2B565DAA008FF872 /* 🛠️Setting */ = {
+			isa = PBXGroup;
+			children = (
+				160786DB2B5526BA00E2B2CA /* 🛠️SettingButton.swift */,
+				160786D52B5512AE00E2B2CA /* 🛠️SettingMenu.swift */,
+				16359E222B91CF0D004CC792 /* 🛠️Tabs */,
 			);
 			path = "🛠️Setting";
 			sourceTree = "<group>";
