@@ -32,10 +32,9 @@ struct 🛠️ClockTab: View {
             .navigationTitle("Clock setting")
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    if !self.model.presentedClockWindow {
+                    if self.model.closedClockWindow {
                         Button {
                             self.openWindow(id: "clock")
-                            self.model.presentedClockWindow = true
                         } label: {
                             HStack {
                                 Image(systemName: "clock.fill")

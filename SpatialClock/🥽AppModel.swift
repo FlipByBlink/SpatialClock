@@ -2,7 +2,7 @@ import SwiftUI
 
 class 🥽AppModel: ObservableObject {
     @Published var presentSettingButton: Bool = false
-    @Published var presentedClockWindow: Bool = true
+    @Published var closedClockWindow: Bool = false
     @AppStorage(💾Key.showYear) var showYear: Bool = false
     @AppStorage(💾Key.hideWeekday) var hideWeekday: Bool = false
     @AppStorage(💾Key.hideDate) var hideDate: Bool = false
