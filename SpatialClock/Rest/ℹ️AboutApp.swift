@@ -5,11 +5,13 @@ import SwiftUI
 struct ℹ️AboutAppContent: View {
     var body: some View {
         📰AppStoreDescriptionSection()
+            .navigationTitle(String(localized: "About App", table: "🌐AboutApp"))
         📜VersionHistoryLink()
         👤PrivacyPolicySection()
         🏬AppStoreSection()
         📓SourceCodeLink()
         🧑‍💻AboutDeveloperPublisherLink()
+        📧FeedbackLink()
     }
 }
 
@@ -177,8 +179,8 @@ private struct 📓SourceCodeLink: View {
             List {
                 Self.DebugView()
                 ForEach(🗒️StaticInfo.SourceCodeCategory.allCases) { Self.CodeSection($0) }
-                self.bundleMainInfoDictionary()
-                self.repositoryLinks()
+                Self.bundleMainInfoDictionary()
+                Self.RepositoryLinks()
             }
             .navigationTitle(.init("Source code", tableName: "🌐AboutApp"))
         } label: {
@@ -202,7 +204,7 @@ private struct 📓SourceCodeLink: View {
                         Text(verbatim: "⚠️ mismatch fileCounts")
                         LabeledContent(String("fileCounts"),
                                        value: self.fileCounts.debugDescription)
-                        LabeledContent(String("caseCounts"), 
+                        LabeledContent(String("caseCounts"),
                                        value: self.caseCounts.description)
                     }
                 }
@@ -245,7 +247,7 @@ private struct 📓SourceCodeLink: View {
             .textSelection(.enabled)
         }
     }
-    private func bundleMainInfoDictionary() -> some View {
+    private static func bundleMainInfoDictionary() -> some View {
         Section {
             NavigationLink(String("Bundle.main.infoDictionary")) {
                 List {
@@ -260,10 +262,13 @@ private struct 📓SourceCodeLink: View {
             }
         }
     }
-    private func repositoryLinks() -> some View {
-        Group {
+    private struct RepositoryLinks: View {
+        @Environment(\.openURL) var openURL
+        var body: some View {
             Section {
-                Link(destination: 🗒️StaticInfo.webRepositoryURL) {
+                Button {
+                    self.openURL(🗒️StaticInfo.webRepositoryURL)
+                } label: {
                     LabeledContent {
                         Image(systemName: "arrow.up.forward.app")
                     } label: {
@@ -275,7 +280,9 @@ private struct 📓SourceCodeLink: View {
                 Text(verbatim: "\(🗒️StaticInfo.webRepositoryURL)")
             }
             Section {
-                Link(destination: 🗒️StaticInfo.webMirrorRepositoryURL) {
+                Button {
+                    self.openURL(🗒️StaticInfo.webMirrorRepositoryURL)
+                } label: {
                     LabeledContent {
                         Image(systemName: "arrow.up.forward.app")
                     } label: {
@@ -408,6 +415,68 @@ private struct 🧑‍💻AboutDeveloperPublisherLink: View {
             }
             .padding(12)
             .frame(maxWidth: .infinity)
+        }
+    }
+}
+
+private struct 📧FeedbackLink: View {
+    var body: some View {
+        Section {
+            NavigationLink {
+                Self.Destination()
+            } label: {
+                Label(String(localized: "Feedback", table: "🌐AboutApp"),
+                      systemImage: "envelope")
+            }
+        }
+    }
+    private struct Destination: View {
+        @State private var copied: Bool = false
+        @Environment(\.openURL) var openURL
+        var body: some View {
+            List {
+                Section {
+                    Button {
+                        var ⓤrlString = "mailto:" + 🗒️StaticInfo.contactAddress
+                        ⓤrlString += "?subject="
+                        let ⓣitle = String(localized: 🗒️StaticInfo.appName)
+                        ⓤrlString += ⓣitle
+                        ⓤrlString += String(localized: " feedback", table: "🌐AboutApp")
+                        ⓤrlString += "&body="
+                        ⓤrlString += String(localized: "(Input here)", table: "🌐AboutApp")
+                        self.openURL(.init(string: ⓤrlString)!)
+                    } label: {
+                        Label(String(localized: "Feedback from mail app", table: "🌐AboutApp"),
+                              systemImage: "envelope")
+                        .badge(Text(Image(systemName: "arrow.up.forward.app")))
+                    }
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Text(🗒️StaticInfo.contactAddress)
+                                .textSelection(.enabled)
+                                .italic()
+                            Spacer()
+                        }
+                        Button(String(localized: "Copy", table: "🌐AboutApp")) {
+                            UIPasteboard.general.string = 🗒️StaticInfo.contactAddress
+                            withAnimation { self.copied = true }
+                        }
+                        .opacity(self.copied ? 0.3 : 1)
+                        .buttonStyle(.bordered)
+                        .overlay {
+                            if self.copied {
+                                Image(systemName: "checkmark")
+                                    .bold()
+                            }
+                        }
+                    }
+                    .padding(.vertical)
+                } footer: {
+                    Text("bug report, feature request, impression...", tableName: "🌐AboutApp")
+                }
+            }
+            .navigationBarTitle(String(localized: "Feedback", table: "🌐AboutApp"))
         }
     }
 }

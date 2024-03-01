@@ -1,6 +1,26 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    " feedback" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " フィードバック"
+          }
+        }
+      }
+    },
+    "(Input here)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(ここに入力してください)"
+          }
+        }
+      }
+    },
     "(Mirror)" : {
       "localizations" : {
         "en" : {
@@ -114,6 +134,16 @@
         }
       }
     },
+    "bug report, feature request, impression..." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不具合レポート、機能リクエスト、感想など"
+          }
+        }
+      }
+    },
     "builded on %@" : {
       "localizations" : {
         "en" : {
@@ -126,6 +156,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ にビルドしました"
+          }
+        }
+      }
+    },
+    "Copy" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コピー"
           }
         }
       }
@@ -174,6 +214,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開発 / パブリッシャー"
+          }
+        }
+      }
+    },
+    "Feedback" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フィードバック"
+          }
+        }
+      }
+    },
+    "Feedback from mail app" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「メール」アプリからフィードバックを送る"
           }
         }
       }
