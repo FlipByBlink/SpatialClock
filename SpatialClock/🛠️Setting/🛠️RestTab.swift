@@ -2,6 +2,7 @@ import SwiftUI
 
 struct 🛠️RestTab: View {
     @EnvironmentObject var model: 🥽AppModel
+    @Environment(\.openWindow) var openWindow
     var body: some View {
         NavigationStack {
             List {
@@ -32,6 +33,11 @@ struct 🛠️RestTab: View {
                     }
                 } header: {
                     Text("Reserve direct-touch")
+                }
+                Button {
+                    self.openWindow(id: "clock")
+                } label: {
+                    Label("Open clock window", systemImage: "clock.fill")
                 }
             }
             .navigationTitle("Rest setting")
