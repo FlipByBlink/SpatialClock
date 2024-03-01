@@ -7,7 +7,7 @@ enum 🗒️StaticInfo {
     static let appStoreProductURL: URL = .init(string: "https://apps.apple.com/app/id6476141176")!
     static var appStoreUserReviewURL: URL { .init(string: "\(Self.appStoreProductURL)?action=write-review")! }
     
-    static var contactAddress: String { "sear_pandora_0x@icloud.com" }
+    static var contactAddress: String { "seemly-blanker-0b@icloud.com" }
     
     static let privacyPolicyDescription = """
         2024-02-02
