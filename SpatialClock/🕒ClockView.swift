@@ -29,6 +29,7 @@ struct 🕒ClockView: View {
         .offset(z: self.model.presentSettingButton ? -100 : 0)
         .onTapGesture(count: self.model.tapCountForSettingButton) { self.showSettingButton() }
         .task { self.handleFirstLaunch() }
+        .onDisappear { self.model.presentedClockWindow = false }
     }
 }
 

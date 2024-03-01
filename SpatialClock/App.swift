@@ -4,7 +4,7 @@ import SwiftUI
 struct SpatialClockApp: App {
     @StateObject private var model: 🥽AppModel = .init()
     var body: some Scene {
-        WindowGroup {
+        WindowGroup(id: "clock") {
             ContentView()
                 .environmentObject(self.model)
                 .frame(depth: 300)
