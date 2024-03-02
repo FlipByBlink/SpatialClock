@@ -36,7 +36,21 @@
       }
     },
     "1.1.1" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- Fixed a bug that prevents the clock window from being reopened if it is closed while the settings window is displayed.\n- Fixed small bugs."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "・設定ウインドウを表示中に時計ウインドウを閉じると時計ウインドウを開けなくなるバグを修正\n・軽微なバグの修正"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

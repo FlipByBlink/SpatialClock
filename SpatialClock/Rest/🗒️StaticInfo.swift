@@ -28,7 +28,7 @@ enum 🗒️StaticInfo {
 }
 
 extension 🗒️StaticInfo {
-    static let versionInfos: [(version: String, date: String)] = [("1.1.1", "2024-03-01"),
+    static let versionInfos: [(version: String, date: String)] = [("1.1.1", "2024-03-02"),
                                                                   ("1.1", "2024-02-14"),
                                                                   ("1.0", "2024-02-02")] //降順。先頭の方が新しい
     
