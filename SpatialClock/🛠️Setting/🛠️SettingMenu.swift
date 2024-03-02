@@ -9,6 +9,7 @@ struct 🛠️SettingMenu: View {
             🛠️RestTab()
             🛠️TipsTab()
             🛠️AboutTab()
+            🛠️RequestTab()
         }
         .frame(width: 520, height: 600)
     }

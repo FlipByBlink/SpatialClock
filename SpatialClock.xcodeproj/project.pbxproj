@@ -13,6 +13,7 @@
 		160786DC2B5526BA00E2B2CA /* 🛠️SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160786DB2B5526BA00E2B2CA /* 🛠️SettingButton.swift */; };
 		16267B462B578836000CA8AD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 16267B452B578836000CA8AD /* Localizable.xcstrings */; };
 		16267B552B57D496000CA8AD /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 16267B542B57D496000CA8AD /* InfoPlist.xcstrings */; };
+		16359E292B931EE5004CC792 /* 🛠️RequestTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16359E282B931EE4004CC792 /* 🛠️RequestTab.swift */; };
 		164C77FB2B565D6C008FF872 /* 🛠️TipsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C77FA2B565D6C008FF872 /* 🛠️TipsTab.swift */; };
 		164C77FF2B565DFC008FF872 /* 🛠️ClockTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */; };
 		164C78012B565E0A008FF872 /* 🛠️VisualTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */; };
@@ -87,6 +88,7 @@
 		16267B482B5788AB000CA8AD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		16267B4A2B5791FB000CA8AD /* appstore_badge.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = appstore_badge.svg; sourceTree = "<group>"; };
 		16267B542B57D496000CA8AD /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		16359E282B931EE4004CC792 /* 🛠️RequestTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️RequestTab.swift"; sourceTree = "<group>"; };
 		164C77FA2B565D6C008FF872 /* 🛠️TipsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️TipsTab.swift"; sourceTree = "<group>"; };
 		164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️ClockTab.swift"; sourceTree = "<group>"; };
 		164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️VisualTab.swift"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				16891EB22B7AF43600C6F0B3 /* 🛠️RestTab.swift */,
 				164C77FA2B565D6C008FF872 /* 🛠️TipsTab.swift */,
 				16891EC42B7B0A8300C6F0B3 /* 🛠️AboutTab.swift */,
+				16359E282B931EE4004CC792 /* 🛠️RequestTab.swift */,
 			);
 			path = "🛠️Tabs";
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				160786D82B5512EB00E2B2CA /* 🥽AppModel.swift in Sources */,
 				16F828702B560FBB00A29476 /* 💾Option.swift in Sources */,
 				160786DC2B5526BA00E2B2CA /* 🛠️SettingButton.swift in Sources */,
+				16359E292B931EE5004CC792 /* 🛠️RequestTab.swift in Sources */,
 				16F8286E2B560D8700A29476 /* 💾Key.swift in Sources */,
 				164C77FF2B565DFC008FF872 /* 🛠️ClockTab.swift in Sources */,
 			);

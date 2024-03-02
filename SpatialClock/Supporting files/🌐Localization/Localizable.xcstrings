@@ -31,6 +31,16 @@
         }
       }
     },
+    "App Store\nreview\nPLEASE!!!" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Storeで\nレビュー\nしてください！"
+          }
+        }
+      }
+    },
     "Battery" : {
       "localizations" : {
         "ja" : {
@@ -147,6 +157,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apple Vision Pro 向け"
+          }
+        }
+      }
+    },
+    "Go to App Store" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Storeに移動"
           }
         }
       }
@@ -287,6 +307,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "レギュラー"
+          }
+        }
+      }
+    },
+    "Request" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お願い"
           }
         }
       }
