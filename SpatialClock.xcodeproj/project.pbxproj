@@ -303,7 +303,6 @@
 				uk,
 				es,
 				id,
-				ar,
 				"pt-BR",
 				"pt-PT",
 				"es-419",
