@@ -51,6 +51,17 @@
           }
         }
       }
+    },
+    "1.2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add localization for few key words (Date text, Time text, \"Clock\", \"Setting\")"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
