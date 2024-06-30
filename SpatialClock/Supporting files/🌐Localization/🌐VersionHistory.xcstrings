@@ -60,6 +60,12 @@
             "state" : "translated",
             "value" : "Add localization for few key words (Date text, Time text, \"Clock\", \"Setting\")"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "いくつかの重要単語に対してローカライゼーションを追加\n(日付テキスト、時刻テキスト、\"時計\"、\"設定\")"
+          }
         }
       }
     }
