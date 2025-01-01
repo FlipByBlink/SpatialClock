@@ -79,6 +79,16 @@ enum 💾Option {
             }
         }
     }
+    enum Layout: String, CaseIterable, Identifiable {
+        case left, right
+        var id: Self { self }
+        var label: LocalizedStringKey {
+            switch self {
+                case .left: "left"
+                case .right: "right"
+            }
+        }
+    }
     static func load() -> Color {
         if let ⓓata = UserDefaults.standard.data(forKey: 💾Key.textColor),
            let ⓜodel = try? JSONDecoder().decode(Self.ColorModel.self, from: ⓓata) {

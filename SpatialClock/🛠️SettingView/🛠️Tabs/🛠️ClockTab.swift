@@ -32,7 +32,7 @@ struct 🛠️ClockTab: View {
             .navigationTitle("Clock setting")
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    if self.model.closedClockWindow {
+                    if self.model.isClosedClockWindow {
                         Button {
                             self.openWindow(id: "clock")
                         } label: {

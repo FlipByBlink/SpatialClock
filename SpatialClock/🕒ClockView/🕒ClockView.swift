@@ -7,15 +7,11 @@ struct 🕒ClockView: View {
     var body: some View {
         TimelineView(.periodic(from: .now, by: 1)) { context in
             HStack(spacing: 0) {
-                Text(context.date.formatted(self.format))
-                    .font(.system(size: .init(self.model.fontSize),
-                                  weight: self.model.fontWeight.value,
-                                  design: self.model.fontDesign.value))
-                    .monospacedDigit()
-                    .lineLimit(1)
-                    .fixedSize()
-                if self.model.showBattery { 🔋BatteryView() }
+                🔋BatteryView(.left)
+                🕒ClockText(date: context.date)
+                🔋BatteryView(.right)
             }
+            .environment(\.layoutDirection, .leftToRight)
             .modifier(💾Option.Animation(value: context.date))
             .foregroundStyle(self.model.textColor)
             .padding(.horizontal)
@@ -28,38 +24,22 @@ struct 🕒ClockView: View {
         .modifier(Self.ApplyAnimation())
         .onTapGesture(count: self.model.tapCountForSettingButton) { self.showSettingButton() }
         .task { self.handleFirstLaunch() }
-        .onDisappear { self.model.closedClockWindow = true }
+        .onDisappear { self.model.isClosedClockWindow = true }
     }
 }
 
 private extension 🕒ClockView {
-    private var format: Date.FormatStyle {
-        var value: Date.FormatStyle = .dateTime.hour().minute()
-        if !self.model.hideDate {
-            value = value.month().day()
-            if self.model.showYear {
-                value = value.year()
-            }
-            if !self.model.hideWeekday {
-                value = value.weekday()
-            }
-        }
-        if self.model.showSecond {
-            value = value.second()
-        }
-        return value
-    }
     private func showSettingButton() {
-        if !self.model.presentSettingButton {
-            withAnimation { self.model.presentSettingButton = true }
+        if !self.model.isPresentedSettingButton {
+            withAnimation { self.model.isPresentedSettingButton = true }
             self.taskToDisappearSettingButton = Task {
                 try? await Task.sleep(for: .seconds(4.5))
                 withAnimation(.default.speed(0.4)) {
-                    self.model.presentSettingButton = false
+                    self.model.isPresentedSettingButton = false
                 }
             }
         } else {
-            withAnimation { self.model.presentSettingButton = false }
+            withAnimation { self.model.isPresentedSettingButton = false }
             self.taskToDisappearSettingButton?.cancel()
             self.taskToDisappearSettingButton = nil
         }

@@ -15,4 +15,7 @@ enum 💾Key {
     static let tapCountForOpenSettingButton: String = "tapCountForSettingButton"
     static let showBattery: String = "showBattery"
     static let showBatteryNumber: String = "showBatteryNumber"
+    static let customizeDateTimeLayout: String = "customizeDateTimeLayout"
+    static let datePosition: String = "datePosition"
+    static let batteryPosition: String = "batteryPosition"
 }

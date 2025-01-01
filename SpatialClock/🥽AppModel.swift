@@ -1,8 +1,8 @@
 import SwiftUI
 
 class 🥽AppModel: ObservableObject {
-    @Published var presentSettingButton: Bool = false
-    @Published var closedClockWindow: Bool = false
+    @Published var isPresentedSettingButton: Bool = false
+    @Published var isClosedClockWindow: Bool = false
     @AppStorage(💾Key.showYear) var showYear: Bool = false
     @AppStorage(💾Key.hideWeekday) var hideWeekday: Bool = false
     @AppStorage(💾Key.hideDate) var hideDate: Bool = false
@@ -19,4 +19,7 @@ class 🥽AppModel: ObservableObject {
     @AppStorage(💾Key.showBattery) var showBattery: Bool = false
     @AppStorage(💾Key.showBatteryNumber) var showBatteryNumber: Bool = false
     @AppStorage(💾Key.tapCountForOpenSettingButton) var tapCountForSettingButton: Int = 1
+    @AppStorage(💾Key.customizeDateTimeLayout) var customizeDateTimeLayout: Bool = false
+    @AppStorage(💾Key.datePosition) var datePosition: 💾Option.Layout = .left
+    @AppStorage(💾Key.batteryPosition) var batteryPosition: 💾Option.Layout = .right
 }

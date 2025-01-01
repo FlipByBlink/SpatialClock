@@ -5,7 +5,7 @@ struct ContentView: View {
     var body: some View {
         🕒ClockView()
             .ornament(
-                visibility: self.model.presentSettingButton ? .visible : .hidden,
+                visibility: self.model.isPresentedSettingButton ? .visible : .hidden,
                 attachmentAnchor: .scene(.bottom)
             ) {
                 🛠️SettingButton()

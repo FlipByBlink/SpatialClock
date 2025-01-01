@@ -8,7 +8,7 @@ struct 🛠️SettingButton: View {
         Button {
             self.openWindow(id: "setting")
             withAnimation {
-                self.model.presentSettingButton = false
+                self.model.isPresentedSettingButton = false
             }
         } label: {
             HStack(spacing: 16) {
@@ -23,8 +23,11 @@ struct 🛠️SettingButton: View {
         .padding(.top)
         .onChange(of: self.scenePhase) { _, newValue in
             switch newValue {
-                case .inactive, .background: self.model.presentSettingButton = false
-                default: break
+                case .inactive,
+                        .background:
+                    self.model.isPresentedSettingButton = false
+                default:
+                    break
             }
         }
     }

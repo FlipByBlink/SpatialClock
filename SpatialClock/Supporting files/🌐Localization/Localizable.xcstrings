@@ -42,6 +42,7 @@
       }
     },
     "Battery" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -50,6 +51,9 @@
           }
         }
       }
+    },
+    "Battery level" : {
+
     },
     "black" : {
       "localizations" : {
@@ -257,6 +261,15 @@
         }
       }
     },
+    "Customize Date&Time layout" : {
+
+    },
+    "Date position" : {
+
+    },
+    "Date&Time layout" : {
+
+    },
     "default" : {
       "localizations" : {
         "ja" : {
@@ -266,6 +279,9 @@
           }
         }
       }
+    },
+    "Direct-touch reservation" : {
+
     },
     "disable" : {
       "localizations" : {
@@ -386,6 +402,9 @@
           }
         }
       }
+    },
+    "left" : {
+
     },
     "light" : {
       "localizations" : {
@@ -535,6 +554,9 @@
         }
       }
     },
+    "Position" : {
+
+    },
     "regular" : {
       "localizations" : {
         "ja" : {
@@ -556,6 +578,7 @@
       }
     },
     "Reserve direct-touch" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -584,6 +607,12 @@
           }
         }
       }
+    },
+    "Restore clock window" : {
+
+    },
+    "right" : {
+
     },
     "rounded" : {
       "localizations" : {
