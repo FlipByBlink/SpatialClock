@@ -4,7 +4,14 @@ struct ContentView: View {
     @EnvironmentObject var model: 🥽AppModel
     var body: some View {
         🕒ClockView()
-            .overlay(alignment: .bottom) { 🛠️SettingButton() }
+            .ornament(
+                visibility: self.model.presentSettingButton ? .visible : .hidden,
+                attachmentAnchor: .scene(.bottom)
+            ) {
+                🛠️SettingButton()
+            }
+            .volumeBaseplateVisibility(.hidden)
+            .supportedVolumeViewpoints(.front)
             .persistentSystemOverlays(.hidden)
     }
 }

@@ -11,18 +11,16 @@ struct 🛠️SettingButton: View {
                 self.model.presentSettingButton = false
             }
         } label: {
-            HStack(spacing: 20) {
+            HStack(spacing: 16) {
                 Image(systemName: "gearshape")
                 Text("Open setting")
             }
-            .font(.system(size: 42, weight: .semibold))
-            .padding(.horizontal, 4)
-            .padding(24)
-            .fixedSize()
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+            .glassBackgroundEffect()
         }
-        .glassBackgroundEffect()
-        .offset(z: self.model.presentSettingButton ? 50 : 0)
-        .opacity(self.model.presentSettingButton ? 1 : 0)
+        .buttonStyle(.plain)
+        .padding(.top)
         .onChange(of: self.scenePhase) { _, newValue in
             switch newValue {
                 case .inactive, .background: self.model.presentSettingButton = false

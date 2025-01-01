@@ -10,13 +10,16 @@ struct SpatialClockApp: App {
                 .frame(depth: 300)
         }
         .defaultSize(width: 800, height: 300, depth: 300)
-        .windowResizability(.contentMinSize)
+        .windowResizability(.contentSize)
+        .volumeWorldAlignment(.gravityAligned)
         .windowStyle(.volumetric)
+        
         WindowGroup(id: "setting") {
             🛠️SettingMenu()
                 .environmentObject(self.model)
         }
         .defaultSize(width: 520, height: 600)
         .windowResizability(.contentSize)
+        .defaultWindowPlacement { _, _ in .init(.utilityPanel) }
     }
 }
