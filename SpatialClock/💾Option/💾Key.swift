@@ -17,5 +17,7 @@ enum 💾Key {
     static let showBatteryNumber: String = "showBatteryNumber"
     static let customizeDateTimeLayout: String = "customizeDateTimeLayout"
     static let datePosition: String = "datePosition"
+    static let spaceBetweenDateAndTime: String = "spaceBetweenDateAndTime"
     static let batteryPosition: String = "batteryPosition"
+    static let spaceBetweenClockAndBattery: String = "spaceBetweenClockAndBattery"
 }

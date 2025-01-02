@@ -15,11 +15,13 @@ struct 🛠️SettingButton: View {
                 Image(systemName: "gearshape")
                 Text("Open setting")
             }
-            .padding(.horizontal)
-            .padding(.vertical, 8)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
             .glassBackgroundEffect()
         }
         .buttonStyle(.plain)
+        .disabled(!self.model.isPresentedSettingButton)
+        .opacity(self.model.isPresentedSettingButton ? 1 : 0)
         .padding(.top)
         .onChange(of: self.scenePhase) { _, newValue in
             switch newValue {

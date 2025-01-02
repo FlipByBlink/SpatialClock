@@ -111,9 +111,13 @@ private extension 💾Option {
     private struct ColorModel: Codable {
         var r, g, b: Double
         var value: Color { .init(red: self.r, green: self.g, blue: self.b) }
-        init(_ ⓢwiftUIColor: Color) {
-            if let ⓒolor = ⓢwiftUIColor.cgColor?.components {
-                (self.r, self.g, self.b) = (.init(ⓒolor[0]), .init(ⓒolor[1]), .init(ⓒolor[2]))
+        init(_ swiftUIColor: Color) {
+            if let components = swiftUIColor.cgColor?.components {
+                (self.r,
+                 self.g,
+                 self.b) = (.init(components[0]),
+                            .init(components[1]),
+                            .init(components[2]))
             } else {
                 (self.r, self.g, self.b) = (0, 0, 0)
             }

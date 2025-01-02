@@ -21,5 +21,7 @@ class 🥽AppModel: ObservableObject {
     @AppStorage(💾Key.tapCountForOpenSettingButton) var tapCountForSettingButton: Int = 1
     @AppStorage(💾Key.customizeDateTimeLayout) var customizeDateTimeLayout: Bool = false
     @AppStorage(💾Key.datePosition) var datePosition: 💾Option.Layout = .left
+    @AppStorage(💾Key.spaceBetweenDateAndTime) var spaceBetweenDateAndTime: Int = 0
     @AppStorage(💾Key.batteryPosition) var batteryPosition: 💾Option.Layout = .right
+    @AppStorage(💾Key.spaceBetweenClockAndBattery) var spaceBetweenClockAndBattery: Int = 0
 }

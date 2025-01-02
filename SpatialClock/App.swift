@@ -20,6 +20,8 @@ struct SpatialClockApp: App {
         }
         .defaultSize(width: 520, height: 600)
         .windowResizability(.contentSize)
-        .defaultWindowPlacement { _, _ in .init(.utilityPanel) }
+        .defaultWindowPlacement { _, context in
+            .init(context.windows.compactMap({.below($0)}).first)
+        }
     }
 }

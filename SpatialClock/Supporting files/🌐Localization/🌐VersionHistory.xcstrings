@@ -68,6 +68,17 @@
           }
         }
       }
+    },
+    "1.3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- Add a option to customize layout.\n- Unsupport OS ver 1.x.\n- Small fix."
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

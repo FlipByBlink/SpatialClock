@@ -67,10 +67,14 @@ private extension 🛠️RestTab {
                     """)
                 }
                 Section {
-                    Picker(selection: self.$model.batteryPosition) {
-                        ForEach(💾Option.Layout.allCases) { Text($0.label) }
-                    } label: {
-                        Label("Position", systemImage: "battery.50")
+                    Group {
+                        Picker(selection: self.$model.batteryPosition) {
+                            ForEach(💾Option.Layout.allCases) { Text($0.label) }
+                        } label: {
+                            Label("Position", systemImage: "battery.50")
+                        }
+                        🛠️RestTab.SpacePicekr(value: self.$model.spaceBetweenClockAndBattery,
+                                               kind: .clockBattery)
                     }
                     .disabled(!self.model.showBattery)
                     .opacity(self.model.showBattery ? 1 : 0.6)
@@ -90,22 +94,54 @@ private extension 🛠️RestTab {
                 }
                 .disabled(self.model.hideDate)
                 Section {
-                    Picker(selection: self.$model.datePosition) {
-                        ForEach(💾Option.Layout.allCases) { Text($0.label) }
-                    } label: {
-                        Label("Date position", systemImage: "calendar")
-                            .opacity(self.isDisabledDatePositionPicker ? 0.6 : 1)
-                            .animation(.default, value: self.isDisabledDatePositionPicker)
+                    Group {
+                        Picker(selection: self.$model.datePosition) {
+                            ForEach(💾Option.Layout.allCases) { Text($0.label) }
+                        } label: {
+                            Label("Date position", systemImage: "calendar")
+                        }
+                        🛠️RestTab.SpacePicekr(value: self.$model.spaceBetweenDateAndTime,
+                                               kind: .dateTime)
                     }
-                    .disabled(self.isDisabledDatePositionPicker)
+                    .opacity(self.isSubOptionsDisabled ? 0.6 : 1)
+                    .animation(.default, value: self.isSubOptionsDisabled)
+                    .disabled(self.isSubOptionsDisabled)
                 }
             }
             .navigationTitle("Date&Time layout")
         }
-        private var isDisabledDatePositionPicker: Bool {
+        private var isSubOptionsDisabled: Bool {
             self.model.customizeDateTimeLayout == false
             ||
             self.model.hideDate
+        }
+    }
+    private struct SpacePicekr: View {
+        @Binding var value: Int
+        var kind: Self.Kind
+        var body: some View {
+            Picker(selection: self.$value) {
+                ForEach(-16...16, id: \.self) {
+                    switch $0 {
+                        case ..<0: Text("\($0)")
+                        case 0: Text("0 (default)")
+                        case 1...: Text("+\($0)")
+                        default: fatalError()
+                    }
+                }
+            } label: {
+                Label {
+                    switch self.kind {
+                        case .dateTime: Text("Space between date and time")
+                        case .clockBattery: Text("Space between clock and battery")
+                    }
+                } icon: {
+                    Image(systemName: "space")
+                }
+            }
+        }
+        enum Kind {
+            case dateTime, clockBattery
         }
     }
     private struct DirectTouchReservationMenu: View {

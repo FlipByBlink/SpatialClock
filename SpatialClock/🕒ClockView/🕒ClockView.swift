@@ -8,7 +8,7 @@ struct 🕒ClockView: View {
         TimelineView(.periodic(from: .now, by: 1)) { context in
             HStack(spacing: 0) {
                 🔋BatteryView(.left)
-                🕒ClockText(date: context.date)
+                🔤DateTimeText(context.date)
                 🔋BatteryView(.right)
             }
             .environment(\.layoutDirection, .leftToRight)

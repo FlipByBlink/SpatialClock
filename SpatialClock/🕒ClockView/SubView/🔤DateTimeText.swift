@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct 🕒ClockText: View {
+struct 🔤DateTimeText: View {
     @EnvironmentObject var model: 🥽AppModel
     var date: Date
     var body: some View {
@@ -18,9 +18,12 @@ struct 🕒ClockText: View {
         .lineLimit(1)
         .fixedSize()
     }
+    init(_ date: Date) {
+        self.date = date
+    }
 }
 
-private extension 🕒ClockText {
+private extension 🔤DateTimeText {
     private var defaultString: String {
         Date.FormatStyle
             .dateTime
@@ -34,7 +37,7 @@ private extension 🕒ClockText {
             .format(self.date)
     }
     private func customizeLayoutView() -> some View {
-        HStack(spacing: 10 + (.init(self.model.fontSize) * 0.35)) {
+        HStack(spacing: 10 + (.init(self.model.fontSize) * 0.35) + CGFloat(self.model.spaceBetweenDateAndTime)) {
             self.customizeLayoutDateView(.left)
             Text(
                 Date.FormatStyle

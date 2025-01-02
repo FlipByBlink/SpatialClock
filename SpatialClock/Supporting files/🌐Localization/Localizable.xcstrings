@@ -1,6 +1,15 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld" : {
+
+    },
+    "+%lld" : {
+
+    },
+    "0 (default)" : {
+
+    },
     "About" : {
       "localizations" : {
         "ja" : {
@@ -608,7 +617,7 @@
         }
       }
     },
-    "Restore clock window" : {
+    "Restore window" : {
 
     },
     "right" : {
@@ -683,6 +692,12 @@
           }
         }
       }
+    },
+    "Space between clock and battery" : {
+
+    },
+    "Space between date and time" : {
+
     },
     "SpatialClock" : {
       "localizations" : {
