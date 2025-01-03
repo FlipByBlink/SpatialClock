@@ -1,14 +1,15 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%lld" : {
-
-    },
-    "+%lld" : {
-
-    },
     "0 (default)" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0 (デフォルト)"
+          }
+        }
+      }
     },
     "About" : {
       "localizations" : {
@@ -50,19 +51,15 @@
         }
       }
     },
-    "Battery" : {
-      "extractionState" : "stale",
+    "Battery level" : {
       "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "バッテリー"
+            "value" : "バッテリー残量"
           }
         }
       }
-    },
-    "Battery level" : {
-
     },
     "black" : {
       "localizations" : {
@@ -271,13 +268,34 @@
       }
     },
     "Customize Date&Time layout" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日時レイアウトをカスタマイズ"
+          }
+        }
+      }
     },
     "Date position" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日付の位置"
+          }
+        }
+      }
     },
     "Date&Time layout" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日時レイアウト"
+          }
+        }
+      }
     },
     "default" : {
       "localizations" : {
@@ -290,7 +308,14 @@
       }
     },
     "Direct-touch reservation" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダイレクトタッチの抑制"
+          }
+        }
+      }
     },
     "disable" : {
       "localizations" : {
@@ -413,7 +438,14 @@
       }
     },
     "left" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左"
+          }
+        }
+      }
     },
     "light" : {
       "localizations" : {
@@ -564,7 +596,14 @@
       }
     },
     "Position" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "位置"
+          }
+        }
+      }
     },
     "regular" : {
       "localizations" : {
@@ -582,17 +621,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "お願い"
-          }
-        }
-      }
-    },
-    "Reserve direct-touch" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ダイレクトタッチを抑制"
           }
         }
       }
@@ -618,10 +646,24 @@
       }
     },
     "Restore window" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウインドウを復元"
+          }
+        }
+      }
     },
     "right" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右"
+          }
+        }
+      }
     },
     "rounded" : {
       "localizations" : {
@@ -694,10 +736,24 @@
       }
     },
     "Space between clock and battery" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日時とバッテリー間のスペース"
+          }
+        }
+      }
     },
     "Space between date and time" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日付と時刻間のスペース"
+          }
+        }
+      }
     },
     "SpatialClock" : {
       "localizations" : {

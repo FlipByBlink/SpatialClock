@@ -48,6 +48,7 @@
 		16C4CE452B550684002260A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C4CE442B550684002260A6 /* Assets.xcassets */; };
 		16F8286E2B560D8700A29476 /* 💾Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8286D2B560D8700A29476 /* 💾Key.swift */; };
 		16F828702B560FBB00A29476 /* 💾Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8286F2B560FBB00A29476 /* 💾Option.swift */; };
+		1D98A0DF2D27A21300E5913A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1D98A0DE2D27A21300E5913A /* PrivacyInfo.xcprivacy */; };
 		1DA1976E2D25487D004F2885 /* 🔤DateTimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1976D2D25484A004F2885 /* 🔤DateTimeText.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +116,7 @@
 		16D833112B7C473300409943 /* 5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpeg; sourceTree = "<group>"; };
 		16F8286D2B560D8700A29476 /* 💾Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "💾Key.swift"; sourceTree = "<group>"; };
 		16F8286F2B560FBB00A29476 /* 💾Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "💾Option.swift"; sourceTree = "<group>"; };
+		1D98A0DE2D27A21300E5913A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		1DA1976D2D25484A004F2885 /* 🔤DateTimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🔤DateTimeText.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				16C4CE492B550684002260A6 /* Info.plist */,
+				1D98A0DE2D27A21300E5913A /* PrivacyInfo.xcprivacy */,
 				16891EBF2B7B0A0500C6F0B3 /* Assets */,
 				16891EBA2B7B09A500C6F0B3 /* 🌐Localization */,
 				16267B492B578919000CA8AD /* README assets */,
@@ -344,6 +347,7 @@
 				16891EBE2B7B09B600C6F0B3 /* 🌐Timeline.xcstrings in Resources */,
 				16891EC32B7B0A2600C6F0B3 /* 🌐VersionHistory.xcstrings in Resources */,
 				16891EBD2B7B09B600C6F0B3 /* 🌐AboutApp.xcstrings in Resources */,
+				1D98A0DF2D27A21300E5913A /* PrivacyInfo.xcprivacy in Resources */,
 				16267B552B57D496000CA8AD /* InfoPlist.xcstrings in Resources */,
 				16267B462B578836000CA8AD /* Localizable.xcstrings in Resources */,
 				16891EC22B7B0A2600C6F0B3 /* 🌐AppStoreDescription.xcstrings in Resources */,

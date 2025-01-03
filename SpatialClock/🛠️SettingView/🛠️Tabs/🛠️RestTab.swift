@@ -123,9 +123,9 @@ private extension 🛠️RestTab {
             Picker(selection: self.$value) {
                 ForEach(-16...16, id: \.self) {
                     switch $0 {
-                        case ..<0: Text("\($0)")
+                        case ..<0: Text(verbatim: "\($0)")
                         case 0: Text("0 (default)")
-                        case 1...: Text("+\($0)")
+                        case 1...: Text(verbatim: "+\($0)")
                         default: fatalError()
                     }
                 }
