@@ -29,13 +29,15 @@ struct 🛠️VisualTab: View {
                     Label("Font design", systemImage: "paintbrush.pointed")
                 }
                 Self.TextColorPicker()
-                Stepper(value: self.$model.opacity, in: 0.5 ... 1.0, step: 0.1) {
-                    LabeledContent {
+                LabeledContent {
+                    HStack {
                         Text(self.model.opacity.formatted())
                             .monospacedDigit()
-                    } label: {
-                        Label("Opacity", systemImage: "camera.filters")
+                        Stepper("Opacity", value: self.$model.opacity, in: 0.5 ... 1.0, step: 0.1)
+                            .labelsHidden()
                     }
+                } label: {
+                    Label("Opacity", systemImage: "camera.filters")
                 }
                 Picker(selection: self.$model.angle) {
                     ForEach(-90 ... 90, id: \.self) {
@@ -62,7 +64,7 @@ struct 🛠️VisualTab: View {
                         }
                     } label: {
                         Label("Padding size", systemImage: "calendar")
-                            .opacity(self.model.hideBackground ? 0.6 : 1)
+                            .opacity(self.model.hideBackground ? 0.8 : 1)
                             .animation(.default, value: self.model.hideBackground)
                     }
                     .disabled(self.model.hideBackground)

@@ -58,7 +58,7 @@ private extension 🛠️RestTab {
                         Label("Show percent number", systemImage: "percent")
                     }
                     .disabled(!self.model.showBattery)
-                    .opacity(self.model.showBattery ? 1 : 0.6)
+                    .opacity(self.model.showBattery ? 1 : 0.8)
                     .animation(.default, value: self.model.showBattery)
                 } footer: {
                     Text("""
@@ -67,19 +67,20 @@ private extension 🛠️RestTab {
                     """)
                 }
                 Section {
-                    Group {
-                        Picker(selection: self.$model.batteryPosition) {
-                            ForEach(💾Option.Layout.allCases) { Text($0.label) }
-                        } label: {
-                            Label("Position", systemImage: "battery.50")
-                        }
-                        🛠️RestTab.SpacePicekr(value: self.$model.spaceBetweenClockAndBattery,
-                                               kind: .clockBattery)
+                    Picker(selection: self.$model.batteryPosition) {
+                        ForEach(💾Option.Layout.allCases) { Text($0.label) }
+                    } label: {
+                        Label("Position", systemImage: "battery.50")
                     }
                     .disabled(!self.model.showBattery)
-                    .opacity(self.model.showBattery ? 1 : 0.6)
+                    .opacity(self.model.showBattery ? 1 : 0.8)
                     .animation(.default, value: self.model.showBattery)
                 }
+                🛠️RestTab.SpacePicekr(value: self.$model.spaceBetweenClockAndBattery,
+                                       kind: .clockBattery)
+                .disabled(!self.model.showBattery)
+                .opacity(self.model.showBattery ? 1 : 0.8)
+                .animation(.default, value: self.model.showBattery)
             }
             .navigationTitle("Battery level")
         }
@@ -94,19 +95,20 @@ private extension 🛠️RestTab {
                 }
                 .disabled(self.model.hideDate)
                 Section {
-                    Group {
-                        Picker(selection: self.$model.datePosition) {
-                            ForEach(💾Option.Layout.allCases) { Text($0.label) }
-                        } label: {
-                            Label("Date position", systemImage: "calendar")
-                        }
-                        🛠️RestTab.SpacePicekr(value: self.$model.spaceBetweenDateAndTime,
-                                               kind: .dateTime)
+                    Picker(selection: self.$model.datePosition) {
+                        ForEach(💾Option.Layout.allCases) { Text($0.label) }
+                    } label: {
+                        Label("Date position", systemImage: "calendar")
                     }
-                    .opacity(self.isSubOptionsDisabled ? 0.6 : 1)
+                    .opacity(self.isSubOptionsDisabled ? 0.8 : 1)
                     .animation(.default, value: self.isSubOptionsDisabled)
                     .disabled(self.isSubOptionsDisabled)
                 }
+                🛠️RestTab.SpacePicekr(value: self.$model.spaceBetweenDateAndTime,
+                                       kind: .dateTime)
+                .opacity(self.isSubOptionsDisabled ? 0.8 : 1)
+                .animation(.default, value: self.isSubOptionsDisabled)
+                .disabled(self.isSubOptionsDisabled)
             }
             .navigationTitle("Date&Time layout")
         }
@@ -120,24 +122,28 @@ private extension 🛠️RestTab {
         @Binding var value: Int
         var kind: Self.Kind
         var body: some View {
-            Picker(selection: self.$value) {
-                ForEach(-16...16, id: \.self) {
-                    switch $0 {
-                        case ..<0: Text(verbatim: "\($0)")
-                        case 0: Text("0 (default)")
-                        case 1...: Text(verbatim: "+\($0)")
-                        default: fatalError()
+            Section {
+                Picker(selection: self.$value) {
+                    ForEach(-16...16, id: \.self) {
+                        switch $0 {
+                            case ..<0: Text(verbatim: "\($0)")
+                            case 0: Text("0 (default)")
+                            case 1...: Text(verbatim: "+\($0)")
+                            default: fatalError()
+                        }
+                    }
+                } label: {
+                    Label {
+                        switch self.kind {
+                            case .dateTime: Text("Space between date and time")
+                            case .clockBattery: Text("Space between clock and battery")
+                        }
+                    } icon: {
+                        Image(systemName: "space")
                     }
                 }
-            } label: {
-                Label {
-                    switch self.kind {
-                        case .dateTime: Text("Space between date and time")
-                        case .clockBattery: Text("Space between clock and battery")
-                    }
-                } icon: {
-                    Image(systemName: "space")
-                }
+            } footer: {
+                Text("Unit: point")
             }
         }
         enum Kind {
@@ -148,15 +154,16 @@ private extension 🛠️RestTab {
         @EnvironmentObject var model: 🥽AppModel
         var body: some View {
             List {
-                Section {
-                    Stepper(value: self.$model.tapCountForSettingButton, in: 1...4) {
-                        LabeledContent {
-                            Text(self.model.tapCountForSettingButton.formatted())
-                        } label: {
-                            Label(#"Tap count for "Open setting" button"#,
-                                  systemImage: "hand.tap")
-                        }
+                LabeledContent {
+                    HStack {
+                        Text(self.model.tapCountForSettingButton.formatted())
+                            .monospacedDigit()
+                        Stepper("Count", value: self.$model.tapCountForSettingButton, in: 1...4)
+                            .labelsHidden()
                     }
+                } label: {
+                    Label(#"Tap count for "Open setting" button"#,
+                          systemImage: "hand.tap")
                 }
             }
             .navigationTitle("Direct-touch reservation")

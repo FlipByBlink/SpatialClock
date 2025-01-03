@@ -27,7 +27,7 @@ struct 🔋BatteryView: View {
                 }
             }
             .padding(self.position == .right ? .leading : .trailing,
-                     10 + (.init(self.model.fontSize) * 0.35) + CGFloat(self.model.spaceBetweenClockAndBattery))
+                     💾Option.space(self.model.fontSize, self.model.spaceBetweenClockAndBattery))
         }
     }
     init(_ position: 💾Option.Layout) {

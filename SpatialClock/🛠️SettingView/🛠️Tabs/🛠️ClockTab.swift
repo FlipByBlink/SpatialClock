@@ -13,11 +13,11 @@ struct 🛠️ClockTab: View {
                     Group {
                         Toggle(isOn: self.$model.showYear) {
                             Label("Show year", systemImage: "calendar.circle")
-                                .opacity(self.model.hideDate ? 0.6 : 1)
+                                .opacity(self.model.hideDate ? 0.8 : 1)
                         }
                         Toggle(isOn: self.$model.hideWeekday) {
                             Label("Hide weekday", systemImage: "calendar.circle.fill")
-                                .opacity(self.model.hideDate ? 0.6 : 1)
+                                .opacity(self.model.hideDate ? 0.8 : 1)
                         }
                     }
                     .disabled(self.model.hideDate)

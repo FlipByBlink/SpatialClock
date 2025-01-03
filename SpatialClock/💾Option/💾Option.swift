@@ -89,6 +89,9 @@ enum 💾Option {
             }
         }
     }
+    static func space(_ fontSize: Int, _ adjustment: Int) -> CGFloat {
+        10 + (CGFloat(fontSize) * 0.35) + CGFloat(adjustment)
+    }
     static func load() -> Color {
         if let ⓓata = UserDefaults.standard.data(forKey: 💾Key.textColor),
            let ⓜodel = try? JSONDecoder().decode(Self.ColorModel.self, from: ⓓata) {

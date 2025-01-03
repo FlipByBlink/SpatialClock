@@ -267,6 +267,16 @@
         }
       }
     },
+    "Count" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回数"
+          }
+        }
+      }
+    },
     "Customize Date&Time layout" : {
       "localizations" : {
         "ja" : {
@@ -831,6 +841,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ウルトラライト"
+          }
+        }
+      }
+    },
+    "Unit: point" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "単位: ポイント"
           }
         }
       }
