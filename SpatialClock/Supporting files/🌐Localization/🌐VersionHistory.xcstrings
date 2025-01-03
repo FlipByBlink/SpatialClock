@@ -75,7 +75,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "- Add a option to customize layout.\n- Unsupport OS ver 1.x.\n- Small fix."
+            "value" : "- Add options to customize layout.\n    - Date&Time order.\n    - Clock&Battery order.\n    - Space between Date/Time/Battery.\n- Unsupport OS ver 1.x.\n- Small fix."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "・レイアウト調整機能を追加しました。\n　・日付/時刻の並び順。\n　・時計/バッテリーの並び順。\n　・各UIの空白間隔。\n・OS 1.xを非対応にしました。\n・軽微な修正。"
           }
         }
       }
