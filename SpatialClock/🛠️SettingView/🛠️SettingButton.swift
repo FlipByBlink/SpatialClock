@@ -22,7 +22,7 @@ struct 🛠️SettingButton: View {
         .buttonStyle(.plain)
         .disabled(!self.model.isPresentedSettingButton)
         .opacity(self.model.isPresentedSettingButton ? 1 : 0)
-        .padding(.top)
+        .padding()
         .onChange(of: self.scenePhase) { _, newValue in
             switch newValue {
                 case .inactive,

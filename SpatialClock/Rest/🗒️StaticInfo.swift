@@ -28,7 +28,7 @@ enum 🗒️StaticInfo {
 }
 
 extension 🗒️StaticInfo {
-    static let versionInfos: [(version: String, date: String)] = [("1.3", "2025-01-02"),
+    static let versionInfos: [(version: String, date: String)] = [("1.3", "2025-01-04"),
                                                                   ("1.2", "2024-06-30"),
                                                                   ("1.1.1", "2024-03-02"),
                                                                   ("1.1", "2024-02-14"),
@@ -56,7 +56,8 @@ extension 🗒️StaticInfo {
                     "🛠️VisualTab.swift",
                     "🛠️RestTab.swift",
                     "🛠️TipsTab.swift",
-                    "🛠️AboutTab.swift"
+                    "🛠️AboutTab.swift",
+                    "🛠️RequestTab.swift",
                 ]
                 case .Option: [
                     "💾Option.swift",

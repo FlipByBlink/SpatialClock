@@ -58,6 +58,11 @@ private extension 🕒ClockView {
                 .animation(.default, value: self.model.textColor)
                 .animation(.default, value: self.model.padding)
                 .animation(.default, value: self.model.angle)
+                .animation(.default, value: self.model.showBattery)
+                .animation(.default, value: self.model.showBatteryNumber)
+                .animation(.default, value: self.model.customizeDateTimeLayout)
+                .animation(.default, value: self.model.datePosition)
+                .animation(.default, value: self.model.batteryPosition)
         }
     }
     private func handleFirstLaunch() {

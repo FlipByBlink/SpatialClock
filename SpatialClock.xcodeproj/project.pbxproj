@@ -48,6 +48,8 @@
 		16C4CE452B550684002260A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16C4CE442B550684002260A6 /* Assets.xcassets */; };
 		16F8286E2B560D8700A29476 /* 💾Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8286D2B560D8700A29476 /* 💾Key.swift */; };
 		16F828702B560FBB00A29476 /* 💾Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8286F2B560FBB00A29476 /* 💾Option.swift */; };
+		1D827CC92D290EE2003FDE62 /* 🔤DateTimeText.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA1976D2D25484A004F2885 /* 🔤DateTimeText.swift */; };
+		1D827CCA2D290EE2003FDE62 /* 🛠️RequestTab.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16359E282B931EE4004CC792 /* 🛠️RequestTab.swift */; };
 		1D98A0DF2D27A21300E5913A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1D98A0DE2D27A21300E5913A /* PrivacyInfo.xcprivacy */; };
 		1DA1976E2D25487D004F2885 /* 🔤DateTimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1976D2D25484A004F2885 /* 🔤DateTimeText.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 			dstPath = "📁SourceCode";
 			dstSubfolderSpec = 7;
 			files = (
+				1D827CC92D290EE2003FDE62 /* 🔤DateTimeText.swift in CopyFiles */,
+				1D827CCA2D290EE2003FDE62 /* 🛠️RequestTab.swift in CopyFiles */,
 				16891EC72B7B0E4000C6F0B3 /* App.swift in CopyFiles */,
 				16891EC82B7B0E4000C6F0B3 /* ContentView.swift in CopyFiles */,
 				16891EC92B7B0E4000C6F0B3 /* 🥽AppModel.swift in CopyFiles */,
