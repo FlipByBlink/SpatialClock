@@ -1,7 +1,7 @@
 import WidgetKit
 import SwiftUI
 
-struct BatteryState {
+struct 🔋BatteryState {
     let currentLevel: Self.Level = .get()
     
     enum Level: String {
