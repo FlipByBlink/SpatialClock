@@ -5,16 +5,16 @@ struct 🔋BatteryState {
     let currentLevel: Self.Level = .get()
     
     enum Level: String {
-        case Minimal, Low, Medium, High, Max, unknown
+        case Minimal, Low, Medium, High, Full, unknown
         
         static func get() -> Self {
             UIDevice.current.isBatteryMonitoringEnabled = true
             return switch UIDevice.current.batteryLevel {
                 case 0..<0.2: .Minimal
-                case 0.2..<0.4: .Low
-                case 0.4..<0.7: .Medium
-                case 0.7..<1: .High
-                case 1: .Max
+                case 0.2..<0.45: .Low
+                case 0.45..<0.7: .Medium
+                case 0.7..<0.95: .High
+                case 0.95...1: .Full
                 default: .unknown
             }
         }
@@ -26,7 +26,7 @@ struct 🔋BatteryState {
             case .Low: .init(systemName: "battery.25percent")
             case .Medium: .init(systemName: "battery.50percent")
             case .High: .init(systemName: "battery.75percent")
-            case .Max: .init(systemName: "battery.100percent")
+            case .Full: .init(systemName: "battery.100percent")
             case .unknown: .init(systemName: "questionmark")
         }
     }
