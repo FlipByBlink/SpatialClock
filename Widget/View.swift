@@ -11,7 +11,7 @@ struct 🕒EntryView: View {
             Text(.currentDate, format: .dateTime.hour().minute().second())
             HStack(alignment: .firstTextBaseline, spacing: 6) {
                 self.entry.batteryState.image()
-                Text(self.entry.batteryState.currentLevel.rawValue)
+                Text(self.entry.batteryState.rawValue)
                     .frame(maxWidth: .infinity,
                            alignment: .leading)
             }
