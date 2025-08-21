@@ -12,9 +12,9 @@ struct 🔋BatteryState {
             return switch UIDevice.current.batteryLevel {
                 case 0..<0.2: .Minimal
                 case 0.2..<0.4: .Low
-                case 0.4..<0.6: .Medium
-                case 0.6..<0.8: .High
-                case 0.8...1: .Max
+                case 0.4..<0.7: .Medium
+                case 0.7..<1: .High
+                case 1: .Max
                 default: .unknown
             }
         }
