@@ -1,5 +1,4 @@
 import WidgetKit
-import SwiftUI
 
 struct 🕒Provider: TimelineProvider {
     func placeholder(in context: Context) -> 🕒Entry { .init() }

@@ -8,6 +8,7 @@ struct 🕒EntryView: View {
         VStack(spacing: 8) {
             Text(.currentDate, format: .dateTime.year())
             Text(.currentDate, format: .dateTime.month().day().weekday())
+            Text(.currentDate, format: .dateTime.hour().minute())
             Text(.currentDate, format: .dateTime.hour().minute().second())
             HStack(alignment: .firstTextBaseline, spacing: 6) {
                 self.entry.batteryState.image()
@@ -18,7 +19,7 @@ struct 🕒EntryView: View {
         }
         //.multilineTextAlignment(.center)
         .monospacedDigit()
-        .font(.system(size: 20, weight: .bold))
+        .font(.system(size: 16, weight: .bold))
         .containerBackground(.background, for: .widget)
     }
 }
