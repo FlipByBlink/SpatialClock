@@ -89,6 +89,36 @@ enum 💾Option {
             }
         }
     }
+    enum AlignmentOnWidget: String, CaseIterable, Identifiable {
+        case `default`, center, leading, trailing
+        var id: Self { self }
+        var label: LocalizedStringKey {
+            LocalizedStringKey(self.rawValue)
+        }
+        var vstackValue: HorizontalAlignment {
+            switch self {
+                case .default: .leading
+                case .center: .center
+                case .leading: .leading
+                case .trailing: .trailing
+            }
+        }
+        var multilineValue: TextAlignment {
+            switch self {
+                case .default: .leading
+                case .center: .center
+                case .leading: .leading
+                case .trailing: .trailing
+            }
+        }
+    }
+    enum BatteryLabelStyleOnWidget: String, CaseIterable, Identifiable {
+        case `default`, lowercase, numbarPlus, japaneseStyle, nothing
+        var id: Self { self }
+        var label: LocalizedStringKey {
+            LocalizedStringKey(self.rawValue)
+        }
+    }
     static func space(_ fontSize: Int, _ adjustment: Int) -> CGFloat {
         10 + (CGFloat(fontSize) * 0.35) + CGFloat(adjustment)
     }

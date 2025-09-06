@@ -4,9 +4,11 @@ struct 🛠️SettingMenu: View {
     @EnvironmentObject var model: 🥽AppModel
     var body: some View {
         TabView {
+            🛠️WidgetTab() //TODO: remove
             🛠️ClockTab()
             🛠️VisualTab()
             🛠️RestTab()
+            🛠️WidgetTab()
             🛠️TipsTab()
             🛠️AboutTab()
             🛠️RequestTab()

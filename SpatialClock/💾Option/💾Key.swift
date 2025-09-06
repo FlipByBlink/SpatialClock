@@ -20,4 +20,17 @@ enum 💾Key {
     static let spaceBetweenDateAndTime: String = "spaceBetweenDateAndTime"
     static let batteryPosition: String = "batteryPosition"
     static let spaceBetweenClockAndBattery: String = "spaceBetweenClockAndBattery"
+    
+    static let hideDateOnWidget: String = "hideDateOnWidget"
+    static let showYearOnWidget: String = "showYearOnWidget"
+    static let hideWeekdayOnWidget: String = "hideWeekdayOnWidget"
+    static let showSecondOnWidget: String = "showSecondOnWidget"
+    static let fontSizeOnWidget: String = "fontSizeOnWidget"
+    static let fontWeightOnWidget: String = "fontWeightOnWidget"
+    static let fontDesignOnWidget: String = "fontDesignOnWidget"
+    static let opacityOnWidget: String = "opacityOnWidget"
+    static let spaceBetweenLinesOnWidget: String = "spaceBetweenLinesOnWidget"
+    static let alignmentOnWidget: String = "alignmentOnWidget"
+    static let showBatteryOnWidget: String = "showBatteryOnWidget"
+    static let batteryLabelStyleOnWidget: String = "batteryLabelStyleOnWidget"
 }

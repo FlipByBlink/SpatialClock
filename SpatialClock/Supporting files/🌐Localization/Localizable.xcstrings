@@ -21,6 +21,9 @@
         }
       }
     },
+    "Alignment" : {
+
+    },
     "Angle" : {
       "localizations" : {
         "ja" : {
@@ -50,6 +53,9 @@
           }
         }
       }
+    },
+    "Battery label style" : {
+
     },
     "Battery level" : {
       "localizations" : {
@@ -715,6 +721,9 @@
         }
       }
     },
+    "Show battery on widget" : {
+
+    },
     "Show percent number" : {
       "localizations" : {
         "ja" : {
@@ -764,6 +773,9 @@
           }
         }
       }
+    },
+    "Space between lines" : {
+
     },
     "SpatialClock" : {
       "localizations" : {
@@ -874,6 +886,12 @@
           }
         }
       }
+    },
+    "Widget" : {
+
+    },
+    "Widget setting" : {
+
     }
   },
   "version" : "1.0"

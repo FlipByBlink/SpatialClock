@@ -1,8 +1,10 @@
 import SwiftUI
+import Combine
 
 class 🥽AppModel: ObservableObject {
     @Published var isPresentedSettingButton: Bool = false
     @Published var isClosedClockWindow: Bool = false
+    
     @AppStorage(💾Key.showYear) var showYear: Bool = false
     @AppStorage(💾Key.hideWeekday) var hideWeekday: Bool = false
     @AppStorage(💾Key.hideDate) var hideDate: Bool = false
@@ -24,4 +26,29 @@ class 🥽AppModel: ObservableObject {
     @AppStorage(💾Key.spaceBetweenDateAndTime) var spaceBetweenDateAndTime: Int = 0
     @AppStorage(💾Key.batteryPosition) var batteryPosition: 💾Option.Layout = .right
     @AppStorage(💾Key.spaceBetweenClockAndBattery) var spaceBetweenClockAndBattery: Int = 0
+    
+    @AppStorage(💾Key.showYearOnWidget, store: .group)
+    var showYearOnWidget: Bool = false
+    @AppStorage(💾Key.hideWeekdayOnWidget, store: .group)
+    var hideWeekdayOnWidget: Bool = false
+    @AppStorage(💾Key.hideDateOnWidget, store: .group)
+    var hideDateOnWidget: Bool = false
+    @AppStorage(💾Key.showSecondOnWidget, store: .group)
+    var showSecondOnWidget: Bool = false
+    @AppStorage(💾Key.fontSizeOnWidget, store: .group)
+    var fontSizeOnWidget: Int = 16
+    @AppStorage(💾Key.fontWeightOnWidget, store: .group)
+    var fontWeightOnWidget: 💾Option.FontWeight = .bold
+    @AppStorage(💾Key.fontDesignOnWidget, store: .group)
+    var fontDesignOnWidget: 💾Option.FontDesign = .default
+    @AppStorage(💾Key.opacityOnWidget, store: .group)
+    var opacityOnWidget: Double = 1.0
+    @AppStorage(💾Key.spaceBetweenLinesOnWidget, store: .group)
+    var spaceBetweenLinesOnWidget: Int = 8
+    @AppStorage(💾Key.alignmentOnWidget, store: .group)
+    var alignmentOnWidget: 💾Option.AlignmentOnWidget = .default
+    @AppStorage(💾Key.showBatteryOnWidget, store: .group)
+    var showBatteryOnWidget: Bool = false
+    @AppStorage(💾Key.batteryLabelStyleOnWidget, store: .group)
+    var batteryLabelStyleOnWidget: 💾Option.BatteryLabelStyleOnWidget = .default
 }

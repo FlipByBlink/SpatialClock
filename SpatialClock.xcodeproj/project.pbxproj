@@ -50,6 +50,12 @@
 		16F828702B560FBB00A29476 /* 💾Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8286F2B560FBB00A29476 /* 💾Option.swift */; };
 		1D827CC92D290EE2003FDE62 /* 🔤DateTimeText.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA1976D2D25484A004F2885 /* 🔤DateTimeText.swift */; };
 		1D827CCA2D290EE2003FDE62 /* 🛠️RequestTab.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16359E282B931EE4004CC792 /* 🛠️RequestTab.swift */; };
+		1D83FF052E6B09B60040E67C /* 🛠️WidgetTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83FF042E6B09B60040E67C /* 🛠️WidgetTab.swift */; };
+		1D83FF092E6C1E680040E67C /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83FF082E6C1E600040E67C /* UserDefaults+Extension.swift */; };
+		1D83FF0A2E6C1F8B0040E67C /* 💾Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8286D2B560D8700A29476 /* 💾Key.swift */; };
+		1D83FF0B2E6C1F980040E67C /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83FF082E6C1E600040E67C /* UserDefaults+Extension.swift */; };
+		1D83FF0C2E6C1F980040E67C /* 💾Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8286F2B560FBB00A29476 /* 💾Option.swift */; };
+		1D83FF0D2E6C1F980040E67C /* 🥽AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160786D72B5512EB00E2B2CA /* 🥽AppModel.swift */; };
 		1D98A0DF2D27A21300E5913A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1D98A0DE2D27A21300E5913A /* PrivacyInfo.xcprivacy */; };
 		1DA1976E2D25487D004F2885 /* 🔤DateTimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1976D2D25484A004F2885 /* 🔤DateTimeText.swift */; };
 		1DA2B60A2E55EFEA0085C834 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA2B6092E55EFEA0085C834 /* WidgetKit.framework */; };
@@ -145,6 +151,9 @@
 		16D833112B7C473300409943 /* 5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpeg; sourceTree = "<group>"; };
 		16F8286D2B560D8700A29476 /* 💾Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "💾Key.swift"; sourceTree = "<group>"; };
 		16F8286F2B560FBB00A29476 /* 💾Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "💾Option.swift"; sourceTree = "<group>"; };
+		1D83FF042E6B09B60040E67C /* 🛠️WidgetTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️WidgetTab.swift"; sourceTree = "<group>"; };
+		1D83FF062E6C1CC80040E67C /* SpatialClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpatialClock.entitlements; sourceTree = "<group>"; };
+		1D83FF082E6C1E600040E67C /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		1D98A0DE2D27A21300E5913A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		1DA1976D2D25484A004F2885 /* 🔤DateTimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🔤DateTimeText.swift"; sourceTree = "<group>"; };
 		1DA2B6072E55EFEA0085C834 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +203,7 @@
 				16891EBF2B7B0A0500C6F0B3 /* Assets */,
 				16891EBA2B7B09A500C6F0B3 /* 🌐Localization */,
 				16267B492B578919000CA8AD /* README assets */,
+				1D83FF062E6C1CC80040E67C /* SpatialClock.entitlements */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -218,6 +228,7 @@
 				164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */,
 				164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */,
 				16891EB22B7AF43600C6F0B3 /* 🛠️RestTab.swift */,
+				1D83FF042E6B09B60040E67C /* 🛠️WidgetTab.swift */,
 				164C77FA2B565D6C008FF872 /* 🛠️TipsTab.swift */,
 				16891EC42B7B0A8300C6F0B3 /* 🛠️AboutTab.swift */,
 				16359E282B931EE4004CC792 /* 🛠️RequestTab.swift */,
@@ -240,6 +251,7 @@
 			children = (
 				16F8286F2B560FBB00A29476 /* 💾Option.swift */,
 				16F8286D2B560D8700A29476 /* 💾Key.swift */,
+				1D83FF082E6C1E600040E67C /* UserDefaults+Extension.swift */,
 			);
 			path = "💾Option";
 			sourceTree = "<group>";
@@ -483,6 +495,8 @@
 				160786DC2B5526BA00E2B2CA /* 🛠️SettingButton.swift in Sources */,
 				16359E292B931EE5004CC792 /* 🛠️RequestTab.swift in Sources */,
 				16F8286E2B560D8700A29476 /* 💾Key.swift in Sources */,
+				1D83FF052E6B09B60040E67C /* 🛠️WidgetTab.swift in Sources */,
+				1D83FF092E6C1E680040E67C /* UserDefaults+Extension.swift in Sources */,
 				164C77FF2B565DFC008FF872 /* 🛠️ClockTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +505,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D83FF0B2E6C1F980040E67C /* UserDefaults+Extension.swift in Sources */,
+				1D83FF0C2E6C1F980040E67C /* 💾Option.swift in Sources */,
+				1D83FF0D2E6C1F980040E67C /* 🥽AppModel.swift in Sources */,
+				1D83FF0A2E6C1F8B0040E67C /* 💾Key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +653,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SpatialClock/Supporting files/SpatialClock.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -662,6 +681,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SpatialClock/Supporting files/SpatialClock.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -689,6 +709,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Widget/Supporting files/WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -720,6 +741,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Widget/Supporting files/WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
