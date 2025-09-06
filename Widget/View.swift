@@ -38,10 +38,10 @@ struct 🕒EntryView: View {
             }
         }
         .multilineTextAlignment(self.model.alignmentOnWidget.multilineValue)
-        .monospacedDigit()
         .font(.system(size: .init(self.model.fontSizeOnWidget),
                       weight: self.model.fontWeightOnWidget.value,
                       design: self.model.fontDesignOnWidget.value))
+        .monospacedDigit()
         .opacity(self.model.opacityOnWidget)
         .containerBackground(.background, for: .widget)
     }

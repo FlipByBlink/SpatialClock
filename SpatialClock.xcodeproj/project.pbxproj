@@ -162,6 +162,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1D83FF0F2E6C56410040E67C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Rest/🔋BatteryState.swift",
+			);
+			target = 16C4CE382B550680002260A6 /* SpatialClock */;
+		};
 		1DA2B6182E55EFEB0085C834 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -172,7 +179,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		1DA2B60D2E55EFEA0085C834 /* Widget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (1DA2B6182E55EFEB0085C834 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Widget; sourceTree = "<group>"; };
+		1DA2B60D2E55EFEA0085C834 /* Widget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (1D83FF0F2E6C56410040E67C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 1DA2B6182E55EFEB0085C834 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Widget; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */

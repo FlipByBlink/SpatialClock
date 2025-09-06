@@ -37,7 +37,7 @@ private extension 🔤DateTimeText {
             .format(self.date)
     }
     private func customizeLayoutView() -> some View {
-        HStack(spacing: 💾Option.space(self.model.fontSize, self.model.spaceBetweenDateAndTime)) {
+        HStack(spacing: 💾Option.hstackSpace(self.model.fontSize, self.model.spaceBetweenDateAndTime)) {
             self.customizeLayoutDateView(.left)
             Text(
                 Date.FormatStyle

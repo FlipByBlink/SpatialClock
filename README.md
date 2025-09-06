@@ -72,7 +72,7 @@ Privacy Policy for App Store
 2024-02-02
 
 ### English
-This application don't collect user infomation.
+This application doesn't collect user information.
 
 ### Japanese
 このアプリ自身において、ユーザーの情報を一切収集しません。

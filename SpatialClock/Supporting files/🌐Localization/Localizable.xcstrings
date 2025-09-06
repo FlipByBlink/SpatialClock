@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "→" : {
+
+    },
     "0 (default)" : {
       "localizations" : {
         "ja" : {
@@ -54,6 +57,9 @@
         }
       }
     },
+    "Battery" : {
+
+    },
     "Battery label style" : {
 
     },
@@ -66,6 +72,9 @@
           }
         }
       }
+    },
+    "Battery(Widget)" : {
+
     },
     "black" : {
       "localizations" : {
@@ -711,6 +720,9 @@
         }
       }
     },
+    "Show battery" : {
+
+    },
     "Show battery level" : {
       "localizations" : {
         "ja" : {
@@ -720,9 +732,6 @@
           }
         }
       }
-    },
-    "Show battery on widget" : {
-
     },
     "Show percent number" : {
       "localizations" : {

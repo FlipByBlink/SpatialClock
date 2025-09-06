@@ -71,15 +71,37 @@ struct 🛠️WidgetTab: View {
                         Label("Alignment", systemImage: "align.horizontal.left")
                     }
                 }
-                Section {
-                    Toggle(isOn: self.$model.showBatteryOnWidget) {
-                        Label("Show battery on widget", systemImage: "battery.100percent")
+                NavigationLink {
+                    List {
+                        Section {
+                            Toggle(isOn: self.$model.showBatteryOnWidget) {
+                                Label("Show battery", systemImage: "battery.100percent")
+                            }
+                        }
+                        Section {
+                            VStack(spacing: 24) {
+                                Picker(selection: self.$model.batteryLabelStyleOnWidget) {
+                                    ForEach(💾Option.BatteryLabelStyleOnWidget.allCases) { Text($0.rawValue) }
+                                } label: {
+                                    Label("Battery label style", systemImage: "percent")
+                                }
+                                .disabled(!self.model.showBatteryOnWidget)
+                                Grid(alignment: .leading, horizontalSpacing: 12, verticalSpacing: 5) {
+                                    ForEach(🔋BatteryState.validCases, id: \.self) { state in
+                                        GridRow {
+                                            Text(state.rangeLabel)
+                                            Text("→")
+                                            Text(state.label(self.model.batteryLabelStyleOnWidget))
+                                        }
+                                    }
+                                }
+                                .foregroundStyle(.secondary)
+                            }
+                        }
                     }
-                    Picker(selection: self.$model.batteryLabelStyleOnWidget) {
-                        ForEach(💾Option.BatteryLabelStyleOnWidget.allCases) { Text($0.rawValue) }
-                    } label: {
-                        Label("Battery label style", systemImage: "percent")
-                    }
+                    .navigationTitle("Battery(Widget)")
+                } label: {
+                    Label("Battery", systemImage: "battery.100percent")
                 }
             }
             .navigationTitle("Widget setting")

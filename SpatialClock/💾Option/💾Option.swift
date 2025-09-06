@@ -89,6 +89,9 @@ enum 💾Option {
             }
         }
     }
+    static func hstackSpace(_ fontSize: Int, _ adjustment: Int) -> CGFloat {
+        10 + (CGFloat(fontSize) * 0.35) + CGFloat(adjustment)
+    }
     enum AlignmentOnWidget: String, CaseIterable, Identifiable {
         case `default`, center, leading, trailing
         var id: Self { self }
@@ -113,15 +116,15 @@ enum 💾Option {
         }
     }
     enum BatteryLabelStyleOnWidget: String, CaseIterable, Identifiable {
-        case `default`, lowercase, numbarPlus, japaneseStyle, nothing
+        case `default`, Uppercase, lowercase, Japanese, Nothing
         var id: Self { self }
         var label: LocalizedStringKey {
             LocalizedStringKey(self.rawValue)
         }
     }
-    static func space(_ fontSize: Int, _ adjustment: Int) -> CGFloat {
-        10 + (CGFloat(fontSize) * 0.35) + CGFloat(adjustment)
-    }
+}
+
+extension 💾Option { //Color
     static func load() -> Color {
         if let ⓓata = UserDefaults.standard.data(forKey: 💾Key.textColor),
            let ⓜodel = try? JSONDecoder().decode(Self.ColorModel.self, from: ⓓata) {

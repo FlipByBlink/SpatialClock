@@ -8,7 +8,7 @@ enum 🔋BatteryState: String {
          High,
          Charged,
          Full,
-         unknown
+         Unknown
 }
 
 extension 🔋BatteryState {
@@ -21,7 +21,7 @@ extension 🔋BatteryState {
             case 0.6..<0.8: .High
             case 0.8..<1: .Charged
             case 1: .Full
-            default: .unknown
+            default: .Unknown
         }
     }
     
@@ -32,17 +32,13 @@ extension 🔋BatteryState {
             case .Medium: .init(systemName: "battery.50percent")
             case .High: .init(systemName: "battery.75percent")
             case .Charged, .Full: .init(systemName: "battery.100percent")
-            case .unknown: .init(systemName: "questionmark")
+            case .Unknown: .init(systemName: "questionmark")
         }
     }
     
     func label(_ style: 💾Option.BatteryLabelStyleOnWidget) -> String {
         switch style {
             case .default:
-                self.rawValue
-            case .lowercase:
-                self.rawValue.lowercased()
-            case .numbarPlus:
                 switch self {
                     case .Minimal: "0+%"
                     case .Low: "20+%"
@@ -50,9 +46,13 @@ extension 🔋BatteryState {
                     case .High: "60+%"
                     case .Charged: "80+%"
                     case .Full: "100%"
-                    case .unknown: "??%"
+                    case .Unknown: "??%"
                 }
-            case .japaneseStyle:
+            case .Uppercase:
+                self.rawValue
+            case .lowercase:
+                self.rawValue.lowercased()
+            case .Japanese:
                 switch self {
                     case .Minimal: "ほぼ無し"
                     case .Low: "少なめ"
@@ -60,10 +60,31 @@ extension 🔋BatteryState {
                     case .High: "多め"
                     case .Charged: "ほぼフル"
                     case .Full: "フル"
-                    case .unknown: "アンノウン"
+                    case .Unknown: "アンノウン"
                 }
-            case .nothing:
+            case .Nothing:
                 ""
+        }
+    }
+    
+    static var validCases: [Self] {
+        [.Minimal,
+         .Low,
+         .Medium,
+         .High,
+         .Charged,
+         .Full,]
+    }
+    
+    var rangeLabel: String {
+        switch self {
+            case .Minimal: "0, 5, 10, 15"
+            case .Low: "20, 25, 30, 35"
+            case .Medium: "40, 45, 50, 55"
+            case .High: "60, 65, 70, 75"
+            case .Charged: "80, 85, 90, 95"
+            case .Full: "100"
+            case .Unknown: "??%"
         }
     }
 }
