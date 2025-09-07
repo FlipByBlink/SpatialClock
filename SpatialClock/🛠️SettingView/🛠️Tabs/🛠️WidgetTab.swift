@@ -72,34 +72,7 @@ struct 🛠️WidgetTab: View {
                     }
                 }
                 NavigationLink {
-                    List {
-                        Section {
-                            Toggle(isOn: self.$model.showBatteryOnWidget) {
-                                Label("Show battery", systemImage: "battery.100percent")
-                            }
-                        }
-                        Section {
-                            VStack(spacing: 24) {
-                                Picker(selection: self.$model.batteryLabelStyleOnWidget) {
-                                    ForEach(💾Option.BatteryLabelStyleOnWidget.allCases) { Text($0.rawValue) }
-                                } label: {
-                                    Label("Battery label style", systemImage: "percent")
-                                }
-                                .disabled(!self.model.showBatteryOnWidget)
-                                Grid(alignment: .leading, horizontalSpacing: 12, verticalSpacing: 5) {
-                                    ForEach(🔋BatteryState.validCases, id: \.self) { state in
-                                        GridRow {
-                                            Text(state.rangeLabel)
-                                            Text("→")
-                                            Text(state.label(self.model.batteryLabelStyleOnWidget))
-                                        }
-                                    }
-                                }
-                                .foregroundStyle(.secondary)
-                            }
-                        }
-                    }
-                    .navigationTitle("Battery(Widget)")
+                    Self.BatteryMenu()
                 } label: {
                     Label("Battery", systemImage: "battery.100percent")
                 }
@@ -112,6 +85,46 @@ struct 🛠️WidgetTab: View {
 }
 
 private extension 🛠️WidgetTab {
+    private struct BatteryMenu: View {
+        @EnvironmentObject var model: 🥽AppModel
+        var body: some View {
+            List {
+                Section {
+                    Text("システムの制約により、バッテリー残量をリアルタイムで表示することはできません。約20分毎に更新されます。")
+                    Text("また、バッテリー残量は大まかな数値として取得されます。(e.g. 100% → 95% → 90% → 85% …)")
+                    Text("こうした背景があるため、本アプリでは6段階でバッテリー残量を表記します。")
+                } header: {
+                    Label("Notice", systemImage: "exclamationmark.triangle")
+                }
+                Section {
+                    Toggle(isOn: self.$model.showBatteryOnWidget) {
+                        Label("Show battery", systemImage: "battery.100percent")
+                    }
+                }
+                Section {
+                    VStack(spacing: 24) {
+                        Picker(selection: self.$model.batteryLabelStyleOnWidget) {
+                            ForEach(💾Option.BatteryLabelStyleOnWidget.allCases) { Text($0.rawValue) }
+                        } label: {
+                            Label("Battery label style", systemImage: "percent")
+                        }
+                        .disabled(!self.model.showBatteryOnWidget)
+                        Grid(alignment: .leading, horizontalSpacing: 12, verticalSpacing: 5) {
+                            ForEach(🔋BatteryState.validCases, id: \.self) { state in
+                                GridRow {
+                                    Text(state.rangeLabel)
+                                    Text("→")
+                                    Text(state.label(self.model.batteryLabelStyleOnWidget))
+                                }
+                            }
+                        }
+                        .foregroundStyle(.secondary)
+                    }
+                }
+            }
+            .navigationTitle("Battery(Widget)")
+        }
+    }
     private struct ReloadWidget: ViewModifier {
         @EnvironmentObject var model: 🥽AppModel
         func body(content: Content) -> some View {
