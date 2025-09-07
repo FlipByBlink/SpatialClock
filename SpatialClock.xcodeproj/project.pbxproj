@@ -58,6 +58,7 @@
 		1D83FF0D2E6C1F980040E67C /* 🥽AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160786D72B5512EB00E2B2CA /* 🥽AppModel.swift */; };
 		1D83FF102E6D68BB0040E67C /* 🛠️WidgetTab.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D83FF042E6B09B60040E67C /* 🛠️WidgetTab.swift */; };
 		1D83FF112E6D68BB0040E67C /* UserDefaults+Extension.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D83FF082E6C1E600040E67C /* UserDefaults+Extension.swift */; };
+		1D83FF182E6DA8690040E67C /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 16267B542B57D496000CA8AD /* InfoPlist.xcstrings */; };
 		1D98A0DF2D27A21300E5913A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1D98A0DE2D27A21300E5913A /* PrivacyInfo.xcprivacy */; };
 		1DA1976E2D25487D004F2885 /* 🔤DateTimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA1976D2D25484A004F2885 /* 🔤DateTimeText.swift */; };
 		1DA2B60A2E55EFEA0085C834 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA2B6092E55EFEA0085C834 /* WidgetKit.framework */; };
@@ -492,6 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D83FF182E6DA8690040E67C /* InfoPlist.xcstrings in Resources */,
 				1DA2B6352E55F2010085C834 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

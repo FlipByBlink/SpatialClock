@@ -1,8 +1,15 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "→" : {
-
+    "," : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "、"
+          }
+        }
+      }
     },
     "0 (default)" : {
       "localizations" : {
@@ -25,7 +32,14 @@
       }
     },
     "Alignment" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "揃え方"
+          }
+        }
+      }
     },
     "Angle" : {
       "localizations" : {
@@ -58,10 +72,24 @@
       }
     },
     "Battery" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バッテリー"
+          }
+        }
+      }
     },
     "Battery label style" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示スタイル"
+          }
+        }
+      }
     },
     "Battery level" : {
       "localizations" : {
@@ -74,7 +102,14 @@
       }
     },
     "Battery(Widget)" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バッテリー(ウィジェット)"
+          }
+        }
+      }
     },
     "black" : {
       "localizations" : {
@@ -92,6 +127,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ボールド"
+          }
+        }
+      }
+    },
+    "center" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中央"
           }
         }
       }
@@ -462,6 +507,26 @@
         }
       }
     },
+    "Japanese" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日本語"
+          }
+        }
+      }
+    },
+    "leading" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "先頭"
+          }
+        }
+      }
+    },
     "left" : {
       "localizations" : {
         "ja" : {
@@ -478,6 +543,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ライト"
+          }
+        }
+      }
+    },
+    "lowercase" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英語(ローワーケース)"
           }
         }
       }
@@ -502,8 +577,25 @@
         }
       }
     },
+    "Nothing" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "なし"
+          }
+        }
+      }
+    },
     "Notice" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注意"
+          }
+        }
+      }
     },
     "Opacity" : {
       "localizations" : {
@@ -724,7 +816,14 @@
       }
     },
     "Show battery" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バッテリー残量を表示"
+          }
+        }
+      }
     },
     "Show battery level" : {
       "localizations" : {
@@ -787,7 +886,14 @@
       }
     },
     "Space between lines" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行間の高さ"
+          }
+        }
+      }
     },
     "SpatialClock" : {
       "localizations" : {
@@ -859,6 +965,16 @@
         }
       }
     },
+    "trailing" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "末尾"
+          }
+        }
+      }
+    },
     "ultraLight" : {
       "localizations" : {
         "ja" : {
@@ -875,6 +991,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "単位: ポイント"
+          }
+        }
+      }
+    },
+    "Uppercase" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英語(アッパーケース)"
           }
         }
       }
@@ -900,18 +1026,32 @@
       }
     },
     "Widget" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウィジェット"
+          }
+        }
+      }
     },
     "Widget setting" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウィジェットの設定"
+          }
+        }
+      }
+    },
+    "こうした背景があるため、本アプリでは以下のようにバッテリー残量を6段階で表記します。" : {
 
     },
-    "こうした背景があるため、本アプリでは6段階でバッテリー残量を表記します。" : {
+    "システム上の制約により、ウィジェット上のバッテリー残量の表示は約20分毎に更新されます。" : {
 
     },
-    "システムの制約により、バッテリー残量をリアルタイムで表示することはできません。約20分毎に更新されます。" : {
-
-    },
-    "また、バッテリー残量は大まかな数値として取得されます。(e.g. 100% → 95% → 90% → 85% …)" : {
+    "また、バッテリー残量は5%単位の大まかな数値として取得されます。" : {
 
     }
   },

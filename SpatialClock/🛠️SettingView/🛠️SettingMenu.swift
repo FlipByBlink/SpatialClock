@@ -8,8 +8,8 @@ struct 🛠️SettingMenu: View {
             🛠️ClockTab()
             🛠️VisualTab()
             🛠️RestTab()
-            🛠️WidgetTab()
             🛠️TipsTab()
+            🛠️WidgetTab()
             🛠️AboutTab()
             🛠️RequestTab()
         }

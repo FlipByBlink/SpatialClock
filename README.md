@@ -21,6 +21,8 @@ Simple design.
 
 Light weight.
 
+Widget support.
+
 ### Main options
 - Hide date
 - Show year
@@ -30,6 +32,15 @@ Light weight.
 - Customize size
 - Customize font
 - Customize layout
+- Show battery level
+
+### Widget options
+- Hide date
+- Show year
+- Hide weekday
+- Show second
+- Customize size
+- Customize font
 - Show battery level
 
 <img src="SpatialClock/Supporting files/README assets/2.jpeg" width="600">

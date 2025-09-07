@@ -96,7 +96,12 @@ enum 💾Option {
         case `default`, center, leading, trailing
         var id: Self { self }
         var label: LocalizedStringKey {
-            LocalizedStringKey(self.rawValue)
+            switch self {
+                case .default: "default"
+                case .center: "center"
+                case .leading: "leading"
+                case .trailing: "trailing"
+            }
         }
         var vstackValue: HorizontalAlignment {
             switch self {
@@ -118,8 +123,14 @@ enum 💾Option {
     enum BatteryLabelStyleOnWidget: String, CaseIterable, Identifiable {
         case `default`, Uppercase, lowercase, Japanese, Nothing
         var id: Self { self }
-        var label: LocalizedStringKey {
-            LocalizedStringKey(self.rawValue)
+        var label: LocalizedStringResource {
+            switch self {
+                case .default: "default"
+                case .Uppercase: "Uppercase"
+                case .lowercase: "lowercase"
+                case .Japanese: "Japanese"
+                case .Nothing: "Nothing"
+            }
         }
     }
 }

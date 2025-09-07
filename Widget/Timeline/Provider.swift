@@ -10,9 +10,12 @@ struct 🕒Provider: TimelineProvider {
     
     func getTimeline(in context: Context,
                      completion: @escaping (Timeline<🕒Entry>) -> ()) {
+        let showBatteryOnWidget = UserDefaults.group.bool(forKey: 💾Key.showBatteryOnWidget)
         completion(
-            Timeline(entries: [.init()],
-                     policy: .after(.now.addingTimeInterval(60 * 20)))
+            Timeline(
+                entries: [.init()],
+                policy: showBatteryOnWidget ? .after(.now.addingTimeInterval(60 * 20)) : .never
+            )
         )
     }
 }

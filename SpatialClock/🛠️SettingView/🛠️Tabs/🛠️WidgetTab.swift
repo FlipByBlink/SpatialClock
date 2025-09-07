@@ -66,7 +66,7 @@ struct 🛠️WidgetTab: View {
                         Label("Space between lines", systemImage: "lines.measurement.vertical")
                     }
                     Picker(selection: self.$model.alignmentOnWidget) {
-                        ForEach(💾Option.AlignmentOnWidget.allCases) { Text($0.rawValue) }
+                        ForEach(💾Option.AlignmentOnWidget.allCases) { Text($0.label) }
                     } label: {
                         Label("Alignment", systemImage: "align.horizontal.left")
                     }
@@ -90,9 +90,26 @@ private extension 🛠️WidgetTab {
         var body: some View {
             List {
                 Section {
-                    Text("システムの制約により、バッテリー残量をリアルタイムで表示することはできません。約20分毎に更新されます。")
-                    Text("また、バッテリー残量は大まかな数値として取得されます。(e.g. 100% → 95% → 90% → 85% …)")
-                    Text("こうした背景があるため、本アプリでは6段階でバッテリー残量を表記します。")
+                    VStack(spacing: 16) {
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("システム上の制約により、ウィジェット上のバッテリー残量の表示は約20分毎に更新されます。")
+                            Text("また、バッテリー残量は5%単位の大まかな数値として取得されます。")
+                            Text("こうした背景があるため、本アプリでは以下のようにバッテリー残量を6段階で表記します。")
+                        }
+                        HStack(alignment: .firstTextBaseline) {
+                            ForEach(🔋BatteryState.validCases, id: \.self) { batteryState in
+                                HStack(alignment: .firstTextBaseline, spacing: 2) {
+                                    Text(batteryState.label(.default))
+                                        .foregroundStyle(.secondary)
+                                    if batteryState != .Full {
+                                        Text(",")
+                                            .foregroundStyle(.tertiary)
+                                    }
+                                }
+                            }
+                        }
+                        .font(.system(size: 15, weight: .medium))
+                    }
                 } header: {
                     Label("Notice", systemImage: "exclamationmark.triangle")
                 }
@@ -104,7 +121,7 @@ private extension 🛠️WidgetTab {
                 Section {
                     VStack(spacing: 24) {
                         Picker(selection: self.$model.batteryLabelStyleOnWidget) {
-                            ForEach(💾Option.BatteryLabelStyleOnWidget.allCases) { Text($0.rawValue) }
+                            ForEach(💾Option.BatteryLabelStyleOnWidget.allCases) { Text($0.label) }
                         } label: {
                             Label("Battery label style", systemImage: "percent")
                         }
@@ -113,7 +130,7 @@ private extension 🛠️WidgetTab {
                             ForEach(🔋BatteryState.validCases, id: \.self) { state in
                                 GridRow {
                                     Text(state.rangeLabel)
-                                    Text("→")
+                                    Text(verbatim: "→")
                                     Text(state.label(self.model.batteryLabelStyleOnWidget))
                                 }
                             }
@@ -142,6 +159,7 @@ private extension 🛠️WidgetTab {
                 .onChange(of: self.model.alignmentOnWidget) { Self.reload() }
                 .onChange(of: self.model.showBatteryOnWidget) { Self.reload() }
                 .onChange(of: self.model.batteryLabelStyleOnWidget) { Self.reload() }
+                //TODO: 数があっているか確認。
         }
         private static func reload() {
             WidgetCenter.shared.reloadAllTimelines()
