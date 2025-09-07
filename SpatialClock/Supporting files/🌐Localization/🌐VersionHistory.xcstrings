@@ -85,6 +85,23 @@
           }
         }
       }
+    },
+    "2.0" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- Add widget support.\n- Unsupport OS ver 2.x.\n- Small fix."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "・ウィジェットをサポートしました。\n・OS 2.xを非対応にしました。\n・軽微な修正。"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

@@ -92,9 +92,8 @@ private extension 🛠️WidgetTab {
                 Section {
                     VStack(spacing: 16) {
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("システム上の制約により、ウィジェット上のバッテリー残量の表示は約20分毎に更新されます。")
-                            Text("また、バッテリー残量は5%単位の大まかな数値として取得されます。")
-                            Text("こうした背景があるため、本アプリでは以下のようにバッテリー残量を6段階で表記します。")
+                            Text("システム上の制約により、ウィジェット上のバッテリー残量は約20分毎に更新されます。")
+                            Text("そのため、本アプリでは以下のようにバッテリー残量を6段階で表記します。")
                         }
                         HStack(alignment: .firstTextBaseline) {
                             ForEach(🔋BatteryState.validCases, id: \.self) { batteryState in
@@ -136,6 +135,10 @@ private extension 🛠️WidgetTab {
                             }
                         }
                         .foregroundStyle(.secondary)
+                        Text("※システム上の制約により、バッテリー残量は5%単位の大まかな数値として取得されます。")
+                            .foregroundStyle(.secondary)
+                            .font(.caption)
+                            .padding(.horizontal, 32)
                     }
                 }
             }

@@ -2,8 +2,11 @@ import SwiftUI
 
 @main
 struct SpatialClockApp: App {
-    @StateObject private var model: 🥽AppModel = .init()
+    
+    @StateObject private var model = 🥽AppModel()
+    
     var body: some Scene {
+        
         WindowGroup(id: "clock") {
             ContentView()
                 .environmentObject(self.model)
@@ -20,6 +23,7 @@ struct SpatialClockApp: App {
         }
         .defaultSize(width: 520, height: 600)
         .windowResizability(.contentSize)
+        .defaultLaunchBehavior(.suppressed)
         .defaultWindowPlacement { _, context in
                 .init(context.windows.compactMap({.above($0)}).first)
         }
