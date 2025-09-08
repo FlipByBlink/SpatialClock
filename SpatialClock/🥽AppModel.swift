@@ -36,7 +36,7 @@ class 🥽AppModel: ObservableObject {
     @AppStorage(💾Key.showSecondOnWidget, store: .group)
     var showSecondOnWidget: Bool = false
     @AppStorage(💾Key.fontSizeOnWidget, store: .group)
-    var fontSizeOnWidget: Int = 16
+    var fontSizeOnWidget: Int = 20
     @AppStorage(💾Key.fontWeightOnWidget, store: .group)
     var fontWeightOnWidget: 💾Option.FontWeight = .bold
     @AppStorage(💾Key.fontDesignOnWidget, store: .group)
