@@ -159,6 +159,7 @@
 		1D83FF042E6B09B60040E67C /* 🛠️WidgetTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🛠️WidgetTab.swift"; sourceTree = "<group>"; };
 		1D83FF062E6C1CC80040E67C /* SpatialClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpatialClock.entitlements; sourceTree = "<group>"; };
 		1D83FF082E6C1E600040E67C /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		1D83FF192E6F01C00040E67C /* widget1200w.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = widget1200w.jpeg; sourceTree = "<group>"; };
 		1D98A0DE2D27A21300E5913A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		1DA1976D2D25484A004F2885 /* 🔤DateTimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🔤DateTimeText.swift"; sourceTree = "<group>"; };
 		1DA2B6072E55EFEA0085C834 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +245,7 @@
 				1669BEB62B6BACE100D0FEEB /* 3.jpeg */,
 				1669BEB52B6BACE000D0FEEB /* 4.jpeg */,
 				16D833112B7C473300409943 /* 5.jpeg */,
+				1D83FF192E6F01C00040E67C /* widget1200w.jpeg */,
 			);
 			path = "README assets";
 			sourceTree = "<group>";

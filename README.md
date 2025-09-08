@@ -51,6 +51,8 @@ Widget support.
 
 <img src="SpatialClock/Supporting files/README assets/5.jpeg" width="600">
 
+<img src="SpatialClock/Supporting files/README assets/widget1200w.jpeg" width="600">
+
 
 App Store link
 ---------------
