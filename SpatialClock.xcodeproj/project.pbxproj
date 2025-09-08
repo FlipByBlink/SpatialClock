@@ -254,8 +254,8 @@
 				164C77FE2B565DFC008FF872 /* 🛠️ClockTab.swift */,
 				164C78002B565E0A008FF872 /* 🛠️VisualTab.swift */,
 				16891EB22B7AF43600C6F0B3 /* 🛠️RestTab.swift */,
-				1D83FF042E6B09B60040E67C /* 🛠️WidgetTab.swift */,
 				164C77FA2B565D6C008FF872 /* 🛠️TipsTab.swift */,
+				1D83FF042E6B09B60040E67C /* 🛠️WidgetTab.swift */,
 				16891EC42B7B0A8300C6F0B3 /* 🛠️AboutTab.swift */,
 				16359E282B931EE4004CC792 /* 🛠️RequestTab.swift */,
 			);
@@ -741,7 +741,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widget/Supporting files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Widget;
+				INFOPLIST_KEY_CFBundleDisplayName = SpatialClock;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -773,7 +773,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Widget/Supporting files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Widget;
+				INFOPLIST_KEY_CFBundleDisplayName = SpatialClock;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

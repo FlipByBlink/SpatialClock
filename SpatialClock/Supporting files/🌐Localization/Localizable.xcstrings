@@ -11,8 +11,15 @@
         }
       }
     },
-    "※システム上の制約により、バッテリー残量は5%単位の大まかな数値として取得されます。" : {
-
+    "* Due to system limitations, the battery level can only be obtained in rough 5% increments." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "※システム上の制約により、バッテリー残量は5%単位の大まかな数値として取得されます。"
+          }
+        }
+      }
     },
     "0 (default)" : {
       "localizations" : {
@@ -396,6 +403,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "なし"
+          }
+        }
+      }
+    },
+    "Due to system limitations, the battery level on the widget is updated about every 20 minutes." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "システム上の制約により、ウィジェット上のバッテリー残量は約20分毎に更新されます。"
           }
         }
       }
@@ -938,6 +955,16 @@
         }
       }
     },
+    "Therefore, this app displays the battery level in six stages as shown below." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "そのため、本アプリでは以下のようにバッテリー残量を6段階で表記します。"
+          }
+        }
+      }
+    },
     "thin" : {
       "localizations" : {
         "ja" : {
@@ -1047,12 +1074,6 @@
           }
         }
       }
-    },
-    "システム上の制約により、ウィジェット上のバッテリー残量は約20分毎に更新されます。" : {
-
-    },
-    "そのため、本アプリでは以下のようにバッテリー残量を6段階で表記します。" : {
-
     }
   },
   "version" : "1.0"

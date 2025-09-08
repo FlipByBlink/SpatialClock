@@ -92,8 +92,8 @@ private extension 🛠️WidgetTab {
                 Section {
                     VStack(spacing: 16) {
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("システム上の制約により、ウィジェット上のバッテリー残量は約20分毎に更新されます。")
-                            Text("そのため、本アプリでは以下のようにバッテリー残量を6段階で表記します。")
+                            Text("Due to system limitations, the battery level on the widget is updated about every 20 minutes.")
+                            Text("Therefore, this app displays the battery level in six stages as shown below.")
                         }
                         HStack(alignment: .firstTextBaseline) {
                             ForEach(🔋BatteryState.validCases, id: \.self) { batteryState in
@@ -135,7 +135,7 @@ private extension 🛠️WidgetTab {
                             }
                         }
                         .foregroundStyle(.secondary)
-                        Text("※システム上の制約により、バッテリー残量は5%単位の大まかな数値として取得されます。")
+                        Text("* Due to system limitations, the battery level can only be obtained in rough 5% increments.")
                             .foregroundStyle(.secondary)
                             .font(.caption)
                             .padding(.horizontal, 32)
@@ -150,7 +150,6 @@ private extension 🛠️WidgetTab {
         func body(content: Content) -> some View {
             content
                 .onChange(of: self.model.showYearOnWidget) { Self.reload() }
-                .onChange(of: self.model.showYearOnWidget) { Self.reload() }
                 .onChange(of: self.model.hideWeekdayOnWidget) { Self.reload() }
                 .onChange(of: self.model.hideDateOnWidget) { Self.reload() }
                 .onChange(of: self.model.showSecondOnWidget) { Self.reload() }
@@ -162,7 +161,6 @@ private extension 🛠️WidgetTab {
                 .onChange(of: self.model.alignmentOnWidget) { Self.reload() }
                 .onChange(of: self.model.showBatteryOnWidget) { Self.reload() }
                 .onChange(of: self.model.batteryLabelStyleOnWidget) { Self.reload() }
-                //TODO: 数があっているか確認。
         }
         private static func reload() {
             WidgetCenter.shared.reloadAllTimelines()

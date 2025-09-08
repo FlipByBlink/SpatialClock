@@ -28,12 +28,14 @@ enum 🗒️StaticInfo {
 }
 
 extension 🗒️StaticInfo {
-    static let versionInfos: [(version: String, date: String)] = [("2.0", "2025-09-09"),
-                                                                  ("1.3", "2025-01-04"),
-                                                                  ("1.2", "2024-06-30"),
-                                                                  ("1.1.1", "2024-03-02"),
-                                                                  ("1.1", "2024-02-14"),
-                                                                  ("1.0", "2024-02-02")] //降順。先頭の方が新しい
+    static let versionInfos: [(version: String, date: String)] = [
+        ("2.0", "2025-09-09"),
+        ("1.3", "2025-01-04"),
+        ("1.2", "2024-06-30"),
+        ("1.1.1", "2024-03-02"),
+        ("1.1", "2024-02-14"),
+        ("1.0", "2024-02-02")
+    ] //降順。先頭の方が新しい
     
     enum SourceCodeCategory: String, CaseIterable, Identifiable {
         case main, ClockView, SettingView, Option, Rest, Widget
